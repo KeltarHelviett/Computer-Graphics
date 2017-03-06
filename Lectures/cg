@@ -1,0 +1,20 @@
+GLUT
+freeGLUT
+GLFW
+SFML
+
+Shader - программа, которая выполняется на GPU
+OpenGL - GLSL
+Direct3D - HLSL
+
+Shader:
+	Vertex
+	Fragment(Pixel)
+
+VBO - Vertex Buffer Object
+
+VAO - Vertex Array Object
+
+GLEW
+
+GLee

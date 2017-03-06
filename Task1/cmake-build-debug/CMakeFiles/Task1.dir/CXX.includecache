@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/keltar/Desktop/Computer-Graphics/Task1/main.cpp
+GL/glew.h
+-
+GL/freeglut.h
+-
+iostream
+-
+fstream
+-
+string
+-
+string.h
+-
+

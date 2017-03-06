@@ -1,0 +1,6 @@
+Application -> Geometry -> Rasterization
+Geometry:
+	Model View Transform -> Vertex Shading -> Projection -> Clipping -> Screen Mapping
+Rasterization:
+	Trianle setup -> Triangle Traverse -> Pixel Shading -> Mergin -> Picture
+
