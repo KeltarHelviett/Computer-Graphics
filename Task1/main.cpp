@@ -36,11 +36,11 @@ void AttachShader(const char *shaderCode, GLenum type)
 {
     GLuint shader = glCreateShader(type);
     std::cout << shaderCode;
-    const GLchar *p[1];
-    p[0] = shaderCode;
+    const GLchar *c[1];
+    c[0] = shaderCode;
     GLint lengths[1];
     lengths[0] = (GLint)strlen(shaderCode);
-    glShaderSource(shader, 1, p, lengths);
+    glShaderSource(shader, 1, c, lengths);
     glAttachShader(ShaderProg, shader);
 }
 void CreateShaders()
@@ -50,10 +50,8 @@ void CreateShaders()
     std::ifstream vertFin("../vert.glsl");
     std::string fragShaderCode {std::istreambuf_iterator<char>(fragFin), std::istreambuf_iterator<char>()},
             vertShaderCode{std::istreambuf_iterator<char>(vertFin), std::istreambuf_iterator<char>()};
-    char *fcode = (char *) fragShaderCode.c_str();
-    char *vcode = (char *) vertShaderCode.c_str();
-    AttachShader(fcode, GL_FRAGMENT_SHADER);
-    AttachShader(vcode, GL_VERTEX_SHADER);
+    AttachShader((char *) fragShaderCode.c_str(), GL_FRAGMENT_SHADER);
+    AttachShader((char *) vertShaderCode.c_str(), GL_VERTEX_SHADER);
     glLinkProgram(ShaderProg);
     glValidateProgram(ShaderProg);
     glUseProgram(ShaderProg);
@@ -63,18 +61,17 @@ void RenderScene()
 {
     glClear(GL_COLOR_BUFFER_BIT);
 
-
-
-    glEnableVertexAttribArray(0);
+    glEnableVertexAttribArray(1);
     glBindBuffer(GL_ARRAY_BUFFER, Triangle);
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, 0);
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 0, 0);
     glDrawArrays(GL_TRIANGLES, 0, 3);
-    glDisableVertexAttribArray(0);
+    glDisableVertexAttribArray(1);
 
     glutSwapBuffers();
 }
 
-int main(int argc, char *argv[]) {
+int main(int argc, char *argv[])
+{
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA);
     glutInitWindowSize(800, 800);
@@ -88,6 +85,5 @@ int main(int argc, char *argv[]) {
     CreateVertexBuffer();
     CreateShaders();
     glutMainLoop();
-
     return 0;
 }

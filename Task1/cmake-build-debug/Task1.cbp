@@ -84,6 +84,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/Task1/Shader.cpp">
+			<Option target="Task1"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/Task1/Shader.h">
+			<Option target="Task1"/>
+		</Unit>
 		<Unit filename="/home/keltar/Desktop/Computer-Graphics/Task1/main.cpp">
 			<Option target="Task1"/>
 		</Unit>

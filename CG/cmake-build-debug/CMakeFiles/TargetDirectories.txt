@@ -1,0 +1,3 @@
+/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/CMakeFiles/CG.dir
