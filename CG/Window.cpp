@@ -10,6 +10,9 @@ Window::Window(GLuint width, GLuint height, GLuint x, GLuint y, std::string titl
     glutCreateWindow(title.c_str());
 }
 
+Window::Window(GLuint width, GLuint height, GLuint y, GLuint x, char *title): Window(width, height, y, x, std::string(title)) {}
+
+
 GLuint Window::width()
 {
     return _width;
@@ -25,7 +28,6 @@ Position Window::position()
     return _position;
 }
 
-Window::Window(GLuint width, GLuint height, GLuint y, GLuint x, char *title): Window(width, height, y, x, std::string(title)) {}
 
 
 Position::Position(GLint _x, GLint _y)

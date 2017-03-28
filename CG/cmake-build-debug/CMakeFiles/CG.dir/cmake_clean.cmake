@@ -3,6 +3,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/CG.dir/Shader.cpp.o"
   "CMakeFiles/CG.dir/ShaderProgram.cpp.o"
   "CMakeFiles/CG.dir/Window.cpp.o"
+  "CMakeFiles/CG.dir/Matrix4.cpp.o"
+  "CMakeFiles/CG.dir/Vector4.cpp.o"
+  "CMakeFiles/CG.dir/Quaternion.cpp.o"
+  "CMakeFiles/CG.dir/gl_math.cpp.o"
   "CG.pdb"
   "CG"
 )

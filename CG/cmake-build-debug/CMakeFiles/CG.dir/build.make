@@ -153,12 +153,112 @@ CMakeFiles/CG.dir/Window.cpp.o.provides: CMakeFiles/CG.dir/Window.cpp.o.requires
 CMakeFiles/CG.dir/Window.cpp.o.provides.build: CMakeFiles/CG.dir/Window.cpp.o
 
 
+CMakeFiles/CG.dir/Matrix4.cpp.o: CMakeFiles/CG.dir/flags.make
+CMakeFiles/CG.dir/Matrix4.cpp.o: ../Matrix4.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/CG.dir/Matrix4.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CG.dir/Matrix4.cpp.o -c /home/keltar/Desktop/Computer-Graphics/CG/Matrix4.cpp
+
+CMakeFiles/CG.dir/Matrix4.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CG.dir/Matrix4.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/keltar/Desktop/Computer-Graphics/CG/Matrix4.cpp > CMakeFiles/CG.dir/Matrix4.cpp.i
+
+CMakeFiles/CG.dir/Matrix4.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CG.dir/Matrix4.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/keltar/Desktop/Computer-Graphics/CG/Matrix4.cpp -o CMakeFiles/CG.dir/Matrix4.cpp.s
+
+CMakeFiles/CG.dir/Matrix4.cpp.o.requires:
+
+.PHONY : CMakeFiles/CG.dir/Matrix4.cpp.o.requires
+
+CMakeFiles/CG.dir/Matrix4.cpp.o.provides: CMakeFiles/CG.dir/Matrix4.cpp.o.requires
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Matrix4.cpp.o.provides.build
+.PHONY : CMakeFiles/CG.dir/Matrix4.cpp.o.provides
+
+CMakeFiles/CG.dir/Matrix4.cpp.o.provides.build: CMakeFiles/CG.dir/Matrix4.cpp.o
+
+
+CMakeFiles/CG.dir/Vector4.cpp.o: CMakeFiles/CG.dir/flags.make
+CMakeFiles/CG.dir/Vector4.cpp.o: ../Vector4.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/CG.dir/Vector4.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CG.dir/Vector4.cpp.o -c /home/keltar/Desktop/Computer-Graphics/CG/Vector4.cpp
+
+CMakeFiles/CG.dir/Vector4.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CG.dir/Vector4.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/keltar/Desktop/Computer-Graphics/CG/Vector4.cpp > CMakeFiles/CG.dir/Vector4.cpp.i
+
+CMakeFiles/CG.dir/Vector4.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CG.dir/Vector4.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/keltar/Desktop/Computer-Graphics/CG/Vector4.cpp -o CMakeFiles/CG.dir/Vector4.cpp.s
+
+CMakeFiles/CG.dir/Vector4.cpp.o.requires:
+
+.PHONY : CMakeFiles/CG.dir/Vector4.cpp.o.requires
+
+CMakeFiles/CG.dir/Vector4.cpp.o.provides: CMakeFiles/CG.dir/Vector4.cpp.o.requires
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Vector4.cpp.o.provides.build
+.PHONY : CMakeFiles/CG.dir/Vector4.cpp.o.provides
+
+CMakeFiles/CG.dir/Vector4.cpp.o.provides.build: CMakeFiles/CG.dir/Vector4.cpp.o
+
+
+CMakeFiles/CG.dir/Quaternion.cpp.o: CMakeFiles/CG.dir/flags.make
+CMakeFiles/CG.dir/Quaternion.cpp.o: ../Quaternion.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/CG.dir/Quaternion.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CG.dir/Quaternion.cpp.o -c /home/keltar/Desktop/Computer-Graphics/CG/Quaternion.cpp
+
+CMakeFiles/CG.dir/Quaternion.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CG.dir/Quaternion.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/keltar/Desktop/Computer-Graphics/CG/Quaternion.cpp > CMakeFiles/CG.dir/Quaternion.cpp.i
+
+CMakeFiles/CG.dir/Quaternion.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CG.dir/Quaternion.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/keltar/Desktop/Computer-Graphics/CG/Quaternion.cpp -o CMakeFiles/CG.dir/Quaternion.cpp.s
+
+CMakeFiles/CG.dir/Quaternion.cpp.o.requires:
+
+.PHONY : CMakeFiles/CG.dir/Quaternion.cpp.o.requires
+
+CMakeFiles/CG.dir/Quaternion.cpp.o.provides: CMakeFiles/CG.dir/Quaternion.cpp.o.requires
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Quaternion.cpp.o.provides.build
+.PHONY : CMakeFiles/CG.dir/Quaternion.cpp.o.provides
+
+CMakeFiles/CG.dir/Quaternion.cpp.o.provides.build: CMakeFiles/CG.dir/Quaternion.cpp.o
+
+
+CMakeFiles/CG.dir/gl_math.cpp.o: CMakeFiles/CG.dir/flags.make
+CMakeFiles/CG.dir/gl_math.cpp.o: ../gl_math.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/CG.dir/gl_math.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CG.dir/gl_math.cpp.o -c /home/keltar/Desktop/Computer-Graphics/CG/gl_math.cpp
+
+CMakeFiles/CG.dir/gl_math.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CG.dir/gl_math.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/keltar/Desktop/Computer-Graphics/CG/gl_math.cpp > CMakeFiles/CG.dir/gl_math.cpp.i
+
+CMakeFiles/CG.dir/gl_math.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CG.dir/gl_math.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/keltar/Desktop/Computer-Graphics/CG/gl_math.cpp -o CMakeFiles/CG.dir/gl_math.cpp.s
+
+CMakeFiles/CG.dir/gl_math.cpp.o.requires:
+
+.PHONY : CMakeFiles/CG.dir/gl_math.cpp.o.requires
+
+CMakeFiles/CG.dir/gl_math.cpp.o.provides: CMakeFiles/CG.dir/gl_math.cpp.o.requires
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/gl_math.cpp.o.provides.build
+.PHONY : CMakeFiles/CG.dir/gl_math.cpp.o.provides
+
+CMakeFiles/CG.dir/gl_math.cpp.o.provides.build: CMakeFiles/CG.dir/gl_math.cpp.o
+
+
 # Object files for target CG
 CG_OBJECTS = \
 "CMakeFiles/CG.dir/main.cpp.o" \
 "CMakeFiles/CG.dir/Shader.cpp.o" \
 "CMakeFiles/CG.dir/ShaderProgram.cpp.o" \
-"CMakeFiles/CG.dir/Window.cpp.o"
+"CMakeFiles/CG.dir/Window.cpp.o" \
+"CMakeFiles/CG.dir/Matrix4.cpp.o" \
+"CMakeFiles/CG.dir/Vector4.cpp.o" \
+"CMakeFiles/CG.dir/Quaternion.cpp.o" \
+"CMakeFiles/CG.dir/gl_math.cpp.o"
 
 # External object files for target CG
 CG_EXTERNAL_OBJECTS =
@@ -167,6 +267,10 @@ CG: CMakeFiles/CG.dir/main.cpp.o
 CG: CMakeFiles/CG.dir/Shader.cpp.o
 CG: CMakeFiles/CG.dir/ShaderProgram.cpp.o
 CG: CMakeFiles/CG.dir/Window.cpp.o
+CG: CMakeFiles/CG.dir/Matrix4.cpp.o
+CG: CMakeFiles/CG.dir/Vector4.cpp.o
+CG: CMakeFiles/CG.dir/Quaternion.cpp.o
+CG: CMakeFiles/CG.dir/gl_math.cpp.o
 CG: CMakeFiles/CG.dir/build.make
 CG: /usr/lib/x86_64-linux-gnu/libGLU.so
 CG: /usr/lib/x86_64-linux-gnu/libGL.so
@@ -175,7 +279,7 @@ CG: /usr/lib/x86_64-linux-gnu/libXmu.so
 CG: /usr/lib/x86_64-linux-gnu/libXi.so
 CG: /usr/lib/x86_64-linux-gnu/libGLEW.so
 CG: CMakeFiles/CG.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable CG"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable CG"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CG.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -187,6 +291,10 @@ CMakeFiles/CG.dir/requires: CMakeFiles/CG.dir/main.cpp.o.requires
 CMakeFiles/CG.dir/requires: CMakeFiles/CG.dir/Shader.cpp.o.requires
 CMakeFiles/CG.dir/requires: CMakeFiles/CG.dir/ShaderProgram.cpp.o.requires
 CMakeFiles/CG.dir/requires: CMakeFiles/CG.dir/Window.cpp.o.requires
+CMakeFiles/CG.dir/requires: CMakeFiles/CG.dir/Matrix4.cpp.o.requires
+CMakeFiles/CG.dir/requires: CMakeFiles/CG.dir/Vector4.cpp.o.requires
+CMakeFiles/CG.dir/requires: CMakeFiles/CG.dir/Quaternion.cpp.o.requires
+CMakeFiles/CG.dir/requires: CMakeFiles/CG.dir/gl_math.cpp.o.requires
 
 .PHONY : CMakeFiles/CG.dir/requires
 

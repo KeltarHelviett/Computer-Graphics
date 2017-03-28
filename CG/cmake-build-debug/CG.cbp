@@ -84,6 +84,18 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Matrix4.cpp">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Matrix4.h">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Quaternion.cpp">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Quaternion.h">
+			<Option target="CG"/>
+		</Unit>
 		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Shader.cpp">
 			<Option target="CG"/>
 		</Unit>
@@ -96,10 +108,22 @@
 		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/ShaderProgram.h">
 			<Option target="CG"/>
 		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Vector4.cpp">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Vector4.h">
+			<Option target="CG"/>
+		</Unit>
 		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Window.cpp">
 			<Option target="CG"/>
 		</Unit>
 		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Window.h">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/gl_math.cpp">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/gl_math.h">
 			<Option target="CG"/>
 		</Unit>
 		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/main.cpp">

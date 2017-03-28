@@ -123,6 +123,60 @@ CG/fast:
 	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/build
 .PHONY : CG/fast
 
+Matrix4.o: Matrix4.cpp.o
+
+.PHONY : Matrix4.o
+
+# target to build an object file
+Matrix4.cpp.o:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Matrix4.cpp.o
+.PHONY : Matrix4.cpp.o
+
+Matrix4.i: Matrix4.cpp.i
+
+.PHONY : Matrix4.i
+
+# target to preprocess a source file
+Matrix4.cpp.i:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Matrix4.cpp.i
+.PHONY : Matrix4.cpp.i
+
+Matrix4.s: Matrix4.cpp.s
+
+.PHONY : Matrix4.s
+
+# target to generate assembly for a file
+Matrix4.cpp.s:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Matrix4.cpp.s
+.PHONY : Matrix4.cpp.s
+
+Quaternion.o: Quaternion.cpp.o
+
+.PHONY : Quaternion.o
+
+# target to build an object file
+Quaternion.cpp.o:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Quaternion.cpp.o
+.PHONY : Quaternion.cpp.o
+
+Quaternion.i: Quaternion.cpp.i
+
+.PHONY : Quaternion.i
+
+# target to preprocess a source file
+Quaternion.cpp.i:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Quaternion.cpp.i
+.PHONY : Quaternion.cpp.i
+
+Quaternion.s: Quaternion.cpp.s
+
+.PHONY : Quaternion.s
+
+# target to generate assembly for a file
+Quaternion.cpp.s:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Quaternion.cpp.s
+.PHONY : Quaternion.cpp.s
+
 Shader.o: Shader.cpp.o
 
 .PHONY : Shader.o
@@ -177,6 +231,33 @@ ShaderProgram.cpp.s:
 	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/ShaderProgram.cpp.s
 .PHONY : ShaderProgram.cpp.s
 
+Vector4.o: Vector4.cpp.o
+
+.PHONY : Vector4.o
+
+# target to build an object file
+Vector4.cpp.o:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Vector4.cpp.o
+.PHONY : Vector4.cpp.o
+
+Vector4.i: Vector4.cpp.i
+
+.PHONY : Vector4.i
+
+# target to preprocess a source file
+Vector4.cpp.i:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Vector4.cpp.i
+.PHONY : Vector4.cpp.i
+
+Vector4.s: Vector4.cpp.s
+
+.PHONY : Vector4.s
+
+# target to generate assembly for a file
+Vector4.cpp.s:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Vector4.cpp.s
+.PHONY : Vector4.cpp.s
+
 Window.o: Window.cpp.o
 
 .PHONY : Window.o
@@ -203,6 +284,33 @@ Window.s: Window.cpp.s
 Window.cpp.s:
 	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Window.cpp.s
 .PHONY : Window.cpp.s
+
+gl_math.o: gl_math.cpp.o
+
+.PHONY : gl_math.o
+
+# target to build an object file
+gl_math.cpp.o:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/gl_math.cpp.o
+.PHONY : gl_math.cpp.o
+
+gl_math.i: gl_math.cpp.i
+
+.PHONY : gl_math.i
+
+# target to preprocess a source file
+gl_math.cpp.i:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/gl_math.cpp.i
+.PHONY : gl_math.cpp.i
+
+gl_math.s: gl_math.cpp.s
+
+.PHONY : gl_math.s
+
+# target to generate assembly for a file
+gl_math.cpp.s:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/gl_math.cpp.s
+.PHONY : gl_math.cpp.s
 
 main.o: main.cpp.o
 
@@ -240,15 +348,27 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... CG"
+	@echo "... Matrix4.o"
+	@echo "... Matrix4.i"
+	@echo "... Matrix4.s"
+	@echo "... Quaternion.o"
+	@echo "... Quaternion.i"
+	@echo "... Quaternion.s"
 	@echo "... Shader.o"
 	@echo "... Shader.i"
 	@echo "... Shader.s"
 	@echo "... ShaderProgram.o"
 	@echo "... ShaderProgram.i"
 	@echo "... ShaderProgram.s"
+	@echo "... Vector4.o"
+	@echo "... Vector4.i"
+	@echo "... Vector4.s"
 	@echo "... Window.o"
 	@echo "... Window.i"
 	@echo "... Window.s"
+	@echo "... gl_math.o"
+	@echo "... gl_math.i"
+	@echo "... gl_math.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
