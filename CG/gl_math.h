@@ -6,7 +6,7 @@
 #define CG_GL_MATH_H
 
 #include "Matrix4.h"
-#include "Vector4.h"
+#include "Vector.h"
 #include "Quaternion.h"
 
 Matrix4 EyeMatrix4();

@@ -5,7 +5,7 @@
 #ifndef CG_QUATERNION_H
 #define CG_QUATERNION_H
 
-#include "Vector4.h"
+#include "Vector.h"
 
 class Quaternion
 {

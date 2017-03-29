@@ -6,21 +6,33 @@
 
 #IncludeRegexTransform: 
 
+/home/keltar/Desktop/Computer-Graphics/CG/Camera.cpp
+Camera.h
+/home/keltar/Desktop/Computer-Graphics/CG/Camera.h
+
+/home/keltar/Desktop/Computer-Graphics/CG/Camera.h
+Vector.h
+/home/keltar/Desktop/Computer-Graphics/CG/Vector.h
+Matrix4.h
+/home/keltar/Desktop/Computer-Graphics/CG/Matrix4.h
+
 /home/keltar/Desktop/Computer-Graphics/CG/Matrix4.cpp
 Matrix4.h
 /home/keltar/Desktop/Computer-Graphics/CG/Matrix4.h
 
 /home/keltar/Desktop/Computer-Graphics/CG/Matrix4.h
-Vector4.h
-/home/keltar/Desktop/Computer-Graphics/CG/Vector4.h
+initializer_list
+-
+Vector.h
+/home/keltar/Desktop/Computer-Graphics/CG/Vector.h
 
 /home/keltar/Desktop/Computer-Graphics/CG/Quaternion.cpp
 Quaternion.h
 /home/keltar/Desktop/Computer-Graphics/CG/Quaternion.h
 
 /home/keltar/Desktop/Computer-Graphics/CG/Quaternion.h
-Vector4.h
-/home/keltar/Desktop/Computer-Graphics/CG/Vector4.h
+Vector.h
+/home/keltar/Desktop/Computer-Graphics/CG/Vector.h
 
 /home/keltar/Desktop/Computer-Graphics/CG/Shader.cpp
 Shader.h
@@ -48,11 +60,11 @@ GL/glut.h
 Shader.h
 /home/keltar/Desktop/Computer-Graphics/CG/Shader.h
 
-/home/keltar/Desktop/Computer-Graphics/CG/Vector4.cpp
-Vector4.h
-/home/keltar/Desktop/Computer-Graphics/CG/Vector4.h
+/home/keltar/Desktop/Computer-Graphics/CG/Vector.cpp
+Vector.h
+/home/keltar/Desktop/Computer-Graphics/CG/Vector.h
 
-/home/keltar/Desktop/Computer-Graphics/CG/Vector4.h
+/home/keltar/Desktop/Computer-Graphics/CG/Vector.h
 cmath
 -
 
@@ -77,8 +89,8 @@ gl_math.h
 /home/keltar/Desktop/Computer-Graphics/CG/gl_math.h
 Matrix4.h
 /home/keltar/Desktop/Computer-Graphics/CG/Matrix4.h
-Vector4.h
-/home/keltar/Desktop/Computer-Graphics/CG/Vector4.h
+Vector.h
+/home/keltar/Desktop/Computer-Graphics/CG/Vector.h
 Quaternion.h
 /home/keltar/Desktop/Computer-Graphics/CG/Quaternion.h
 
@@ -99,4 +111,6 @@ cmath
 -
 gl_math.h
 /home/keltar/Desktop/Computer-Graphics/CG/gl_math.h
+Camera.h
+/home/keltar/Desktop/Computer-Graphics/CG/Camera.h
 

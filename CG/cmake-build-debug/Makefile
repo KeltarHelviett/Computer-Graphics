@@ -123,6 +123,33 @@ CG/fast:
 	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/build
 .PHONY : CG/fast
 
+Camera.o: Camera.cpp.o
+
+.PHONY : Camera.o
+
+# target to build an object file
+Camera.cpp.o:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Camera.cpp.o
+.PHONY : Camera.cpp.o
+
+Camera.i: Camera.cpp.i
+
+.PHONY : Camera.i
+
+# target to preprocess a source file
+Camera.cpp.i:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Camera.cpp.i
+.PHONY : Camera.cpp.i
+
+Camera.s: Camera.cpp.s
+
+.PHONY : Camera.s
+
+# target to generate assembly for a file
+Camera.cpp.s:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Camera.cpp.s
+.PHONY : Camera.cpp.s
+
 Matrix4.o: Matrix4.cpp.o
 
 .PHONY : Matrix4.o
@@ -231,32 +258,32 @@ ShaderProgram.cpp.s:
 	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/ShaderProgram.cpp.s
 .PHONY : ShaderProgram.cpp.s
 
-Vector4.o: Vector4.cpp.o
+Vector.o: Vector.cpp.o
 
-.PHONY : Vector4.o
+.PHONY : Vector.o
 
 # target to build an object file
-Vector4.cpp.o:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Vector4.cpp.o
-.PHONY : Vector4.cpp.o
+Vector.cpp.o:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Vector.cpp.o
+.PHONY : Vector.cpp.o
 
-Vector4.i: Vector4.cpp.i
+Vector.i: Vector.cpp.i
 
-.PHONY : Vector4.i
+.PHONY : Vector.i
 
 # target to preprocess a source file
-Vector4.cpp.i:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Vector4.cpp.i
-.PHONY : Vector4.cpp.i
+Vector.cpp.i:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Vector.cpp.i
+.PHONY : Vector.cpp.i
 
-Vector4.s: Vector4.cpp.s
+Vector.s: Vector.cpp.s
 
-.PHONY : Vector4.s
+.PHONY : Vector.s
 
 # target to generate assembly for a file
-Vector4.cpp.s:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Vector4.cpp.s
-.PHONY : Vector4.cpp.s
+Vector.cpp.s:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Vector.cpp.s
+.PHONY : Vector.cpp.s
 
 Window.o: Window.cpp.o
 
@@ -348,6 +375,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... CG"
+	@echo "... Camera.o"
+	@echo "... Camera.i"
+	@echo "... Camera.s"
 	@echo "... Matrix4.o"
 	@echo "... Matrix4.i"
 	@echo "... Matrix4.s"
@@ -360,9 +390,9 @@ help:
 	@echo "... ShaderProgram.o"
 	@echo "... ShaderProgram.i"
 	@echo "... ShaderProgram.s"
-	@echo "... Vector4.o"
-	@echo "... Vector4.i"
-	@echo "... Vector4.s"
+	@echo "... Vector.o"
+	@echo "... Vector.i"
+	@echo "... Vector.s"
 	@echo "... Window.o"
 	@echo "... Window.i"
 	@echo "... Window.s"
