@@ -7,6 +7,8 @@
 #include <cmath>
 #include "gl_math.h"
 #include "Camera.h"
+#include "KeyboardEventHandler.h"
+#include "CameraEventHandler.h"
 
 #define ToRadian(x) (float)((x) * M_PI / 180.0f)
 #define ToDegree(x) ((x) * 180.0f / M_PI)
@@ -20,6 +22,9 @@ GLuint gWorldLocation;
 Matrix4 Projection, Translation, Rotattion, MScale;
 Camera Cam;
 float zMove = 0.0f;
+KeyboardEventHandler KEH;
+CameraEventHandler CEH;
+
 #define WINDOW_WIDTH 1024
 #define WINDOW_HEIGHT 768
 
@@ -133,7 +138,9 @@ void RenderScene()
     Translation = Trans(0.0, 0.0, 5.0);
     Scale += 0.004f;
     zMove += 0.0001f;
-    auto CamMove = Cam.SetPosition(0, 0, zMove);
+    Vector3 cspeed = CEH.GetCameraSpeed(KEH.keys());
+    Vector3 cpos = Cam.Position() + cspeed;
+    auto CamMove = Cam.SetPosition(cpos[0], cpos[1], cpos[2]);
     auto UVN = Cam.GetUVNMatrix();
     Matrix4 res = Projection * CamMove * UVN * Translation * Rotattion;
 
@@ -148,7 +155,15 @@ void RenderScene()
     glutSwapBuffers();
 }
 
+void KeyPressed(unsigned char key, int x, int y)
+{
+    KEH.Press(key, x, y);
+}
 
+void KeyUp(unsigned char key, int x, int y)
+{
+    KEH.Release(key, x, y);
+}
 
 int main(int argc, char *argv[])
 {
@@ -162,6 +177,8 @@ int main(int argc, char *argv[])
     Window w(1024, 768, 300, 300, "Window");
     glClearColor(1.0f, 1.0f, 1.0f, 0.0f);
     glutIdleFunc(RenderScene);
+    glutKeyboardUpFunc(KeyUp);
+    glutKeyboardFunc(KeyPressed);
     // glutDisplayFunc(RenderScene);
     GLenum res = glewInit();
     if (res != GLEW_OK)

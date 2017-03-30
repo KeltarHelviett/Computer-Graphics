@@ -40,3 +40,8 @@ Matrix4 Camera::GetUVNMatrix()
     };
 
 }
+
+Vector3 Camera::Position()
+{
+    return pos;
+}

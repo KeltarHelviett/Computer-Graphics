@@ -37,6 +37,14 @@ public:
     Vector3 Cross(Vector3 &other);
     Vector3 operator%(Vector3 &other);
 
+    Vector3 Add(Vector3 &other);
+    Vector3 operator+(Vector3 &other);
+    Vector3 &operator+=(Vector3 &other);
+
+    Vector3 Sub(Vector3 &other);
+    Vector3 operator-(Vector3 &other);
+    Vector3 &operator-=(Vector3 &other);
+
     float Length();
 
     Vector3 &Normalize();

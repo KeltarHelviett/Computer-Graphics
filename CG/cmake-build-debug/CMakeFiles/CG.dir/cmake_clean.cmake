@@ -8,6 +8,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/CG.dir/Quaternion.cpp.o"
   "CMakeFiles/CG.dir/gl_math.cpp.o"
   "CMakeFiles/CG.dir/Camera.cpp.o"
+  "CMakeFiles/CG.dir/EventHandler.cpp.o"
+  "CMakeFiles/CG.dir/Event.cpp.o"
+  "CMakeFiles/CG.dir/KeyboardEventHandler.cpp.o"
+  "CMakeFiles/CG.dir/CameraEventHandler.cpp.o"
   "CG.pdb"
   "CG"
 )

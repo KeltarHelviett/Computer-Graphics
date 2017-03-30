@@ -150,6 +150,114 @@ Camera.cpp.s:
 	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Camera.cpp.s
 .PHONY : Camera.cpp.s
 
+CameraEventHandler.o: CameraEventHandler.cpp.o
+
+.PHONY : CameraEventHandler.o
+
+# target to build an object file
+CameraEventHandler.cpp.o:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/CameraEventHandler.cpp.o
+.PHONY : CameraEventHandler.cpp.o
+
+CameraEventHandler.i: CameraEventHandler.cpp.i
+
+.PHONY : CameraEventHandler.i
+
+# target to preprocess a source file
+CameraEventHandler.cpp.i:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/CameraEventHandler.cpp.i
+.PHONY : CameraEventHandler.cpp.i
+
+CameraEventHandler.s: CameraEventHandler.cpp.s
+
+.PHONY : CameraEventHandler.s
+
+# target to generate assembly for a file
+CameraEventHandler.cpp.s:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/CameraEventHandler.cpp.s
+.PHONY : CameraEventHandler.cpp.s
+
+Event.o: Event.cpp.o
+
+.PHONY : Event.o
+
+# target to build an object file
+Event.cpp.o:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Event.cpp.o
+.PHONY : Event.cpp.o
+
+Event.i: Event.cpp.i
+
+.PHONY : Event.i
+
+# target to preprocess a source file
+Event.cpp.i:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Event.cpp.i
+.PHONY : Event.cpp.i
+
+Event.s: Event.cpp.s
+
+.PHONY : Event.s
+
+# target to generate assembly for a file
+Event.cpp.s:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Event.cpp.s
+.PHONY : Event.cpp.s
+
+EventHandler.o: EventHandler.cpp.o
+
+.PHONY : EventHandler.o
+
+# target to build an object file
+EventHandler.cpp.o:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/EventHandler.cpp.o
+.PHONY : EventHandler.cpp.o
+
+EventHandler.i: EventHandler.cpp.i
+
+.PHONY : EventHandler.i
+
+# target to preprocess a source file
+EventHandler.cpp.i:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/EventHandler.cpp.i
+.PHONY : EventHandler.cpp.i
+
+EventHandler.s: EventHandler.cpp.s
+
+.PHONY : EventHandler.s
+
+# target to generate assembly for a file
+EventHandler.cpp.s:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/EventHandler.cpp.s
+.PHONY : EventHandler.cpp.s
+
+KeyboardEventHandler.o: KeyboardEventHandler.cpp.o
+
+.PHONY : KeyboardEventHandler.o
+
+# target to build an object file
+KeyboardEventHandler.cpp.o:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/KeyboardEventHandler.cpp.o
+.PHONY : KeyboardEventHandler.cpp.o
+
+KeyboardEventHandler.i: KeyboardEventHandler.cpp.i
+
+.PHONY : KeyboardEventHandler.i
+
+# target to preprocess a source file
+KeyboardEventHandler.cpp.i:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/KeyboardEventHandler.cpp.i
+.PHONY : KeyboardEventHandler.cpp.i
+
+KeyboardEventHandler.s: KeyboardEventHandler.cpp.s
+
+.PHONY : KeyboardEventHandler.s
+
+# target to generate assembly for a file
+KeyboardEventHandler.cpp.s:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/KeyboardEventHandler.cpp.s
+.PHONY : KeyboardEventHandler.cpp.s
+
 Matrix4.o: Matrix4.cpp.o
 
 .PHONY : Matrix4.o
@@ -378,6 +486,18 @@ help:
 	@echo "... Camera.o"
 	@echo "... Camera.i"
 	@echo "... Camera.s"
+	@echo "... CameraEventHandler.o"
+	@echo "... CameraEventHandler.i"
+	@echo "... CameraEventHandler.s"
+	@echo "... Event.o"
+	@echo "... Event.i"
+	@echo "... Event.s"
+	@echo "... EventHandler.o"
+	@echo "... EventHandler.i"
+	@echo "... EventHandler.s"
+	@echo "... KeyboardEventHandler.o"
+	@echo "... KeyboardEventHandler.i"
+	@echo "... KeyboardEventHandler.s"
 	@echo "... Matrix4.o"
 	@echo "... Matrix4.i"
 	@echo "... Matrix4.s"

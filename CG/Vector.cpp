@@ -118,3 +118,35 @@ float& Vector3::operator[](unsigned int index)
     return _vec[index];
 }
 
+Vector3 Vector3::Add(Vector3 &other)
+{
+    return Vector3(_vec[0] + other[0], _vec[1] + other[1], _vec[2] + other[2]);
+}
+
+Vector3 Vector3::operator+(Vector3 &other)
+{
+    return this->Add(other);
+}
+
+Vector3 &Vector3::operator+=(Vector3 &other)
+{
+    *this = this->Add(other);
+    return *this;
+}
+
+Vector3 Vector3::Sub(Vector3 &other)
+{
+    return Vector3(_vec[0] - other[0], _vec[1] - other[1], _vec[2] - other[2]);
+}
+
+Vector3 Vector3::operator-(Vector3 &other)
+{
+    return this->Sub(other);
+}
+
+Vector3 &Vector3::operator-=(Vector3 &other)
+{
+    *this = this->Sub(other);
+    return *this;
+}
+

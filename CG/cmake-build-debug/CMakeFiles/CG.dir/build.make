@@ -273,6 +273,102 @@ CMakeFiles/CG.dir/Camera.cpp.o.provides: CMakeFiles/CG.dir/Camera.cpp.o.requires
 CMakeFiles/CG.dir/Camera.cpp.o.provides.build: CMakeFiles/CG.dir/Camera.cpp.o
 
 
+CMakeFiles/CG.dir/EventHandler.cpp.o: CMakeFiles/CG.dir/flags.make
+CMakeFiles/CG.dir/EventHandler.cpp.o: ../EventHandler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/CG.dir/EventHandler.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CG.dir/EventHandler.cpp.o -c /home/keltar/Desktop/Computer-Graphics/CG/EventHandler.cpp
+
+CMakeFiles/CG.dir/EventHandler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CG.dir/EventHandler.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/keltar/Desktop/Computer-Graphics/CG/EventHandler.cpp > CMakeFiles/CG.dir/EventHandler.cpp.i
+
+CMakeFiles/CG.dir/EventHandler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CG.dir/EventHandler.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/keltar/Desktop/Computer-Graphics/CG/EventHandler.cpp -o CMakeFiles/CG.dir/EventHandler.cpp.s
+
+CMakeFiles/CG.dir/EventHandler.cpp.o.requires:
+
+.PHONY : CMakeFiles/CG.dir/EventHandler.cpp.o.requires
+
+CMakeFiles/CG.dir/EventHandler.cpp.o.provides: CMakeFiles/CG.dir/EventHandler.cpp.o.requires
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/EventHandler.cpp.o.provides.build
+.PHONY : CMakeFiles/CG.dir/EventHandler.cpp.o.provides
+
+CMakeFiles/CG.dir/EventHandler.cpp.o.provides.build: CMakeFiles/CG.dir/EventHandler.cpp.o
+
+
+CMakeFiles/CG.dir/Event.cpp.o: CMakeFiles/CG.dir/flags.make
+CMakeFiles/CG.dir/Event.cpp.o: ../Event.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/CG.dir/Event.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CG.dir/Event.cpp.o -c /home/keltar/Desktop/Computer-Graphics/CG/Event.cpp
+
+CMakeFiles/CG.dir/Event.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CG.dir/Event.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/keltar/Desktop/Computer-Graphics/CG/Event.cpp > CMakeFiles/CG.dir/Event.cpp.i
+
+CMakeFiles/CG.dir/Event.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CG.dir/Event.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/keltar/Desktop/Computer-Graphics/CG/Event.cpp -o CMakeFiles/CG.dir/Event.cpp.s
+
+CMakeFiles/CG.dir/Event.cpp.o.requires:
+
+.PHONY : CMakeFiles/CG.dir/Event.cpp.o.requires
+
+CMakeFiles/CG.dir/Event.cpp.o.provides: CMakeFiles/CG.dir/Event.cpp.o.requires
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Event.cpp.o.provides.build
+.PHONY : CMakeFiles/CG.dir/Event.cpp.o.provides
+
+CMakeFiles/CG.dir/Event.cpp.o.provides.build: CMakeFiles/CG.dir/Event.cpp.o
+
+
+CMakeFiles/CG.dir/KeyboardEventHandler.cpp.o: CMakeFiles/CG.dir/flags.make
+CMakeFiles/CG.dir/KeyboardEventHandler.cpp.o: ../KeyboardEventHandler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/CG.dir/KeyboardEventHandler.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CG.dir/KeyboardEventHandler.cpp.o -c /home/keltar/Desktop/Computer-Graphics/CG/KeyboardEventHandler.cpp
+
+CMakeFiles/CG.dir/KeyboardEventHandler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CG.dir/KeyboardEventHandler.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/keltar/Desktop/Computer-Graphics/CG/KeyboardEventHandler.cpp > CMakeFiles/CG.dir/KeyboardEventHandler.cpp.i
+
+CMakeFiles/CG.dir/KeyboardEventHandler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CG.dir/KeyboardEventHandler.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/keltar/Desktop/Computer-Graphics/CG/KeyboardEventHandler.cpp -o CMakeFiles/CG.dir/KeyboardEventHandler.cpp.s
+
+CMakeFiles/CG.dir/KeyboardEventHandler.cpp.o.requires:
+
+.PHONY : CMakeFiles/CG.dir/KeyboardEventHandler.cpp.o.requires
+
+CMakeFiles/CG.dir/KeyboardEventHandler.cpp.o.provides: CMakeFiles/CG.dir/KeyboardEventHandler.cpp.o.requires
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/KeyboardEventHandler.cpp.o.provides.build
+.PHONY : CMakeFiles/CG.dir/KeyboardEventHandler.cpp.o.provides
+
+CMakeFiles/CG.dir/KeyboardEventHandler.cpp.o.provides.build: CMakeFiles/CG.dir/KeyboardEventHandler.cpp.o
+
+
+CMakeFiles/CG.dir/CameraEventHandler.cpp.o: CMakeFiles/CG.dir/flags.make
+CMakeFiles/CG.dir/CameraEventHandler.cpp.o: ../CameraEventHandler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/CG.dir/CameraEventHandler.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CG.dir/CameraEventHandler.cpp.o -c /home/keltar/Desktop/Computer-Graphics/CG/CameraEventHandler.cpp
+
+CMakeFiles/CG.dir/CameraEventHandler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CG.dir/CameraEventHandler.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/keltar/Desktop/Computer-Graphics/CG/CameraEventHandler.cpp > CMakeFiles/CG.dir/CameraEventHandler.cpp.i
+
+CMakeFiles/CG.dir/CameraEventHandler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CG.dir/CameraEventHandler.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/keltar/Desktop/Computer-Graphics/CG/CameraEventHandler.cpp -o CMakeFiles/CG.dir/CameraEventHandler.cpp.s
+
+CMakeFiles/CG.dir/CameraEventHandler.cpp.o.requires:
+
+.PHONY : CMakeFiles/CG.dir/CameraEventHandler.cpp.o.requires
+
+CMakeFiles/CG.dir/CameraEventHandler.cpp.o.provides: CMakeFiles/CG.dir/CameraEventHandler.cpp.o.requires
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/CameraEventHandler.cpp.o.provides.build
+.PHONY : CMakeFiles/CG.dir/CameraEventHandler.cpp.o.provides
+
+CMakeFiles/CG.dir/CameraEventHandler.cpp.o.provides.build: CMakeFiles/CG.dir/CameraEventHandler.cpp.o
+
+
 # Object files for target CG
 CG_OBJECTS = \
 "CMakeFiles/CG.dir/main.cpp.o" \
@@ -283,7 +379,11 @@ CG_OBJECTS = \
 "CMakeFiles/CG.dir/Vector.cpp.o" \
 "CMakeFiles/CG.dir/Quaternion.cpp.o" \
 "CMakeFiles/CG.dir/gl_math.cpp.o" \
-"CMakeFiles/CG.dir/Camera.cpp.o"
+"CMakeFiles/CG.dir/Camera.cpp.o" \
+"CMakeFiles/CG.dir/EventHandler.cpp.o" \
+"CMakeFiles/CG.dir/Event.cpp.o" \
+"CMakeFiles/CG.dir/KeyboardEventHandler.cpp.o" \
+"CMakeFiles/CG.dir/CameraEventHandler.cpp.o"
 
 # External object files for target CG
 CG_EXTERNAL_OBJECTS =
@@ -297,6 +397,10 @@ CG: CMakeFiles/CG.dir/Vector.cpp.o
 CG: CMakeFiles/CG.dir/Quaternion.cpp.o
 CG: CMakeFiles/CG.dir/gl_math.cpp.o
 CG: CMakeFiles/CG.dir/Camera.cpp.o
+CG: CMakeFiles/CG.dir/EventHandler.cpp.o
+CG: CMakeFiles/CG.dir/Event.cpp.o
+CG: CMakeFiles/CG.dir/KeyboardEventHandler.cpp.o
+CG: CMakeFiles/CG.dir/CameraEventHandler.cpp.o
 CG: CMakeFiles/CG.dir/build.make
 CG: /usr/lib/x86_64-linux-gnu/libGLU.so
 CG: /usr/lib/x86_64-linux-gnu/libGL.so
@@ -305,7 +409,7 @@ CG: /usr/lib/x86_64-linux-gnu/libXmu.so
 CG: /usr/lib/x86_64-linux-gnu/libXi.so
 CG: /usr/lib/x86_64-linux-gnu/libGLEW.so
 CG: CMakeFiles/CG.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable CG"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable CG"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CG.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -322,6 +426,10 @@ CMakeFiles/CG.dir/requires: CMakeFiles/CG.dir/Vector.cpp.o.requires
 CMakeFiles/CG.dir/requires: CMakeFiles/CG.dir/Quaternion.cpp.o.requires
 CMakeFiles/CG.dir/requires: CMakeFiles/CG.dir/gl_math.cpp.o.requires
 CMakeFiles/CG.dir/requires: CMakeFiles/CG.dir/Camera.cpp.o.requires
+CMakeFiles/CG.dir/requires: CMakeFiles/CG.dir/EventHandler.cpp.o.requires
+CMakeFiles/CG.dir/requires: CMakeFiles/CG.dir/Event.cpp.o.requires
+CMakeFiles/CG.dir/requires: CMakeFiles/CG.dir/KeyboardEventHandler.cpp.o.requires
+CMakeFiles/CG.dir/requires: CMakeFiles/CG.dir/CameraEventHandler.cpp.o.requires
 
 .PHONY : CMakeFiles/CG.dir/requires
 

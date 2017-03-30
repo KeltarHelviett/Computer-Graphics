@@ -16,6 +16,8 @@ public:
 
     Matrix4 SetPosition(float x, float y, float z);
     Matrix4 GetUVNMatrix();
+
+    Vector3 Position();
 private:
     Vector3 up, target, pos;
 };

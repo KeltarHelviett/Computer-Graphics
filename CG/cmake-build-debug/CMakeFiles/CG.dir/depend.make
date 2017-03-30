@@ -6,6 +6,24 @@ CMakeFiles/CG.dir/Camera.cpp.o: ../Camera.h
 CMakeFiles/CG.dir/Camera.cpp.o: ../Matrix4.h
 CMakeFiles/CG.dir/Camera.cpp.o: ../Vector.h
 
+CMakeFiles/CG.dir/CameraEventHandler.cpp.o: ../CameraEventHandler.cpp
+CMakeFiles/CG.dir/CameraEventHandler.cpp.o: ../CameraEventHandler.h
+CMakeFiles/CG.dir/CameraEventHandler.cpp.o: ../Event.h
+CMakeFiles/CG.dir/CameraEventHandler.cpp.o: ../EventHandler.h
+CMakeFiles/CG.dir/CameraEventHandler.cpp.o: ../Vector.h
+
+CMakeFiles/CG.dir/Event.cpp.o: ../Event.cpp
+CMakeFiles/CG.dir/Event.cpp.o: ../Event.h
+
+CMakeFiles/CG.dir/EventHandler.cpp.o: ../Event.h
+CMakeFiles/CG.dir/EventHandler.cpp.o: ../EventHandler.cpp
+CMakeFiles/CG.dir/EventHandler.cpp.o: ../EventHandler.h
+
+CMakeFiles/CG.dir/KeyboardEventHandler.cpp.o: ../Event.h
+CMakeFiles/CG.dir/KeyboardEventHandler.cpp.o: ../EventHandler.h
+CMakeFiles/CG.dir/KeyboardEventHandler.cpp.o: ../KeyboardEventHandler.cpp
+CMakeFiles/CG.dir/KeyboardEventHandler.cpp.o: ../KeyboardEventHandler.h
+
 CMakeFiles/CG.dir/Matrix4.cpp.o: ../Matrix4.cpp
 CMakeFiles/CG.dir/Matrix4.cpp.o: ../Matrix4.h
 CMakeFiles/CG.dir/Matrix4.cpp.o: ../Vector.h
@@ -34,6 +52,10 @@ CMakeFiles/CG.dir/gl_math.cpp.o: ../gl_math.cpp
 CMakeFiles/CG.dir/gl_math.cpp.o: ../gl_math.h
 
 CMakeFiles/CG.dir/main.cpp.o: ../Camera.h
+CMakeFiles/CG.dir/main.cpp.o: ../CameraEventHandler.h
+CMakeFiles/CG.dir/main.cpp.o: ../Event.h
+CMakeFiles/CG.dir/main.cpp.o: ../EventHandler.h
+CMakeFiles/CG.dir/main.cpp.o: ../KeyboardEventHandler.h
 CMakeFiles/CG.dir/main.cpp.o: ../Matrix4.h
 CMakeFiles/CG.dir/main.cpp.o: ../Quaternion.h
 CMakeFiles/CG.dir/main.cpp.o: ../Shader.h

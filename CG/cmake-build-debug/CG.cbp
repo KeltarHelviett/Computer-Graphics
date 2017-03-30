@@ -90,6 +90,30 @@
 		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Camera.h">
 			<Option target="CG"/>
 		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/CameraEventHandler.cpp">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/CameraEventHandler.h">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Event.cpp">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Event.h">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/EventHandler.cpp">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/EventHandler.h">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/KeyboardEventHandler.cpp">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/KeyboardEventHandler.h">
+			<Option target="CG"/>
+		</Unit>
 		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Matrix4.cpp">
 			<Option target="CG"/>
 		</Unit>

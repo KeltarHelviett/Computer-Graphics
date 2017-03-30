@@ -5,6 +5,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/keltar/Desktop/Computer-Graphics/CG/Camera.cpp" "/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/CMakeFiles/CG.dir/Camera.cpp.o"
+  "/home/keltar/Desktop/Computer-Graphics/CG/CameraEventHandler.cpp" "/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/CMakeFiles/CG.dir/CameraEventHandler.cpp.o"
+  "/home/keltar/Desktop/Computer-Graphics/CG/Event.cpp" "/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/CMakeFiles/CG.dir/Event.cpp.o"
+  "/home/keltar/Desktop/Computer-Graphics/CG/EventHandler.cpp" "/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/CMakeFiles/CG.dir/EventHandler.cpp.o"
+  "/home/keltar/Desktop/Computer-Graphics/CG/KeyboardEventHandler.cpp" "/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/CMakeFiles/CG.dir/KeyboardEventHandler.cpp.o"
   "/home/keltar/Desktop/Computer-Graphics/CG/Matrix4.cpp" "/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/CMakeFiles/CG.dir/Matrix4.cpp.o"
   "/home/keltar/Desktop/Computer-Graphics/CG/Quaternion.cpp" "/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/CMakeFiles/CG.dir/Quaternion.cpp.o"
   "/home/keltar/Desktop/Computer-Graphics/CG/Shader.cpp" "/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/CMakeFiles/CG.dir/Shader.cpp.o"

@@ -6,6 +6,24 @@ CMakeFiles/CG.dir/Camera.cpp.o
  /home/keltar/Desktop/Computer-Graphics/CG/Camera.h
  /home/keltar/Desktop/Computer-Graphics/CG/Matrix4.h
  /home/keltar/Desktop/Computer-Graphics/CG/Vector.h
+CMakeFiles/CG.dir/CameraEventHandler.cpp.o
+ /home/keltar/Desktop/Computer-Graphics/CG/CameraEventHandler.cpp
+ /home/keltar/Desktop/Computer-Graphics/CG/CameraEventHandler.h
+ /home/keltar/Desktop/Computer-Graphics/CG/Event.h
+ /home/keltar/Desktop/Computer-Graphics/CG/EventHandler.h
+ /home/keltar/Desktop/Computer-Graphics/CG/Vector.h
+CMakeFiles/CG.dir/Event.cpp.o
+ /home/keltar/Desktop/Computer-Graphics/CG/Event.cpp
+ /home/keltar/Desktop/Computer-Graphics/CG/Event.h
+CMakeFiles/CG.dir/EventHandler.cpp.o
+ /home/keltar/Desktop/Computer-Graphics/CG/Event.h
+ /home/keltar/Desktop/Computer-Graphics/CG/EventHandler.cpp
+ /home/keltar/Desktop/Computer-Graphics/CG/EventHandler.h
+CMakeFiles/CG.dir/KeyboardEventHandler.cpp.o
+ /home/keltar/Desktop/Computer-Graphics/CG/Event.h
+ /home/keltar/Desktop/Computer-Graphics/CG/EventHandler.h
+ /home/keltar/Desktop/Computer-Graphics/CG/KeyboardEventHandler.cpp
+ /home/keltar/Desktop/Computer-Graphics/CG/KeyboardEventHandler.h
 CMakeFiles/CG.dir/Matrix4.cpp.o
  /home/keltar/Desktop/Computer-Graphics/CG/Matrix4.cpp
  /home/keltar/Desktop/Computer-Graphics/CG/Matrix4.h
@@ -35,6 +53,10 @@ CMakeFiles/CG.dir/gl_math.cpp.o
  /home/keltar/Desktop/Computer-Graphics/CG/gl_math.h
 CMakeFiles/CG.dir/main.cpp.o
  /home/keltar/Desktop/Computer-Graphics/CG/Camera.h
+ /home/keltar/Desktop/Computer-Graphics/CG/CameraEventHandler.h
+ /home/keltar/Desktop/Computer-Graphics/CG/Event.h
+ /home/keltar/Desktop/Computer-Graphics/CG/EventHandler.h
+ /home/keltar/Desktop/Computer-Graphics/CG/KeyboardEventHandler.h
  /home/keltar/Desktop/Computer-Graphics/CG/Matrix4.h
  /home/keltar/Desktop/Computer-Graphics/CG/Quaternion.h
  /home/keltar/Desktop/Computer-Graphics/CG/Shader.h
