@@ -285,6 +285,87 @@ Matrix4.cpp.s:
 	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Matrix4.cpp.s
 .PHONY : Matrix4.cpp.s
 
+MouseEventArgs.o: MouseEventArgs.cpp.o
+
+.PHONY : MouseEventArgs.o
+
+# target to build an object file
+MouseEventArgs.cpp.o:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/MouseEventArgs.cpp.o
+.PHONY : MouseEventArgs.cpp.o
+
+MouseEventArgs.i: MouseEventArgs.cpp.i
+
+.PHONY : MouseEventArgs.i
+
+# target to preprocess a source file
+MouseEventArgs.cpp.i:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/MouseEventArgs.cpp.i
+.PHONY : MouseEventArgs.cpp.i
+
+MouseEventArgs.s: MouseEventArgs.cpp.s
+
+.PHONY : MouseEventArgs.s
+
+# target to generate assembly for a file
+MouseEventArgs.cpp.s:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/MouseEventArgs.cpp.s
+.PHONY : MouseEventArgs.cpp.s
+
+MouseEventHandler.o: MouseEventHandler.cpp.o
+
+.PHONY : MouseEventHandler.o
+
+# target to build an object file
+MouseEventHandler.cpp.o:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/MouseEventHandler.cpp.o
+.PHONY : MouseEventHandler.cpp.o
+
+MouseEventHandler.i: MouseEventHandler.cpp.i
+
+.PHONY : MouseEventHandler.i
+
+# target to preprocess a source file
+MouseEventHandler.cpp.i:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/MouseEventHandler.cpp.i
+.PHONY : MouseEventHandler.cpp.i
+
+MouseEventHandler.s: MouseEventHandler.cpp.s
+
+.PHONY : MouseEventHandler.s
+
+# target to generate assembly for a file
+MouseEventHandler.cpp.s:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/MouseEventHandler.cpp.s
+.PHONY : MouseEventHandler.cpp.s
+
+Point.o: Point.cpp.o
+
+.PHONY : Point.o
+
+# target to build an object file
+Point.cpp.o:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Point.cpp.o
+.PHONY : Point.cpp.o
+
+Point.i: Point.cpp.i
+
+.PHONY : Point.i
+
+# target to preprocess a source file
+Point.cpp.i:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Point.cpp.i
+.PHONY : Point.cpp.i
+
+Point.s: Point.cpp.s
+
+.PHONY : Point.s
+
+# target to generate assembly for a file
+Point.cpp.s:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Point.cpp.s
+.PHONY : Point.cpp.s
+
 Quaternion.o: Quaternion.cpp.o
 
 .PHONY : Quaternion.o
@@ -501,6 +582,15 @@ help:
 	@echo "... Matrix4.o"
 	@echo "... Matrix4.i"
 	@echo "... Matrix4.s"
+	@echo "... MouseEventArgs.o"
+	@echo "... MouseEventArgs.i"
+	@echo "... MouseEventArgs.s"
+	@echo "... MouseEventHandler.o"
+	@echo "... MouseEventHandler.i"
+	@echo "... MouseEventHandler.s"
+	@echo "... Point.o"
+	@echo "... Point.i"
+	@echo "... Point.s"
 	@echo "... Quaternion.o"
 	@echo "... Quaternion.i"
 	@echo "... Quaternion.s"

@@ -23,7 +23,7 @@ Matrix4::Matrix4(std::initializer_list<std::initializer_list<float>> mat)
     }
 }
 
-Matrix4 Matrix4::Mult(Matrix4 &other)
+Matrix4 Matrix4::Mult(const Matrix4 &other)
 {
     Matrix4 res;
     for (int i = 0; i < 4; ++i)
@@ -40,12 +40,12 @@ Matrix4 Matrix4::Mult(Matrix4 &other)
     return res;
 }
 
-Matrix4 Matrix4::operator*(Matrix4 &other)
+Matrix4 Matrix4::operator*(const Matrix4 &other)
 {
     return this->Mult(other);
 }
 
-Matrix4 Matrix4::Add(Matrix4 &other)
+Matrix4 Matrix4::Add(const Matrix4 &other)
 {
     Matrix4 res;
     for (int i = 0; i < 4; i++)
@@ -80,6 +80,11 @@ Vector4 Matrix4::operator*(Vector4 &other)
 float *Matrix4::operator[](unsigned int index)
 {
     return &_mat[0][0] + index * 4;
+}
+
+Matrix4 Matrix4::operator+(const Matrix4 &other)
+{
+    return this->Add(other);
 }
 
 

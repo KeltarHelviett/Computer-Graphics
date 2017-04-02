@@ -10,9 +10,10 @@ public:
     Matrix4();
     Matrix4(std::initializer_list<std::initializer_list<float>> mat);
 
-    Matrix4 Mult(Matrix4 &other);
-    Matrix4 operator*(Matrix4 &other);
-    Matrix4 Add(Matrix4 &other);
+    Matrix4 Mult(const Matrix4 &other);
+    Matrix4 operator*(const Matrix4 &other);
+    Matrix4 Add(const Matrix4 &other);
+    Matrix4 operator+(const Matrix4 &other);
 
     Vector4 Mult(Vector4 &other);
     Vector4 operator*(Vector4 &other);

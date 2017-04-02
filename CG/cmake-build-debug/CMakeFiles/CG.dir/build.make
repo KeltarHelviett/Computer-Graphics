@@ -369,6 +369,78 @@ CMakeFiles/CG.dir/CameraEventHandler.cpp.o.provides: CMakeFiles/CG.dir/CameraEve
 CMakeFiles/CG.dir/CameraEventHandler.cpp.o.provides.build: CMakeFiles/CG.dir/CameraEventHandler.cpp.o
 
 
+CMakeFiles/CG.dir/MouseEventHandler.cpp.o: CMakeFiles/CG.dir/flags.make
+CMakeFiles/CG.dir/MouseEventHandler.cpp.o: ../MouseEventHandler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/CG.dir/MouseEventHandler.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CG.dir/MouseEventHandler.cpp.o -c /home/keltar/Desktop/Computer-Graphics/CG/MouseEventHandler.cpp
+
+CMakeFiles/CG.dir/MouseEventHandler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CG.dir/MouseEventHandler.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/keltar/Desktop/Computer-Graphics/CG/MouseEventHandler.cpp > CMakeFiles/CG.dir/MouseEventHandler.cpp.i
+
+CMakeFiles/CG.dir/MouseEventHandler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CG.dir/MouseEventHandler.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/keltar/Desktop/Computer-Graphics/CG/MouseEventHandler.cpp -o CMakeFiles/CG.dir/MouseEventHandler.cpp.s
+
+CMakeFiles/CG.dir/MouseEventHandler.cpp.o.requires:
+
+.PHONY : CMakeFiles/CG.dir/MouseEventHandler.cpp.o.requires
+
+CMakeFiles/CG.dir/MouseEventHandler.cpp.o.provides: CMakeFiles/CG.dir/MouseEventHandler.cpp.o.requires
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/MouseEventHandler.cpp.o.provides.build
+.PHONY : CMakeFiles/CG.dir/MouseEventHandler.cpp.o.provides
+
+CMakeFiles/CG.dir/MouseEventHandler.cpp.o.provides.build: CMakeFiles/CG.dir/MouseEventHandler.cpp.o
+
+
+CMakeFiles/CG.dir/MouseEventArgs.cpp.o: CMakeFiles/CG.dir/flags.make
+CMakeFiles/CG.dir/MouseEventArgs.cpp.o: ../MouseEventArgs.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/CG.dir/MouseEventArgs.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CG.dir/MouseEventArgs.cpp.o -c /home/keltar/Desktop/Computer-Graphics/CG/MouseEventArgs.cpp
+
+CMakeFiles/CG.dir/MouseEventArgs.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CG.dir/MouseEventArgs.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/keltar/Desktop/Computer-Graphics/CG/MouseEventArgs.cpp > CMakeFiles/CG.dir/MouseEventArgs.cpp.i
+
+CMakeFiles/CG.dir/MouseEventArgs.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CG.dir/MouseEventArgs.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/keltar/Desktop/Computer-Graphics/CG/MouseEventArgs.cpp -o CMakeFiles/CG.dir/MouseEventArgs.cpp.s
+
+CMakeFiles/CG.dir/MouseEventArgs.cpp.o.requires:
+
+.PHONY : CMakeFiles/CG.dir/MouseEventArgs.cpp.o.requires
+
+CMakeFiles/CG.dir/MouseEventArgs.cpp.o.provides: CMakeFiles/CG.dir/MouseEventArgs.cpp.o.requires
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/MouseEventArgs.cpp.o.provides.build
+.PHONY : CMakeFiles/CG.dir/MouseEventArgs.cpp.o.provides
+
+CMakeFiles/CG.dir/MouseEventArgs.cpp.o.provides.build: CMakeFiles/CG.dir/MouseEventArgs.cpp.o
+
+
+CMakeFiles/CG.dir/Point.cpp.o: CMakeFiles/CG.dir/flags.make
+CMakeFiles/CG.dir/Point.cpp.o: ../Point.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/CG.dir/Point.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CG.dir/Point.cpp.o -c /home/keltar/Desktop/Computer-Graphics/CG/Point.cpp
+
+CMakeFiles/CG.dir/Point.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CG.dir/Point.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/keltar/Desktop/Computer-Graphics/CG/Point.cpp > CMakeFiles/CG.dir/Point.cpp.i
+
+CMakeFiles/CG.dir/Point.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CG.dir/Point.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/keltar/Desktop/Computer-Graphics/CG/Point.cpp -o CMakeFiles/CG.dir/Point.cpp.s
+
+CMakeFiles/CG.dir/Point.cpp.o.requires:
+
+.PHONY : CMakeFiles/CG.dir/Point.cpp.o.requires
+
+CMakeFiles/CG.dir/Point.cpp.o.provides: CMakeFiles/CG.dir/Point.cpp.o.requires
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Point.cpp.o.provides.build
+.PHONY : CMakeFiles/CG.dir/Point.cpp.o.provides
+
+CMakeFiles/CG.dir/Point.cpp.o.provides.build: CMakeFiles/CG.dir/Point.cpp.o
+
+
 # Object files for target CG
 CG_OBJECTS = \
 "CMakeFiles/CG.dir/main.cpp.o" \
@@ -383,7 +455,10 @@ CG_OBJECTS = \
 "CMakeFiles/CG.dir/EventHandler.cpp.o" \
 "CMakeFiles/CG.dir/Event.cpp.o" \
 "CMakeFiles/CG.dir/KeyboardEventHandler.cpp.o" \
-"CMakeFiles/CG.dir/CameraEventHandler.cpp.o"
+"CMakeFiles/CG.dir/CameraEventHandler.cpp.o" \
+"CMakeFiles/CG.dir/MouseEventHandler.cpp.o" \
+"CMakeFiles/CG.dir/MouseEventArgs.cpp.o" \
+"CMakeFiles/CG.dir/Point.cpp.o"
 
 # External object files for target CG
 CG_EXTERNAL_OBJECTS =
@@ -401,6 +476,9 @@ CG: CMakeFiles/CG.dir/EventHandler.cpp.o
 CG: CMakeFiles/CG.dir/Event.cpp.o
 CG: CMakeFiles/CG.dir/KeyboardEventHandler.cpp.o
 CG: CMakeFiles/CG.dir/CameraEventHandler.cpp.o
+CG: CMakeFiles/CG.dir/MouseEventHandler.cpp.o
+CG: CMakeFiles/CG.dir/MouseEventArgs.cpp.o
+CG: CMakeFiles/CG.dir/Point.cpp.o
 CG: CMakeFiles/CG.dir/build.make
 CG: /usr/lib/x86_64-linux-gnu/libGLU.so
 CG: /usr/lib/x86_64-linux-gnu/libGL.so
@@ -409,7 +487,7 @@ CG: /usr/lib/x86_64-linux-gnu/libXmu.so
 CG: /usr/lib/x86_64-linux-gnu/libXi.so
 CG: /usr/lib/x86_64-linux-gnu/libGLEW.so
 CG: CMakeFiles/CG.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable CG"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable CG"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CG.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -430,6 +508,9 @@ CMakeFiles/CG.dir/requires: CMakeFiles/CG.dir/EventHandler.cpp.o.requires
 CMakeFiles/CG.dir/requires: CMakeFiles/CG.dir/Event.cpp.o.requires
 CMakeFiles/CG.dir/requires: CMakeFiles/CG.dir/KeyboardEventHandler.cpp.o.requires
 CMakeFiles/CG.dir/requires: CMakeFiles/CG.dir/CameraEventHandler.cpp.o.requires
+CMakeFiles/CG.dir/requires: CMakeFiles/CG.dir/MouseEventHandler.cpp.o.requires
+CMakeFiles/CG.dir/requires: CMakeFiles/CG.dir/MouseEventArgs.cpp.o.requires
+CMakeFiles/CG.dir/requires: CMakeFiles/CG.dir/Point.cpp.o.requires
 
 .PHONY : CMakeFiles/CG.dir/requires
 

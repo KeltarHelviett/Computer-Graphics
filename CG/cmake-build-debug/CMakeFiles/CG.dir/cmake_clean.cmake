@@ -12,6 +12,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/CG.dir/Event.cpp.o"
   "CMakeFiles/CG.dir/KeyboardEventHandler.cpp.o"
   "CMakeFiles/CG.dir/CameraEventHandler.cpp.o"
+  "CMakeFiles/CG.dir/MouseEventHandler.cpp.o"
+  "CMakeFiles/CG.dir/MouseEventArgs.cpp.o"
+  "CMakeFiles/CG.dir/Point.cpp.o"
   "CG.pdb"
   "CG"
 )

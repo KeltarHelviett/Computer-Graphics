@@ -5,12 +5,17 @@ CMakeFiles/CG.dir/Camera.cpp.o
  /home/keltar/Desktop/Computer-Graphics/CG/Camera.cpp
  /home/keltar/Desktop/Computer-Graphics/CG/Camera.h
  /home/keltar/Desktop/Computer-Graphics/CG/Matrix4.h
+ /home/keltar/Desktop/Computer-Graphics/CG/Point.h
+ /home/keltar/Desktop/Computer-Graphics/CG/Quaternion.h
  /home/keltar/Desktop/Computer-Graphics/CG/Vector.h
 CMakeFiles/CG.dir/CameraEventHandler.cpp.o
  /home/keltar/Desktop/Computer-Graphics/CG/CameraEventHandler.cpp
  /home/keltar/Desktop/Computer-Graphics/CG/CameraEventHandler.h
  /home/keltar/Desktop/Computer-Graphics/CG/Event.h
  /home/keltar/Desktop/Computer-Graphics/CG/EventHandler.h
+ /home/keltar/Desktop/Computer-Graphics/CG/MouseEventArgs.h
+ /home/keltar/Desktop/Computer-Graphics/CG/MouseEventHandler.h
+ /home/keltar/Desktop/Computer-Graphics/CG/Point.h
  /home/keltar/Desktop/Computer-Graphics/CG/Vector.h
 CMakeFiles/CG.dir/Event.cpp.o
  /home/keltar/Desktop/Computer-Graphics/CG/Event.cpp
@@ -28,6 +33,18 @@ CMakeFiles/CG.dir/Matrix4.cpp.o
  /home/keltar/Desktop/Computer-Graphics/CG/Matrix4.cpp
  /home/keltar/Desktop/Computer-Graphics/CG/Matrix4.h
  /home/keltar/Desktop/Computer-Graphics/CG/Vector.h
+CMakeFiles/CG.dir/MouseEventArgs.cpp.o
+ /home/keltar/Desktop/Computer-Graphics/CG/MouseEventArgs.cpp
+ /home/keltar/Desktop/Computer-Graphics/CG/MouseEventArgs.h
+CMakeFiles/CG.dir/MouseEventHandler.cpp.o
+ /home/keltar/Desktop/Computer-Graphics/CG/MouseEventArgs.h
+ /home/keltar/Desktop/Computer-Graphics/CG/MouseEventHandler.cpp
+ /home/keltar/Desktop/Computer-Graphics/CG/MouseEventHandler.h
+ /home/keltar/Desktop/Computer-Graphics/CG/Point.h
+ /home/keltar/Desktop/Computer-Graphics/CG/Vector.h
+CMakeFiles/CG.dir/Point.cpp.o
+ /home/keltar/Desktop/Computer-Graphics/CG/Point.cpp
+ /home/keltar/Desktop/Computer-Graphics/CG/Point.h
 CMakeFiles/CG.dir/Quaternion.cpp.o
  /home/keltar/Desktop/Computer-Graphics/CG/Quaternion.cpp
  /home/keltar/Desktop/Computer-Graphics/CG/Quaternion.h
@@ -58,6 +75,9 @@ CMakeFiles/CG.dir/main.cpp.o
  /home/keltar/Desktop/Computer-Graphics/CG/EventHandler.h
  /home/keltar/Desktop/Computer-Graphics/CG/KeyboardEventHandler.h
  /home/keltar/Desktop/Computer-Graphics/CG/Matrix4.h
+ /home/keltar/Desktop/Computer-Graphics/CG/MouseEventArgs.h
+ /home/keltar/Desktop/Computer-Graphics/CG/MouseEventHandler.h
+ /home/keltar/Desktop/Computer-Graphics/CG/Point.h
  /home/keltar/Desktop/Computer-Graphics/CG/Quaternion.h
  /home/keltar/Desktop/Computer-Graphics/CG/Shader.h
  /home/keltar/Desktop/Computer-Graphics/CG/ShaderProgram.h

@@ -8,6 +8,7 @@
 
 #include "Vector.h"
 #include "Matrix4.h"
+#include "Point.h"
 
 class Camera
 {
@@ -17,9 +18,13 @@ public:
     Matrix4 SetPosition(float x, float y, float z);
     Matrix4 GetUVNMatrix();
 
+    void Rotate(Point &newAngles);
     Vector3 Position();
+    Vector3 Target();
+    Point Angles();
 private:
     Vector3 up, target, pos;
+    Point angles;
 };
 
 #endif //CG_CAMERA_H

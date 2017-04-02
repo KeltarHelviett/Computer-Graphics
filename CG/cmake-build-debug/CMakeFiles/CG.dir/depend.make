@@ -4,12 +4,17 @@
 CMakeFiles/CG.dir/Camera.cpp.o: ../Camera.cpp
 CMakeFiles/CG.dir/Camera.cpp.o: ../Camera.h
 CMakeFiles/CG.dir/Camera.cpp.o: ../Matrix4.h
+CMakeFiles/CG.dir/Camera.cpp.o: ../Point.h
+CMakeFiles/CG.dir/Camera.cpp.o: ../Quaternion.h
 CMakeFiles/CG.dir/Camera.cpp.o: ../Vector.h
 
 CMakeFiles/CG.dir/CameraEventHandler.cpp.o: ../CameraEventHandler.cpp
 CMakeFiles/CG.dir/CameraEventHandler.cpp.o: ../CameraEventHandler.h
 CMakeFiles/CG.dir/CameraEventHandler.cpp.o: ../Event.h
 CMakeFiles/CG.dir/CameraEventHandler.cpp.o: ../EventHandler.h
+CMakeFiles/CG.dir/CameraEventHandler.cpp.o: ../MouseEventArgs.h
+CMakeFiles/CG.dir/CameraEventHandler.cpp.o: ../MouseEventHandler.h
+CMakeFiles/CG.dir/CameraEventHandler.cpp.o: ../Point.h
 CMakeFiles/CG.dir/CameraEventHandler.cpp.o: ../Vector.h
 
 CMakeFiles/CG.dir/Event.cpp.o: ../Event.cpp
@@ -27,6 +32,18 @@ CMakeFiles/CG.dir/KeyboardEventHandler.cpp.o: ../KeyboardEventHandler.h
 CMakeFiles/CG.dir/Matrix4.cpp.o: ../Matrix4.cpp
 CMakeFiles/CG.dir/Matrix4.cpp.o: ../Matrix4.h
 CMakeFiles/CG.dir/Matrix4.cpp.o: ../Vector.h
+
+CMakeFiles/CG.dir/MouseEventArgs.cpp.o: ../MouseEventArgs.cpp
+CMakeFiles/CG.dir/MouseEventArgs.cpp.o: ../MouseEventArgs.h
+
+CMakeFiles/CG.dir/MouseEventHandler.cpp.o: ../MouseEventArgs.h
+CMakeFiles/CG.dir/MouseEventHandler.cpp.o: ../MouseEventHandler.cpp
+CMakeFiles/CG.dir/MouseEventHandler.cpp.o: ../MouseEventHandler.h
+CMakeFiles/CG.dir/MouseEventHandler.cpp.o: ../Point.h
+CMakeFiles/CG.dir/MouseEventHandler.cpp.o: ../Vector.h
+
+CMakeFiles/CG.dir/Point.cpp.o: ../Point.cpp
+CMakeFiles/CG.dir/Point.cpp.o: ../Point.h
 
 CMakeFiles/CG.dir/Quaternion.cpp.o: ../Quaternion.cpp
 CMakeFiles/CG.dir/Quaternion.cpp.o: ../Quaternion.h
@@ -57,6 +74,9 @@ CMakeFiles/CG.dir/main.cpp.o: ../Event.h
 CMakeFiles/CG.dir/main.cpp.o: ../EventHandler.h
 CMakeFiles/CG.dir/main.cpp.o: ../KeyboardEventHandler.h
 CMakeFiles/CG.dir/main.cpp.o: ../Matrix4.h
+CMakeFiles/CG.dir/main.cpp.o: ../MouseEventArgs.h
+CMakeFiles/CG.dir/main.cpp.o: ../MouseEventHandler.h
+CMakeFiles/CG.dir/main.cpp.o: ../Point.h
 CMakeFiles/CG.dir/main.cpp.o: ../Quaternion.h
 CMakeFiles/CG.dir/main.cpp.o: ../Shader.h
 CMakeFiles/CG.dir/main.cpp.o: ../ShaderProgram.h

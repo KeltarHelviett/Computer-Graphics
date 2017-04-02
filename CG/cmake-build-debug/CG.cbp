@@ -120,6 +120,24 @@
 		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Matrix4.h">
 			<Option target="CG"/>
 		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/MouseEventArgs.cpp">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/MouseEventArgs.h">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/MouseEventHandler.cpp">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/MouseEventHandler.h">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Point.cpp">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Point.h">
+			<Option target="CG"/>
+		</Unit>
 		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Quaternion.cpp">
 			<Option target="CG"/>
 		</Unit>

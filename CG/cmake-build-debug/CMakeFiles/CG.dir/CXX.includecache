@@ -9,14 +9,22 @@
 /home/keltar/Desktop/Computer-Graphics/CG/Camera.cpp
 Camera.h
 /home/keltar/Desktop/Computer-Graphics/CG/Camera.h
+Quaternion.h
+/home/keltar/Desktop/Computer-Graphics/CG/Quaternion.h
 
 /home/keltar/Desktop/Computer-Graphics/CG/Camera.h
 Vector.h
 /home/keltar/Desktop/Computer-Graphics/CG/Vector.h
 Matrix4.h
 /home/keltar/Desktop/Computer-Graphics/CG/Matrix4.h
+Point.h
+/home/keltar/Desktop/Computer-Graphics/CG/Point.h
 
 /home/keltar/Desktop/Computer-Graphics/CG/CameraEventHandler.cpp
+GL/glut.h
+-
+iostream
+-
 CameraEventHandler.h
 /home/keltar/Desktop/Computer-Graphics/CG/CameraEventHandler.h
 
@@ -25,6 +33,12 @@ Vector.h
 /home/keltar/Desktop/Computer-Graphics/CG/Vector.h
 EventHandler.h
 /home/keltar/Desktop/Computer-Graphics/CG/EventHandler.h
+Point.h
+/home/keltar/Desktop/Computer-Graphics/CG/Point.h
+MouseEventArgs.h
+/home/keltar/Desktop/Computer-Graphics/CG/MouseEventArgs.h
+MouseEventHandler.h
+/home/keltar/Desktop/Computer-Graphics/CG/MouseEventHandler.h
 
 /home/keltar/Desktop/Computer-Graphics/CG/Event.cpp
 Event.h
@@ -60,7 +74,37 @@ initializer_list
 Vector.h
 /home/keltar/Desktop/Computer-Graphics/CG/Vector.h
 
+/home/keltar/Desktop/Computer-Graphics/CG/MouseEventArgs.cpp
+MouseEventArgs.h
+/home/keltar/Desktop/Computer-Graphics/CG/MouseEventArgs.h
+
+/home/keltar/Desktop/Computer-Graphics/CG/MouseEventArgs.h
+
+/home/keltar/Desktop/Computer-Graphics/CG/MouseEventHandler.cpp
+MouseEventHandler.h
+/home/keltar/Desktop/Computer-Graphics/CG/MouseEventHandler.h
+
+/home/keltar/Desktop/Computer-Graphics/CG/MouseEventHandler.h
+GL/glut.h
+-
+Vector.h
+/home/keltar/Desktop/Computer-Graphics/CG/Vector.h
+MouseEventArgs.h
+/home/keltar/Desktop/Computer-Graphics/CG/MouseEventArgs.h
+Point.h
+/home/keltar/Desktop/Computer-Graphics/CG/Point.h
+
+/home/keltar/Desktop/Computer-Graphics/CG/Point.cpp
+Point.h
+/home/keltar/Desktop/Computer-Graphics/CG/Point.h
+
+/home/keltar/Desktop/Computer-Graphics/CG/Point.h
+cmath
+/home/keltar/Desktop/Computer-Graphics/CG/cmath
+
 /home/keltar/Desktop/Computer-Graphics/CG/Quaternion.cpp
+iostream
+-
 Quaternion.h
 /home/keltar/Desktop/Computer-Graphics/CG/Quaternion.h
 
@@ -151,4 +195,6 @@ KeyboardEventHandler.h
 /home/keltar/Desktop/Computer-Graphics/CG/KeyboardEventHandler.h
 CameraEventHandler.h
 /home/keltar/Desktop/Computer-Graphics/CG/CameraEventHandler.h
+MouseEventHandler.h
+/home/keltar/Desktop/Computer-Graphics/CG/MouseEventHandler.h
 
