@@ -16,7 +16,7 @@ class CameraEventHandler
 public:
     CameraEventHandler();
 
-    Vector3 GetCameraSpeed(bool *keys);
+    Vector3 GetCameraPosition(bool *keys, Vector3 target, Vector3 up, Vector3 oldPos);
     Point GetRotationAngles(MouseInfo mi);
 //    void GetMouseInfo()
 private:

@@ -12,18 +12,26 @@ CameraEventHandler::CameraEventHandler()
 
 }
 
-Vector3 CameraEventHandler::GetCameraSpeed(bool *keys)
+Vector3 CameraEventHandler::GetCameraPosition(bool *keys, Vector3 target, Vector3 up, Vector3 oldPos)
 {
-    Vector3 speed(0.0f, 0.0f, 0.0f);
+    static float step = 0.0005f;
     if (keys['W'] || keys['w'])
-        speed[2] = 0.001f;
+        oldPos += (target * step);
     if (keys['A'] || keys['a'])
-        speed[0] = -0.001f;
+    {
+        Vector3 l = target % up;
+        l.Normalize();
+        oldPos += l * step;
+    }
     if (keys['D'] || keys['d'])
-        speed[0] = 0.001f;
+    {
+        Vector3 r = up % target;
+        r.Normalize();
+        oldPos += r * step;
+    }
     if (keys['S'] || keys['s'])
-        speed[2] = -0.001f;
-    return speed;
+        oldPos -= (target * step);
+    return oldPos;
 }
 
 Point CameraEventHandler::GetRotationAngles(MouseInfo mi)
@@ -31,7 +39,7 @@ Point CameraEventHandler::GetRotationAngles(MouseInfo mi)
     Point delta;
 //    if (mi.buttons[GLUT_RIGHT_BUTTON] == GLUT_DOWN)
 //    {
-        delta.x = -mi.cur.x + mi.prev.x;
+        delta.x = mi.cur.x - mi.prev.x;
         delta.y = mi.cur.y - mi.prev.y;
 
 //    }

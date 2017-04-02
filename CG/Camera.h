@@ -21,6 +21,7 @@ public:
     void Rotate(Point &newAngles);
     Vector3 Position();
     Vector3 Target();
+    Vector3 Up();
     Point Angles();
 private:
     Vector3 up, target, pos;

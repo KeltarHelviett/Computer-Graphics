@@ -76,8 +76,8 @@ void Camera::Rotate(Point &newAngles)
 {
     if (newAngles.x == 0 && newAngles.y == 0)
         return;
-    angles.x += newAngles.x / 20.0f;
-    angles.y += newAngles.y / 20.0f;
+    angles.x += newAngles.x / 10.0f;
+    angles.y += newAngles.y / 10.0f;
     Vector3 Vaxis(0.0f, 1.0f, 0.0f);
     Vector3 View(1.0f, 0.0f, 0.0f);
     Quaternion hor(Vaxis, ToRadian(angles.x));
@@ -107,4 +107,9 @@ Point Camera::Angles()
 Vector3 Camera::Target()
 {
     return target;
+}
+
+Vector3 Camera::Up()
+{
+    return up;
 }

@@ -144,10 +144,8 @@ void RenderScene()
     Rotattion = GetRotationMatrix(0.0, Scale, 0.0);
     Scale += 0.004f;
     Translation = Trans(0.0, 0.0, 5.0);
-    Vector3 cspeed = CEH.GetCameraSpeed(KEH.keys());
-    auto trg = Cam.Target();
-    Vector3 cpos = Cam.Position() + cspeed;
-    auto CamMove = Cam.SetPosition(cpos[0], cpos[1], cpos[2]);
+    Vector3 p = CEH.GetCameraPosition(KEH.keys(), Cam.Target(), Cam.Up(), Cam.Position());
+    auto CamMove = Cam.SetPosition(p[0], p[1], p[2]);
     auto UVN = Cam.GetUVNMatrix();
     Matrix4 res = Projection  * UVN * CamMove ;/** Translation ;Rotattion;*/
 
