@@ -14,9 +14,11 @@ class Camera
 {
 public:
     Camera();
+    Camera(float FOV, float z1, float z2);
 
     Matrix4 SetPosition(float x, float y, float z);
     Matrix4 GetUVNMatrix();
+    Matrix4 GetProjectionPerspectiveMatrix();
 
     void Rotate(Point &newAngles);
     Vector3 Position();
@@ -25,6 +27,7 @@ public:
     Point Angles();
 private:
     Vector3 up, target, pos;
+    float fov, z1, z2;
     Point angles;
 };
 

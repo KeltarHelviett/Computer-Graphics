@@ -2,6 +2,7 @@
 // Created by keltar on 3/22/17.
 //
 
+#include <limits>
 #include "Matrix4.h"
 
 Matrix4::Matrix4()
@@ -85,6 +86,19 @@ float *Matrix4::operator[](unsigned int index)
 Matrix4 Matrix4::operator+(const Matrix4 &other)
 {
     return this->Add(other);
+}
+
+bool Matrix4::operator==(const Matrix4 &other)
+{
+    for (int i = 0; i < 4; ++i)
+    {
+        for (int j = 0; j < 4; ++j)
+        {
+            if (fabsf(_mat[i][j] - other._mat[i][j]) > std::numeric_limits<float>::epsilon())
+                return false;
+        }
+    }
+    return true;
 }
 
 

@@ -7,6 +7,7 @@
 class Matrix4
 {
 public:
+
     Matrix4();
     Matrix4(std::initializer_list<std::initializer_list<float>> mat);
 
@@ -19,6 +20,8 @@ public:
     Vector4 operator*(Vector4 &other);
 
     float* operator[](unsigned int index);
+
+    bool operator==(const Matrix4 &other);
 
 private:
     float _mat[4][4];

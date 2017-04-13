@@ -80,20 +80,6 @@ void CreateShaders()
 //    gWorldLocation = (GLuint)glGetUniformLocation(sp.program(), "gWorld");
 }
 
-Matrix4 InitProjectionMatrix(float z1, float z2, float FOV)
-{
-    Matrix4 m;
-    float ar = WINDOW_WIDTH / WINDOW_HEIGHT;
-    float zrange = z1 - z2;
-    float halftan = tanf(ToRadian(FOV) / 2.0f);
-    m[0][0] = 1.0f / (halftan * ar);  m[0][1] = 0.0f;            m[0][2] = 0.0f;                   m[0][3] = 0.0;
-    m[1][0] = 0.0f;                   m[1][1] = 1.0f / halftan;  m[1][2] = 0.0f;                   m[1][3] = 0.0;
-    m[2][0] = 0.0f;                   m[2][1] = 0.0f;            m[2][2] = (-z1 -z2) / zrange ;    m[2][3] = (2.0f * z2 * z1) / zrange;
-    m[3][0] = 0.0f;                   m[3][1] = 0.0f;            m[3][2] = 1.0f;                   m[3][3] = 0.0;
-    return m;
-
-}
-
 Matrix4 GetRotationMatrix(float x, float y, float z)
 {
     Matrix4 rx, ry, rz;
@@ -138,28 +124,17 @@ void PrintLog()
 
 void RenderScene()
 {
-    glClear(GL_COLOR_BUFFER_BIT);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    glEnable(GL_DEPTH_TEST);
 
     glBindVertexArray(VAO);
-    Rotattion = GetRotationMatrix(0.0, Scale, 0.0);
-    Scale += 0.004f;
-    Translation = Trans(0.0, 0.0, 5.0);
-    Vector3 p = CEH.GetCameraPosition(KEH.keys(), Cam.Target(), Cam.Up(), Cam.Position());
-    auto CamMove = Cam.SetPosition(p[0], p[1], p[2]);
-    auto UVN = Cam.GetUVNMatrix();
-    Matrix4 res = Projection  * UVN * CamMove ;/** Translation ;Rotattion;*/
 
+    Vector3 p = CEH.GetCameraPosition(KEH.keys(), Cam.Target(), Cam.Up(), Cam.Position());
+    Matrix4 res = Cam.GetProjectionPerspectiveMatrix()  * Cam.GetUVNMatrix() * Cam.SetPosition(p[0], p[1], p[2]);/** Translation ;Rotattion;*/
 
     glUniformMatrix4fv(gWorldLocation, 1, GL_TRUE, (GLfloat *)&res);
     glDrawElements(GL_TRIANGLES, 12, GL_UNSIGNED_INT, 0);
 
-
-//    glDrawArrays(GL_TRIANGLES, 0, 3);
-//    glBindVertexArray(VAO);
-    Vector4 v = Vector4(-1.0f, -1.0f, 0.0f);
-    v = res * v;
-    std::cout << "V: " << v[0] << "\t" << v[1] << "\t" << v[2] << "\t" << GLUT_LEFT_BUTTON << std::endl;
-    PrintLog();
     glutSwapBuffers();
 }
 
@@ -190,7 +165,6 @@ int main(int argc, char *argv[])
     Rotattion = EyeMatrix4();
     Translation = EyeMatrix4();
     MScale = EyeMatrix4();
-    Projection = InitProjectionMatrix(1.0, 100.0, 60.0);
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA);
     Window w(1024, 768, 300, 300, "Window");
@@ -207,7 +181,7 @@ int main(int argc, char *argv[])
         return 1;
     CreateVertexBuffer();
     CreateShaders();
-    glutGameModeString("1920x1200@32");
+    glutGameModeString("1920x1200@64");
     glutEnterGameMode();
     glutWarpPointer(WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2);
     MEH.MouseMove(WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2);

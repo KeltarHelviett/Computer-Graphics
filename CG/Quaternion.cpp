@@ -67,10 +67,7 @@ Quaternion Quaternion::Mult(const Quaternion &other)
     res._vec[0] = _vec._vec[3] * other._vec._vec[0] + _vec._vec[0] * other._vec._vec[3] + _vec._vec[1] * other._vec._vec[2] - _vec._vec[2] * other._vec._vec[1];
     res._vec[1] = _vec._vec[3] * other._vec._vec[1] - _vec._vec[0] * other._vec._vec[2] + _vec._vec[1] * other._vec._vec[3] + _vec._vec[2] * other._vec._vec[0];
     res._vec[2] = _vec._vec[3] * other._vec._vec[2] + _vec._vec[0] * other._vec._vec[1] - _vec._vec[1] * other._vec._vec[0] + _vec._vec[2] * other._vec._vec[3];
-//    res[3] = _vec[3] * other[3] - _vec[0] * other[0] - _vec[1] * other[1] - _vec[2] * other[2];
-//    res[0] = _vec[0] * other[3] + _vec[3] * other[0] + _vec[1] * other[2] - _vec[2] * other[1];
-//    res[1] = _vec[1] * other[3] + _vec[3] * other[1] + _vec[2] * other[0] - _vec[0] * other[2];
-//    res[2] = _vec[2] * other[3] + _vec[3] * other[2] + _vec[0] * other[1] - _vec[1] * other[0];
+
     return res;
 }
 
@@ -86,11 +83,6 @@ Quaternion Quaternion::operator*(const Quaternion &other)
 
 Vector3 Quaternion::Rotate(Vector3 &other)
 {
-    auto cjg = this->Conjugate();
-    auto tmp = this->Mult(other);
-    tmp = tmp.Mult(cjg);
-    Vector3 res(tmp._vec);
-    //Vector3 v = Vectosssar3((this->Mult(other) * this->Conjugate().Normalize())._vec);
     return (*this * other * this->Conjugate())._vec;
 }
 

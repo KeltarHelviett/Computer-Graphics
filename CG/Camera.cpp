@@ -2,14 +2,20 @@
 // Created by keltar on 3/29/17.
 //
 
+#include <GL/glut.h>
 #include "Camera.h"
 #include "Quaternion.h"
 
 #define ToRadian(x) (float)((x) * M_PI / 180.0f)
 #define ToDegree(x) (float)((x) * 180.0f / M_PI)
 
-Camera::Camera()
+Camera::Camera(): Camera(60, 1, 100) {}
+
+Camera::Camera(float FOV, float z1, float z2)
 {
+    fov = FOV;
+    this->z1 = z1;
+    this->z2 = z2;
     pos    = Vector3(1.0f, 1.0f, -3.0f);
     target = Vector3(0.0f, 0.0f, 1.0f);
     up     = Vector3(0.0f, 1.0f, 0.0f);
@@ -112,4 +118,17 @@ Vector3 Camera::Target()
 Vector3 Camera::Up()
 {
     return up;
+}
+
+Matrix4 Camera::GetProjectionPerspectiveMatrix()
+{
+    Matrix4 m;
+    float ar = glutGet(GLUT_WINDOW_WIDTH) / glutGet(GLUT_WINDOW_HEIGHT);
+    float zrange = z1 - z2;
+    float halftan = tanf(ToRadian(fov) / 2.0f);
+    m[0][0] = 1.0f / (halftan * ar);  m[0][1] = 0.0f;            m[0][2] = 0.0f;                   m[0][3] = 0.0;
+    m[1][0] = 0.0f;                   m[1][1] = 1.0f / halftan;  m[1][2] = 0.0f;                   m[1][3] = 0.0;
+    m[2][0] = 0.0f;                   m[2][1] = 0.0f;            m[2][2] = (-z1 -z2) / zrange ;    m[2][3] = (2.0f * z2 * z1) / zrange;
+    m[3][0] = 0.0f;                   m[3][1] = 0.0f;            m[3][2] = 1.0f;                   m[3][3] = 0.0;
+    return m;
 }
