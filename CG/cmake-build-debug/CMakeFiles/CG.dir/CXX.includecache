@@ -149,6 +149,8 @@ Vector.h
 /home/keltar/Desktop/Computer-Graphics/CG/Vector.h
 cmath
 -
+initializer_list
+-
 
 /home/keltar/Desktop/Computer-Graphics/CG/Window.cpp
 Window.h

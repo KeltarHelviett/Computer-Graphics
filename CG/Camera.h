@@ -21,12 +21,12 @@ public:
     Matrix4 GetProjectionPerspectiveMatrix();
 
     void Rotate(Point &newAngles);
-    Vector3 Position();
-    Vector3 Target();
-    Vector3 Up();
+    Vec3f Position();
+    Vec3f Target();
+    Vec3f Up();
     Point Angles();
 private:
-    Vector3 up, target, pos;
+    Vec3f up, target, pos;
     float fov, z1, z2;
     Point angles;
 };

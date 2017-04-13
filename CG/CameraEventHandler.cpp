@@ -12,20 +12,20 @@ CameraEventHandler::CameraEventHandler()
 
 }
 
-Vector3 CameraEventHandler::GetCameraPosition(bool *keys, Vector3 target, Vector3 up, Vector3 oldPos)
+Vec3f CameraEventHandler::GetCameraPosition(bool *keys, Vec3f target, Vec3f up, Vec3f oldPos)
 {
     static float step = 0.0005f;
     if (keys['W'] || keys['w'])
         oldPos += (target * step);
     if (keys['A'] || keys['a'])
     {
-        Vector3 l = target % up;
+        Vec3f l = target % up;
         l.Normalize();
         oldPos += l * step;
     }
     if (keys['D'] || keys['d'])
     {
-        Vector3 r = up % target;
+        Vec3f r = up % target;
         r.Normalize();
         oldPos += r * step;
     }

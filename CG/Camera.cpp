@@ -16,11 +16,11 @@ Camera::Camera(float FOV, float z1, float z2)
     fov = FOV;
     this->z1 = z1;
     this->z2 = z2;
-    pos    = Vector3(1.0f, 1.0f, -3.0f);
-    target = Vector3(0.0f, 0.0f, 1.0f);
-    up     = Vector3(0.0f, 1.0f, 0.0f);
+    pos    = {1.0f, 1.0f, -3.0f};
+    target = {0.0f, 0.0f, 1.0f};
+    up     = {0.0f, 1.0f, 0.0f};
 
-    Vector3 hTarget(target[0], 0.0f, target[2]);
+    Vec3f hTarget = {target[0], 0.0f, target[2]};
     hTarget.Normalize();
     if (hTarget[2] >= 0.0f){
         if (hTarget[0] >= 0.0f){
@@ -56,10 +56,10 @@ Matrix4 Camera::SetPosition(float x, float y, float z)
 
 Matrix4 Camera::GetUVNMatrix()
 {
-    Vector3 N = target.Normalize();
-    Vector3 U = up.Normalize();
+    Vec3f N = target.Normalize();
+    Vec3f U = up.Normalize();
     U = U % target;
-    Vector3 V = N % U;
+    Vec3f V = N % U;
     U.Normalize();
     V.Normalize();
     return
@@ -73,7 +73,7 @@ Matrix4 Camera::GetUVNMatrix()
 
 }
 
-Vector3 Camera::Position()
+Vec3f Camera::Position()
 {
     return pos;
 }
@@ -84,14 +84,14 @@ void Camera::Rotate(Point &newAngles)
         return;
     angles.x += newAngles.x / 10.0f;
     angles.y += newAngles.y / 10.0f;
-    Vector3 Vaxis(0.0f, 1.0f, 0.0f);
-    Vector3 View(1.0f, 0.0f, 0.0f);
+    Vec3f Vaxis = {0.0f, 1.0f, 0.0f};
+    Vec3f View = {1.0f, 0.0f, 0.0f};
     Quaternion hor(Vaxis, ToRadian(angles.x));
     View = hor.Rotate(View);
     View.Normalize();
 
     // Rotate the view vector by the vertical angle around the horizontal axis
-    Vector3 Haxis = View.Cross(Vaxis);
+    Vec3f Haxis = View.Cross(Vaxis);
     Haxis.Normalize();
 
     Quaternion ver(Haxis, ToRadian(angles.y));
@@ -110,12 +110,12 @@ Point Camera::Angles()
     return angles;
 }
 
-Vector3 Camera::Target()
+Vec3f Camera::Target()
 {
     return target;
 }
 
-Vector3 Camera::Up()
+Vec3f Camera::Up()
 {
     return up;
 }

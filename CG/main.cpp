@@ -35,11 +35,11 @@ void CreateVertexBuffer()
     glGenVertexArrays(1, &VAO);
     glBindVertexArray(VAO);
 
-    Vector4 vs[4];
-    vs[0] = Vector4(-1.0f, -1.0f, 0.0f);
-    vs[1] = Vector4(0.0f, -1.0f, 1.0f);
-    vs[2] = Vector4(1.0f, -1.0f, 0.0f);
-    vs[3] = Vector4(0.0f, 1.0f, 0.0f);
+    Vec4f vs[4];
+    vs[0] = {-1.0f, -1.0f, 0.0f};
+    vs[1] = {0.0f, -1.0f, 1.0f};
+    vs[2] = {1.0f, -1.0f, 0.0f};
+    vs[3] = {0.0f, 1.0f, 0.0f};
     glGenBuffers(1, &VBO);
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
     glBufferData(GL_ARRAY_BUFFER, sizeof(vs), vs, GL_STATIC_DRAW);
@@ -129,8 +129,8 @@ void RenderScene()
 
     glBindVertexArray(VAO);
 
-    Vector3 p = CEH.GetCameraPosition(KEH.keys(), Cam.Target(), Cam.Up(), Cam.Position());
-    Matrix4 res = Cam.GetProjectionPerspectiveMatrix()  * Cam.GetUVNMatrix() * Cam.SetPosition(p[0], p[1], p[2]);/** Translation ;Rotattion;*/
+    Vec3f p = CEH.GetCameraPosition(KEH.keys(), Cam.Target(), Cam.Up(), Cam.Position());
+    Matrix4 res = Cam.GetProjectionPerspectiveMatrix()  * Cam.GetUVNMatrix() * Cam.SetPosition(p[0], p[1], p[2]);
 
     glUniformMatrix4fv(gWorldLocation, 1, GL_TRUE, (GLfloat *)&res);
     glDrawElements(GL_TRIANGLES, 12, GL_UNSIGNED_INT, 0);
@@ -187,8 +187,4 @@ int main(int argc, char *argv[])
     MEH.MouseMove(WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2);
     MEH.MouseMove(WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2);
     glutMainLoop();
-//    Quaternion q(Vector3(1.0f, 0.0f, 0.0f), ToRadian(90));
-//    Vector3 v(0.0f, 0.0f, 1.0f);
-//    v = q.Rotate(v);
-    return 0;
 }

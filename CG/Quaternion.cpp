@@ -9,15 +9,15 @@ Quaternion::Quaternion()
 {
 }
 
-Quaternion::Quaternion(float x, float y, float z, float w): Quaternion(Vector3(x, y, z), w)
+Quaternion::Quaternion(float x, float y, float z, float w): Quaternion(Vec3f({x, y, z}), w)
 {
 }
 
-Quaternion::Quaternion(const Vector3 &v, float w)
+Quaternion::Quaternion(Vec3f v, float w)
 {
-    Vector3 nv = v;
+    Vec3f nv = v;
     nv.Normalize();
-    _vec = Vector4(nv, w);
+    _vec = Vec4f({nv[0], nv[1], nv[2], w});
     float sinhalfangle = sinf(w / 2.0f);
     for (int i = 0; i < 3; ++i)
         _vec[i] = _vec[i] * sinhalfangle;
@@ -51,7 +51,7 @@ float Quaternion::Length()
     return _vec.Length();
 }
 
-Quaternion Quaternion::Mult(const Vector3 &other)
+Quaternion Quaternion::Mult(const Vec3f &other)
 {
     Quaternion q;
     for (int i = 0; i < 3; ++i)
@@ -71,7 +71,7 @@ Quaternion Quaternion::Mult(const Quaternion &other)
     return res;
 }
 
-Quaternion Quaternion::operator*(const Vector3 &other)
+Quaternion Quaternion::operator*(const Vec3f &other)
 {
     return this->Mult(other);
 }
@@ -81,9 +81,10 @@ Quaternion Quaternion::operator*(const Quaternion &other)
     return this->Mult(other);
 }
 
-Vector3 Quaternion::Rotate(Vector3 &other)
+Vec3f Quaternion::Rotate(Vec3f &other)
 {
-    return (*this * other * this->Conjugate())._vec;
+    auto tmp = (*this * other * this->Conjugate())._vec;
+    return {tmp._vec[0], tmp._vec[1], tmp._vec[2]};
 }
 
 float &Quaternion::operator[](unsigned int index)
