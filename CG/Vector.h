@@ -188,7 +188,7 @@ Vector<size, T> Vector<size, T>::Normalized()
 
 using Vec3f = Vector<3, float>;
 using Vec4f = Vector<4, float>;
-
+using Vec2f = Vector<2, float>;
 
 class Vector3;
 class Vector4;

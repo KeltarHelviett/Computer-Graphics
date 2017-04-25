@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="CG"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="CG">
+				<Option output="/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/CG" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/ImageMagick-6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/ImageMagick-6"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 CG"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="CG/fast">
+				<Option output="/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/CG" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/ImageMagick-6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/ImageMagick-6"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 CG/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Camera.cpp">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Camera.h">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/CameraEventHandler.cpp">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/CameraEventHandler.h">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Event.cpp">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Event.h">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/EventHandler.cpp">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/EventHandler.h">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/KeyboardEventHandler.cpp">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/KeyboardEventHandler.h">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Matrix4.cpp">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Matrix4.h">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/MouseEventArgs.cpp">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/MouseEventArgs.h">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/MouseEventHandler.cpp">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/MouseEventHandler.h">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Point.cpp">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Point.h">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Quaternion.cpp">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Quaternion.h">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Shader.cpp">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Shader.h">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/ShaderProgram.cpp">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/ShaderProgram.h">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Texture.cpp">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Texture.h">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Vector.cpp">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Vector.h">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Window.cpp">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Window.h">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/gl_math.cpp">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/gl_math.h">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/main.cpp">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

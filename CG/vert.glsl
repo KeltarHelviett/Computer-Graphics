@@ -1,11 +1,11 @@
 #version 450
 
-layout (location = 0) in vec4 Position;
-uniform mat4 gWorld;
-out vec4 Color;
-
-void main(void)
+layout (location = 0) in vec3 Position;
+layout (location = 1) in vec2 TexCoord;
+uniform mat4 gWVP;
+out vec2 TexCoord0;
+void main()
 {
-    gl_Position = gWorld * vec4(Position.x, Position.y, Position.z, 1.0);//vec4(Position.x, Position.y, Position.z, 1.0);//gWorld * Position;
-    Color = Color = vec4(clamp(vec3(Position.x, Position.y, Position.z), 0.0, 1.0), 1.0);//vec4(clamp(vec3(Position.x, Position.y, Position.z), 0.0, 1.0), 1.0);
+    gl_Position = gWVP * vec4(Position, 1.0);
+    TexCoord0 = TexCoord;
 }

@@ -16,6 +16,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/keltar/Desktop/Computer-Graphics/CG/Quaternion.cpp" "/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/CMakeFiles/CG.dir/Quaternion.cpp.o"
   "/home/keltar/Desktop/Computer-Graphics/CG/Shader.cpp" "/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/CMakeFiles/CG.dir/Shader.cpp.o"
   "/home/keltar/Desktop/Computer-Graphics/CG/ShaderProgram.cpp" "/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/CMakeFiles/CG.dir/ShaderProgram.cpp.o"
+  "/home/keltar/Desktop/Computer-Graphics/CG/Texture.cpp" "/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/CMakeFiles/CG.dir/Texture.cpp.o"
   "/home/keltar/Desktop/Computer-Graphics/CG/Vector.cpp" "/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/CMakeFiles/CG.dir/Vector.cpp.o"
   "/home/keltar/Desktop/Computer-Graphics/CG/Window.cpp" "/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/CMakeFiles/CG.dir/Window.cpp.o"
   "/home/keltar/Desktop/Computer-Graphics/CG/gl_math.cpp" "/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/CMakeFiles/CG.dir/gl_math.cpp.o"
@@ -25,6 +26,8 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "/usr/include/ImageMagick-6"
+  "/usr/include/x86_64-linux-gnu/ImageMagick-6"
   )
 
 # Targets to which this target links.

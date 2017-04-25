@@ -14,7 +14,7 @@ CameraEventHandler::CameraEventHandler()
 
 Vec3f CameraEventHandler::GetCameraPosition(bool *keys, Vec3f target, Vec3f up, Vec3f oldPos)
 {
-    static float step = 0.0005f;
+    static float step = 0.0007f;
     if (keys['W'] || keys['w'])
         oldPos += (target * step);
     if (keys['A'] || keys['a'])
@@ -40,7 +40,7 @@ Point CameraEventHandler::GetRotationAngles(MouseInfo mi)
 //    if (mi.buttons[GLUT_RIGHT_BUTTON] == GLUT_DOWN)
 //    {
         delta.x = mi.cur.x - mi.prev.x;
-        delta.y = mi.cur.y - mi.prev.y;
+        delta.y = mi.prev.y - mi.cur.y;
 
 //    }
     return delta;
