@@ -1,5 +1,5 @@
 
-#include "Window.h"
+#include "../include/Window.h"
 
 Window::Window() {}
 

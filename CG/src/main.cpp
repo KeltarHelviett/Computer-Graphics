@@ -1,18 +1,18 @@
 #include <GL/glew.h>
 #include <GL/glut.h>
 #include <Magick++.h>
-#include "Shader.h"
-#include "ShaderProgram.h"
-#include "Window.h"
+#include "../include/Shader.h"
+#include "../include/ShaderProgram.h"
+#include "../include/Window.h"
 #include <iostream>
 #include <cmath>
 #include <cassert>
-#include "gl_math.h"
-#include "Camera.h"
-#include "KeyboardEventHandler.h"
-#include "CameraEventHandler.h"
-#include "MouseEventHandler.h"
-#include "Texture.h"
+#include "../include/gl_math.h"
+#include "../include/Camera.h"
+#include "../include/KeyboardEventHandler.h"
+#include "../include/CameraEventHandler.h"
+#include "../include/MouseEventHandler.h"
+#include "../include/Texture.h"
 
 #define ToRadian(x) (float)((x) * M_PI / 180.0f)
 #define ToDegree(x) ((x) * 180.0f / M_PI)
@@ -85,8 +85,8 @@ void CreateVertexBuffer()
 void CreateShaders()
 {
     ShaderProgram sp;
-    std::ifstream fragFin("../frag.glsl");
-    std::ifstream vertFin("../vert.glsl");
+    std::ifstream fragFin("../shaders/fragment/frag.glsl");
+    std::ifstream vertFin("../shaders/vertex/vert.glsl");
     Shader vert(vertFin, GL_VERTEX_SHADER);
     Shader frag(fragFin, GL_FRAGMENT_SHADER);
     vert.compile();

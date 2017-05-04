@@ -3,7 +3,7 @@
 //
 
 #include <iostream>
-#include "Quaternion.h"
+#include "../include/Quaternion.h"
 
 Quaternion::Quaternion()
 {

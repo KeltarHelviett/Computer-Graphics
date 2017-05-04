@@ -88,103 +88,109 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Camera.cpp">
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/include/Camera.h">
 			<Option target="CG"/>
 		</Unit>
-		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Camera.h">
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/include/CameraEventHandler.h">
 			<Option target="CG"/>
 		</Unit>
-		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/CameraEventHandler.cpp">
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/include/Event.h">
 			<Option target="CG"/>
 		</Unit>
-		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/CameraEventHandler.h">
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/include/EventHandler.h">
 			<Option target="CG"/>
 		</Unit>
-		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Event.cpp">
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/include/KeyboardEventHandler.h">
 			<Option target="CG"/>
 		</Unit>
-		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Event.h">
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/include/Light.h">
 			<Option target="CG"/>
 		</Unit>
-		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/EventHandler.cpp">
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/include/Matrix4.h">
 			<Option target="CG"/>
 		</Unit>
-		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/EventHandler.h">
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/include/MouseEventArgs.h">
 			<Option target="CG"/>
 		</Unit>
-		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/KeyboardEventHandler.cpp">
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/include/MouseEventHandler.h">
 			<Option target="CG"/>
 		</Unit>
-		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/KeyboardEventHandler.h">
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/include/Point.h">
 			<Option target="CG"/>
 		</Unit>
-		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Matrix4.cpp">
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/include/Quaternion.h">
 			<Option target="CG"/>
 		</Unit>
-		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Matrix4.h">
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/include/Shader.h">
 			<Option target="CG"/>
 		</Unit>
-		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/MouseEventArgs.cpp">
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/include/ShaderProgram.h">
 			<Option target="CG"/>
 		</Unit>
-		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/MouseEventArgs.h">
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/include/Texture.h">
 			<Option target="CG"/>
 		</Unit>
-		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/MouseEventHandler.cpp">
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/include/Vector.h">
 			<Option target="CG"/>
 		</Unit>
-		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/MouseEventHandler.h">
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/include/Window.h">
 			<Option target="CG"/>
 		</Unit>
-		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Point.cpp">
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/include/gl_math.h">
 			<Option target="CG"/>
 		</Unit>
-		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Point.h">
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/src/Camera.cpp">
 			<Option target="CG"/>
 		</Unit>
-		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Quaternion.cpp">
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/src/CameraEventHandler.cpp">
 			<Option target="CG"/>
 		</Unit>
-		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Quaternion.h">
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/src/Event.cpp">
 			<Option target="CG"/>
 		</Unit>
-		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Shader.cpp">
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/src/EventHandler.cpp">
 			<Option target="CG"/>
 		</Unit>
-		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Shader.h">
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/src/KeyboardEventHandler.cpp">
 			<Option target="CG"/>
 		</Unit>
-		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/ShaderProgram.cpp">
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/src/Light.cpp">
 			<Option target="CG"/>
 		</Unit>
-		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/ShaderProgram.h">
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/src/Matrix4.cpp">
 			<Option target="CG"/>
 		</Unit>
-		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Texture.cpp">
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/src/MouseEventArgs.cpp">
 			<Option target="CG"/>
 		</Unit>
-		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Texture.h">
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/src/MouseEventHandler.cpp">
 			<Option target="CG"/>
 		</Unit>
-		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Vector.cpp">
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/src/Point.cpp">
 			<Option target="CG"/>
 		</Unit>
-		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Vector.h">
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/src/Quaternion.cpp">
 			<Option target="CG"/>
 		</Unit>
-		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Window.cpp">
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/src/Shader.cpp">
 			<Option target="CG"/>
 		</Unit>
-		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/Window.h">
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/src/ShaderProgram.cpp">
 			<Option target="CG"/>
 		</Unit>
-		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/gl_math.cpp">
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/src/Texture.cpp">
 			<Option target="CG"/>
 		</Unit>
-		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/gl_math.h">
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/src/Vector.cpp">
 			<Option target="CG"/>
 		</Unit>
-		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/main.cpp">
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/src/Window.cpp">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/src/gl_math.cpp">
+			<Option target="CG"/>
+		</Unit>
+		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/src/main.cpp">
 			<Option target="CG"/>
 		</Unit>
 		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/CMakeLists.txt">

@@ -3,7 +3,7 @@
 //
 
 #include <iostream>
-#include "Texture.h"
+#include "../include/Texture.h"
 
 Texture::Texture(GLenum textureTarget, const std::string &fileName)
 {

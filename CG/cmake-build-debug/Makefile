@@ -123,464 +123,491 @@ CG/fast:
 	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/build
 .PHONY : CG/fast
 
-Camera.o: Camera.cpp.o
+src/Camera.o: src/Camera.cpp.o
 
-.PHONY : Camera.o
-
-# target to build an object file
-Camera.cpp.o:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Camera.cpp.o
-.PHONY : Camera.cpp.o
-
-Camera.i: Camera.cpp.i
-
-.PHONY : Camera.i
-
-# target to preprocess a source file
-Camera.cpp.i:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Camera.cpp.i
-.PHONY : Camera.cpp.i
-
-Camera.s: Camera.cpp.s
-
-.PHONY : Camera.s
-
-# target to generate assembly for a file
-Camera.cpp.s:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Camera.cpp.s
-.PHONY : Camera.cpp.s
-
-CameraEventHandler.o: CameraEventHandler.cpp.o
-
-.PHONY : CameraEventHandler.o
+.PHONY : src/Camera.o
 
 # target to build an object file
-CameraEventHandler.cpp.o:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/CameraEventHandler.cpp.o
-.PHONY : CameraEventHandler.cpp.o
+src/Camera.cpp.o:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/Camera.cpp.o
+.PHONY : src/Camera.cpp.o
 
-CameraEventHandler.i: CameraEventHandler.cpp.i
+src/Camera.i: src/Camera.cpp.i
 
-.PHONY : CameraEventHandler.i
+.PHONY : src/Camera.i
 
 # target to preprocess a source file
-CameraEventHandler.cpp.i:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/CameraEventHandler.cpp.i
-.PHONY : CameraEventHandler.cpp.i
+src/Camera.cpp.i:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/Camera.cpp.i
+.PHONY : src/Camera.cpp.i
 
-CameraEventHandler.s: CameraEventHandler.cpp.s
+src/Camera.s: src/Camera.cpp.s
 
-.PHONY : CameraEventHandler.s
+.PHONY : src/Camera.s
 
 # target to generate assembly for a file
-CameraEventHandler.cpp.s:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/CameraEventHandler.cpp.s
-.PHONY : CameraEventHandler.cpp.s
+src/Camera.cpp.s:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/Camera.cpp.s
+.PHONY : src/Camera.cpp.s
 
-Event.o: Event.cpp.o
+src/CameraEventHandler.o: src/CameraEventHandler.cpp.o
 
-.PHONY : Event.o
+.PHONY : src/CameraEventHandler.o
 
 # target to build an object file
-Event.cpp.o:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Event.cpp.o
-.PHONY : Event.cpp.o
+src/CameraEventHandler.cpp.o:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/CameraEventHandler.cpp.o
+.PHONY : src/CameraEventHandler.cpp.o
 
-Event.i: Event.cpp.i
+src/CameraEventHandler.i: src/CameraEventHandler.cpp.i
 
-.PHONY : Event.i
+.PHONY : src/CameraEventHandler.i
 
 # target to preprocess a source file
-Event.cpp.i:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Event.cpp.i
-.PHONY : Event.cpp.i
+src/CameraEventHandler.cpp.i:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/CameraEventHandler.cpp.i
+.PHONY : src/CameraEventHandler.cpp.i
 
-Event.s: Event.cpp.s
+src/CameraEventHandler.s: src/CameraEventHandler.cpp.s
 
-.PHONY : Event.s
+.PHONY : src/CameraEventHandler.s
 
 # target to generate assembly for a file
-Event.cpp.s:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Event.cpp.s
-.PHONY : Event.cpp.s
+src/CameraEventHandler.cpp.s:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/CameraEventHandler.cpp.s
+.PHONY : src/CameraEventHandler.cpp.s
 
-EventHandler.o: EventHandler.cpp.o
+src/Event.o: src/Event.cpp.o
 
-.PHONY : EventHandler.o
+.PHONY : src/Event.o
 
 # target to build an object file
-EventHandler.cpp.o:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/EventHandler.cpp.o
-.PHONY : EventHandler.cpp.o
+src/Event.cpp.o:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/Event.cpp.o
+.PHONY : src/Event.cpp.o
 
-EventHandler.i: EventHandler.cpp.i
+src/Event.i: src/Event.cpp.i
 
-.PHONY : EventHandler.i
+.PHONY : src/Event.i
 
 # target to preprocess a source file
-EventHandler.cpp.i:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/EventHandler.cpp.i
-.PHONY : EventHandler.cpp.i
+src/Event.cpp.i:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/Event.cpp.i
+.PHONY : src/Event.cpp.i
 
-EventHandler.s: EventHandler.cpp.s
+src/Event.s: src/Event.cpp.s
 
-.PHONY : EventHandler.s
+.PHONY : src/Event.s
 
 # target to generate assembly for a file
-EventHandler.cpp.s:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/EventHandler.cpp.s
-.PHONY : EventHandler.cpp.s
+src/Event.cpp.s:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/Event.cpp.s
+.PHONY : src/Event.cpp.s
 
-KeyboardEventHandler.o: KeyboardEventHandler.cpp.o
+src/EventHandler.o: src/EventHandler.cpp.o
 
-.PHONY : KeyboardEventHandler.o
+.PHONY : src/EventHandler.o
 
 # target to build an object file
-KeyboardEventHandler.cpp.o:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/KeyboardEventHandler.cpp.o
-.PHONY : KeyboardEventHandler.cpp.o
+src/EventHandler.cpp.o:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/EventHandler.cpp.o
+.PHONY : src/EventHandler.cpp.o
 
-KeyboardEventHandler.i: KeyboardEventHandler.cpp.i
+src/EventHandler.i: src/EventHandler.cpp.i
 
-.PHONY : KeyboardEventHandler.i
+.PHONY : src/EventHandler.i
 
 # target to preprocess a source file
-KeyboardEventHandler.cpp.i:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/KeyboardEventHandler.cpp.i
-.PHONY : KeyboardEventHandler.cpp.i
+src/EventHandler.cpp.i:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/EventHandler.cpp.i
+.PHONY : src/EventHandler.cpp.i
 
-KeyboardEventHandler.s: KeyboardEventHandler.cpp.s
+src/EventHandler.s: src/EventHandler.cpp.s
 
-.PHONY : KeyboardEventHandler.s
+.PHONY : src/EventHandler.s
 
 # target to generate assembly for a file
-KeyboardEventHandler.cpp.s:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/KeyboardEventHandler.cpp.s
-.PHONY : KeyboardEventHandler.cpp.s
+src/EventHandler.cpp.s:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/EventHandler.cpp.s
+.PHONY : src/EventHandler.cpp.s
 
-Matrix4.o: Matrix4.cpp.o
+src/KeyboardEventHandler.o: src/KeyboardEventHandler.cpp.o
 
-.PHONY : Matrix4.o
+.PHONY : src/KeyboardEventHandler.o
 
 # target to build an object file
-Matrix4.cpp.o:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Matrix4.cpp.o
-.PHONY : Matrix4.cpp.o
+src/KeyboardEventHandler.cpp.o:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/KeyboardEventHandler.cpp.o
+.PHONY : src/KeyboardEventHandler.cpp.o
 
-Matrix4.i: Matrix4.cpp.i
+src/KeyboardEventHandler.i: src/KeyboardEventHandler.cpp.i
 
-.PHONY : Matrix4.i
+.PHONY : src/KeyboardEventHandler.i
 
 # target to preprocess a source file
-Matrix4.cpp.i:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Matrix4.cpp.i
-.PHONY : Matrix4.cpp.i
+src/KeyboardEventHandler.cpp.i:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/KeyboardEventHandler.cpp.i
+.PHONY : src/KeyboardEventHandler.cpp.i
 
-Matrix4.s: Matrix4.cpp.s
+src/KeyboardEventHandler.s: src/KeyboardEventHandler.cpp.s
 
-.PHONY : Matrix4.s
+.PHONY : src/KeyboardEventHandler.s
 
 # target to generate assembly for a file
-Matrix4.cpp.s:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Matrix4.cpp.s
-.PHONY : Matrix4.cpp.s
+src/KeyboardEventHandler.cpp.s:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/KeyboardEventHandler.cpp.s
+.PHONY : src/KeyboardEventHandler.cpp.s
 
-MouseEventArgs.o: MouseEventArgs.cpp.o
+src/Light.o: src/Light.cpp.o
 
-.PHONY : MouseEventArgs.o
+.PHONY : src/Light.o
 
 # target to build an object file
-MouseEventArgs.cpp.o:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/MouseEventArgs.cpp.o
-.PHONY : MouseEventArgs.cpp.o
+src/Light.cpp.o:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/Light.cpp.o
+.PHONY : src/Light.cpp.o
 
-MouseEventArgs.i: MouseEventArgs.cpp.i
+src/Light.i: src/Light.cpp.i
 
-.PHONY : MouseEventArgs.i
+.PHONY : src/Light.i
 
 # target to preprocess a source file
-MouseEventArgs.cpp.i:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/MouseEventArgs.cpp.i
-.PHONY : MouseEventArgs.cpp.i
+src/Light.cpp.i:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/Light.cpp.i
+.PHONY : src/Light.cpp.i
 
-MouseEventArgs.s: MouseEventArgs.cpp.s
+src/Light.s: src/Light.cpp.s
 
-.PHONY : MouseEventArgs.s
+.PHONY : src/Light.s
 
 # target to generate assembly for a file
-MouseEventArgs.cpp.s:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/MouseEventArgs.cpp.s
-.PHONY : MouseEventArgs.cpp.s
+src/Light.cpp.s:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/Light.cpp.s
+.PHONY : src/Light.cpp.s
 
-MouseEventHandler.o: MouseEventHandler.cpp.o
+src/Matrix4.o: src/Matrix4.cpp.o
 
-.PHONY : MouseEventHandler.o
+.PHONY : src/Matrix4.o
 
 # target to build an object file
-MouseEventHandler.cpp.o:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/MouseEventHandler.cpp.o
-.PHONY : MouseEventHandler.cpp.o
+src/Matrix4.cpp.o:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/Matrix4.cpp.o
+.PHONY : src/Matrix4.cpp.o
 
-MouseEventHandler.i: MouseEventHandler.cpp.i
+src/Matrix4.i: src/Matrix4.cpp.i
 
-.PHONY : MouseEventHandler.i
+.PHONY : src/Matrix4.i
 
 # target to preprocess a source file
-MouseEventHandler.cpp.i:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/MouseEventHandler.cpp.i
-.PHONY : MouseEventHandler.cpp.i
+src/Matrix4.cpp.i:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/Matrix4.cpp.i
+.PHONY : src/Matrix4.cpp.i
 
-MouseEventHandler.s: MouseEventHandler.cpp.s
+src/Matrix4.s: src/Matrix4.cpp.s
 
-.PHONY : MouseEventHandler.s
+.PHONY : src/Matrix4.s
 
 # target to generate assembly for a file
-MouseEventHandler.cpp.s:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/MouseEventHandler.cpp.s
-.PHONY : MouseEventHandler.cpp.s
+src/Matrix4.cpp.s:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/Matrix4.cpp.s
+.PHONY : src/Matrix4.cpp.s
 
-Point.o: Point.cpp.o
+src/MouseEventArgs.o: src/MouseEventArgs.cpp.o
 
-.PHONY : Point.o
+.PHONY : src/MouseEventArgs.o
 
 # target to build an object file
-Point.cpp.o:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Point.cpp.o
-.PHONY : Point.cpp.o
+src/MouseEventArgs.cpp.o:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/MouseEventArgs.cpp.o
+.PHONY : src/MouseEventArgs.cpp.o
 
-Point.i: Point.cpp.i
+src/MouseEventArgs.i: src/MouseEventArgs.cpp.i
 
-.PHONY : Point.i
+.PHONY : src/MouseEventArgs.i
 
 # target to preprocess a source file
-Point.cpp.i:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Point.cpp.i
-.PHONY : Point.cpp.i
+src/MouseEventArgs.cpp.i:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/MouseEventArgs.cpp.i
+.PHONY : src/MouseEventArgs.cpp.i
 
-Point.s: Point.cpp.s
+src/MouseEventArgs.s: src/MouseEventArgs.cpp.s
 
-.PHONY : Point.s
+.PHONY : src/MouseEventArgs.s
 
 # target to generate assembly for a file
-Point.cpp.s:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Point.cpp.s
-.PHONY : Point.cpp.s
+src/MouseEventArgs.cpp.s:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/MouseEventArgs.cpp.s
+.PHONY : src/MouseEventArgs.cpp.s
 
-Quaternion.o: Quaternion.cpp.o
+src/MouseEventHandler.o: src/MouseEventHandler.cpp.o
 
-.PHONY : Quaternion.o
+.PHONY : src/MouseEventHandler.o
 
 # target to build an object file
-Quaternion.cpp.o:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Quaternion.cpp.o
-.PHONY : Quaternion.cpp.o
+src/MouseEventHandler.cpp.o:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/MouseEventHandler.cpp.o
+.PHONY : src/MouseEventHandler.cpp.o
 
-Quaternion.i: Quaternion.cpp.i
+src/MouseEventHandler.i: src/MouseEventHandler.cpp.i
 
-.PHONY : Quaternion.i
+.PHONY : src/MouseEventHandler.i
 
 # target to preprocess a source file
-Quaternion.cpp.i:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Quaternion.cpp.i
-.PHONY : Quaternion.cpp.i
+src/MouseEventHandler.cpp.i:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/MouseEventHandler.cpp.i
+.PHONY : src/MouseEventHandler.cpp.i
 
-Quaternion.s: Quaternion.cpp.s
+src/MouseEventHandler.s: src/MouseEventHandler.cpp.s
 
-.PHONY : Quaternion.s
+.PHONY : src/MouseEventHandler.s
 
 # target to generate assembly for a file
-Quaternion.cpp.s:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Quaternion.cpp.s
-.PHONY : Quaternion.cpp.s
+src/MouseEventHandler.cpp.s:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/MouseEventHandler.cpp.s
+.PHONY : src/MouseEventHandler.cpp.s
 
-Shader.o: Shader.cpp.o
+src/Point.o: src/Point.cpp.o
 
-.PHONY : Shader.o
+.PHONY : src/Point.o
 
 # target to build an object file
-Shader.cpp.o:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Shader.cpp.o
-.PHONY : Shader.cpp.o
+src/Point.cpp.o:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/Point.cpp.o
+.PHONY : src/Point.cpp.o
 
-Shader.i: Shader.cpp.i
+src/Point.i: src/Point.cpp.i
 
-.PHONY : Shader.i
+.PHONY : src/Point.i
 
 # target to preprocess a source file
-Shader.cpp.i:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Shader.cpp.i
-.PHONY : Shader.cpp.i
+src/Point.cpp.i:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/Point.cpp.i
+.PHONY : src/Point.cpp.i
 
-Shader.s: Shader.cpp.s
+src/Point.s: src/Point.cpp.s
 
-.PHONY : Shader.s
+.PHONY : src/Point.s
 
 # target to generate assembly for a file
-Shader.cpp.s:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Shader.cpp.s
-.PHONY : Shader.cpp.s
+src/Point.cpp.s:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/Point.cpp.s
+.PHONY : src/Point.cpp.s
 
-ShaderProgram.o: ShaderProgram.cpp.o
+src/Quaternion.o: src/Quaternion.cpp.o
 
-.PHONY : ShaderProgram.o
+.PHONY : src/Quaternion.o
 
 # target to build an object file
-ShaderProgram.cpp.o:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/ShaderProgram.cpp.o
-.PHONY : ShaderProgram.cpp.o
+src/Quaternion.cpp.o:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/Quaternion.cpp.o
+.PHONY : src/Quaternion.cpp.o
 
-ShaderProgram.i: ShaderProgram.cpp.i
+src/Quaternion.i: src/Quaternion.cpp.i
 
-.PHONY : ShaderProgram.i
+.PHONY : src/Quaternion.i
 
 # target to preprocess a source file
-ShaderProgram.cpp.i:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/ShaderProgram.cpp.i
-.PHONY : ShaderProgram.cpp.i
+src/Quaternion.cpp.i:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/Quaternion.cpp.i
+.PHONY : src/Quaternion.cpp.i
 
-ShaderProgram.s: ShaderProgram.cpp.s
+src/Quaternion.s: src/Quaternion.cpp.s
 
-.PHONY : ShaderProgram.s
+.PHONY : src/Quaternion.s
 
 # target to generate assembly for a file
-ShaderProgram.cpp.s:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/ShaderProgram.cpp.s
-.PHONY : ShaderProgram.cpp.s
+src/Quaternion.cpp.s:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/Quaternion.cpp.s
+.PHONY : src/Quaternion.cpp.s
 
-Texture.o: Texture.cpp.o
+src/Shader.o: src/Shader.cpp.o
 
-.PHONY : Texture.o
+.PHONY : src/Shader.o
 
 # target to build an object file
-Texture.cpp.o:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Texture.cpp.o
-.PHONY : Texture.cpp.o
+src/Shader.cpp.o:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/Shader.cpp.o
+.PHONY : src/Shader.cpp.o
 
-Texture.i: Texture.cpp.i
+src/Shader.i: src/Shader.cpp.i
 
-.PHONY : Texture.i
+.PHONY : src/Shader.i
 
 # target to preprocess a source file
-Texture.cpp.i:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Texture.cpp.i
-.PHONY : Texture.cpp.i
+src/Shader.cpp.i:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/Shader.cpp.i
+.PHONY : src/Shader.cpp.i
 
-Texture.s: Texture.cpp.s
+src/Shader.s: src/Shader.cpp.s
 
-.PHONY : Texture.s
+.PHONY : src/Shader.s
 
 # target to generate assembly for a file
-Texture.cpp.s:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Texture.cpp.s
-.PHONY : Texture.cpp.s
+src/Shader.cpp.s:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/Shader.cpp.s
+.PHONY : src/Shader.cpp.s
 
-Vector.o: Vector.cpp.o
+src/ShaderProgram.o: src/ShaderProgram.cpp.o
 
-.PHONY : Vector.o
+.PHONY : src/ShaderProgram.o
 
 # target to build an object file
-Vector.cpp.o:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Vector.cpp.o
-.PHONY : Vector.cpp.o
+src/ShaderProgram.cpp.o:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/ShaderProgram.cpp.o
+.PHONY : src/ShaderProgram.cpp.o
 
-Vector.i: Vector.cpp.i
+src/ShaderProgram.i: src/ShaderProgram.cpp.i
 
-.PHONY : Vector.i
+.PHONY : src/ShaderProgram.i
 
 # target to preprocess a source file
-Vector.cpp.i:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Vector.cpp.i
-.PHONY : Vector.cpp.i
+src/ShaderProgram.cpp.i:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/ShaderProgram.cpp.i
+.PHONY : src/ShaderProgram.cpp.i
 
-Vector.s: Vector.cpp.s
+src/ShaderProgram.s: src/ShaderProgram.cpp.s
 
-.PHONY : Vector.s
+.PHONY : src/ShaderProgram.s
 
 # target to generate assembly for a file
-Vector.cpp.s:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Vector.cpp.s
-.PHONY : Vector.cpp.s
+src/ShaderProgram.cpp.s:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/ShaderProgram.cpp.s
+.PHONY : src/ShaderProgram.cpp.s
 
-Window.o: Window.cpp.o
+src/Texture.o: src/Texture.cpp.o
 
-.PHONY : Window.o
+.PHONY : src/Texture.o
 
 # target to build an object file
-Window.cpp.o:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Window.cpp.o
-.PHONY : Window.cpp.o
+src/Texture.cpp.o:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/Texture.cpp.o
+.PHONY : src/Texture.cpp.o
 
-Window.i: Window.cpp.i
+src/Texture.i: src/Texture.cpp.i
 
-.PHONY : Window.i
+.PHONY : src/Texture.i
 
 # target to preprocess a source file
-Window.cpp.i:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Window.cpp.i
-.PHONY : Window.cpp.i
+src/Texture.cpp.i:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/Texture.cpp.i
+.PHONY : src/Texture.cpp.i
 
-Window.s: Window.cpp.s
+src/Texture.s: src/Texture.cpp.s
 
-.PHONY : Window.s
+.PHONY : src/Texture.s
 
 # target to generate assembly for a file
-Window.cpp.s:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/Window.cpp.s
-.PHONY : Window.cpp.s
+src/Texture.cpp.s:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/Texture.cpp.s
+.PHONY : src/Texture.cpp.s
 
-gl_math.o: gl_math.cpp.o
+src/Vector.o: src/Vector.cpp.o
 
-.PHONY : gl_math.o
+.PHONY : src/Vector.o
 
 # target to build an object file
-gl_math.cpp.o:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/gl_math.cpp.o
-.PHONY : gl_math.cpp.o
+src/Vector.cpp.o:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/Vector.cpp.o
+.PHONY : src/Vector.cpp.o
 
-gl_math.i: gl_math.cpp.i
+src/Vector.i: src/Vector.cpp.i
 
-.PHONY : gl_math.i
+.PHONY : src/Vector.i
 
 # target to preprocess a source file
-gl_math.cpp.i:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/gl_math.cpp.i
-.PHONY : gl_math.cpp.i
+src/Vector.cpp.i:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/Vector.cpp.i
+.PHONY : src/Vector.cpp.i
 
-gl_math.s: gl_math.cpp.s
+src/Vector.s: src/Vector.cpp.s
 
-.PHONY : gl_math.s
+.PHONY : src/Vector.s
 
 # target to generate assembly for a file
-gl_math.cpp.s:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/gl_math.cpp.s
-.PHONY : gl_math.cpp.s
+src/Vector.cpp.s:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/Vector.cpp.s
+.PHONY : src/Vector.cpp.s
 
-main.o: main.cpp.o
+src/Window.o: src/Window.cpp.o
 
-.PHONY : main.o
+.PHONY : src/Window.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/main.cpp.o
-.PHONY : main.cpp.o
+src/Window.cpp.o:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/Window.cpp.o
+.PHONY : src/Window.cpp.o
 
-main.i: main.cpp.i
+src/Window.i: src/Window.cpp.i
 
-.PHONY : main.i
+.PHONY : src/Window.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/Window.cpp.i:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/Window.cpp.i
+.PHONY : src/Window.cpp.i
 
-main.s: main.cpp.s
+src/Window.s: src/Window.cpp.s
 
-.PHONY : main.s
+.PHONY : src/Window.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/Window.cpp.s:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/Window.cpp.s
+.PHONY : src/Window.cpp.s
+
+src/gl_math.o: src/gl_math.cpp.o
+
+.PHONY : src/gl_math.o
+
+# target to build an object file
+src/gl_math.cpp.o:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/gl_math.cpp.o
+.PHONY : src/gl_math.cpp.o
+
+src/gl_math.i: src/gl_math.cpp.i
+
+.PHONY : src/gl_math.i
+
+# target to preprocess a source file
+src/gl_math.cpp.i:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/gl_math.cpp.i
+.PHONY : src/gl_math.cpp.i
+
+src/gl_math.s: src/gl_math.cpp.s
+
+.PHONY : src/gl_math.s
+
+# target to generate assembly for a file
+src/gl_math.cpp.s:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/gl_math.cpp.s
+.PHONY : src/gl_math.cpp.s
+
+src/main.o: src/main.cpp.o
+
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -591,57 +618,60 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... CG"
-	@echo "... Camera.o"
-	@echo "... Camera.i"
-	@echo "... Camera.s"
-	@echo "... CameraEventHandler.o"
-	@echo "... CameraEventHandler.i"
-	@echo "... CameraEventHandler.s"
-	@echo "... Event.o"
-	@echo "... Event.i"
-	@echo "... Event.s"
-	@echo "... EventHandler.o"
-	@echo "... EventHandler.i"
-	@echo "... EventHandler.s"
-	@echo "... KeyboardEventHandler.o"
-	@echo "... KeyboardEventHandler.i"
-	@echo "... KeyboardEventHandler.s"
-	@echo "... Matrix4.o"
-	@echo "... Matrix4.i"
-	@echo "... Matrix4.s"
-	@echo "... MouseEventArgs.o"
-	@echo "... MouseEventArgs.i"
-	@echo "... MouseEventArgs.s"
-	@echo "... MouseEventHandler.o"
-	@echo "... MouseEventHandler.i"
-	@echo "... MouseEventHandler.s"
-	@echo "... Point.o"
-	@echo "... Point.i"
-	@echo "... Point.s"
-	@echo "... Quaternion.o"
-	@echo "... Quaternion.i"
-	@echo "... Quaternion.s"
-	@echo "... Shader.o"
-	@echo "... Shader.i"
-	@echo "... Shader.s"
-	@echo "... ShaderProgram.o"
-	@echo "... ShaderProgram.i"
-	@echo "... ShaderProgram.s"
-	@echo "... Texture.o"
-	@echo "... Texture.i"
-	@echo "... Texture.s"
-	@echo "... Vector.o"
-	@echo "... Vector.i"
-	@echo "... Vector.s"
-	@echo "... Window.o"
-	@echo "... Window.i"
-	@echo "... Window.s"
-	@echo "... gl_math.o"
-	@echo "... gl_math.i"
-	@echo "... gl_math.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... src/Camera.o"
+	@echo "... src/Camera.i"
+	@echo "... src/Camera.s"
+	@echo "... src/CameraEventHandler.o"
+	@echo "... src/CameraEventHandler.i"
+	@echo "... src/CameraEventHandler.s"
+	@echo "... src/Event.o"
+	@echo "... src/Event.i"
+	@echo "... src/Event.s"
+	@echo "... src/EventHandler.o"
+	@echo "... src/EventHandler.i"
+	@echo "... src/EventHandler.s"
+	@echo "... src/KeyboardEventHandler.o"
+	@echo "... src/KeyboardEventHandler.i"
+	@echo "... src/KeyboardEventHandler.s"
+	@echo "... src/Light.o"
+	@echo "... src/Light.i"
+	@echo "... src/Light.s"
+	@echo "... src/Matrix4.o"
+	@echo "... src/Matrix4.i"
+	@echo "... src/Matrix4.s"
+	@echo "... src/MouseEventArgs.o"
+	@echo "... src/MouseEventArgs.i"
+	@echo "... src/MouseEventArgs.s"
+	@echo "... src/MouseEventHandler.o"
+	@echo "... src/MouseEventHandler.i"
+	@echo "... src/MouseEventHandler.s"
+	@echo "... src/Point.o"
+	@echo "... src/Point.i"
+	@echo "... src/Point.s"
+	@echo "... src/Quaternion.o"
+	@echo "... src/Quaternion.i"
+	@echo "... src/Quaternion.s"
+	@echo "... src/Shader.o"
+	@echo "... src/Shader.i"
+	@echo "... src/Shader.s"
+	@echo "... src/ShaderProgram.o"
+	@echo "... src/ShaderProgram.i"
+	@echo "... src/ShaderProgram.s"
+	@echo "... src/Texture.o"
+	@echo "... src/Texture.i"
+	@echo "... src/Texture.s"
+	@echo "... src/Vector.o"
+	@echo "... src/Vector.i"
+	@echo "... src/Vector.s"
+	@echo "... src/Window.o"
+	@echo "... src/Window.i"
+	@echo "... src/Window.s"
+	@echo "... src/gl_math.o"
+	@echo "... src/gl_math.i"
+	@echo "... src/gl_math.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 

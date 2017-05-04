@@ -2,7 +2,7 @@
 // Created by keltar on 4/1/17.
 //
 
-#include "MouseEventArgs.h"
+#include "../include/MouseEventArgs.h"
 
 
 MouseEventArgs::MouseEventArgs()

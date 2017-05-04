@@ -2,7 +2,7 @@
 // Created by keltar on 3/31/17.
 //
 
-#include "MouseEventHandler.h"
+#include "../include/MouseEventHandler.h"
 
 MouseEventHandler::MouseEventHandler()
 {

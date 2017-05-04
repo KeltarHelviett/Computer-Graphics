@@ -2,7 +2,7 @@
 // Created by keltar on 3/10/17.
 //
 
-#include "ShaderProgram.h"
+#include "../include/ShaderProgram.h"
 
 ShaderProgram::ShaderProgram()
 {

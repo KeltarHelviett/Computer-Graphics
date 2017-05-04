@@ -1,4 +1,4 @@
-#include "gl_math.h"
+#include "../include/gl_math.h"
 
 Matrix4 EyeMatrix4()
 {

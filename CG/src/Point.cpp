@@ -2,7 +2,7 @@
 // Created by keltar on 4/1/17.
 //
 
-#include "Point.h"
+#include "../include/Point.h"
 
 Point::Point()
 {

@@ -4,7 +4,7 @@
 
 #include <GL/glut.h>
 #include <iostream>
-#include "CameraEventHandler.h"
+#include "../include/CameraEventHandler.h"
 
 
 CameraEventHandler::CameraEventHandler()
