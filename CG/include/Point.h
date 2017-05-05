@@ -5,7 +5,7 @@
 #ifndef CG_POINT_H
 #define CG_POINT_H
 
-#include "cmath"
+#include <cmath>
 
 struct Point
 {

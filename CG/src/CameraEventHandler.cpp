@@ -2,10 +2,9 @@
 // Created by keltar on 3/30/17.
 //
 
-#include <GL/glut.h>
 #include <iostream>
 #include "../include/CameraEventHandler.h"
-
+#include <GL/glut.h>
 
 CameraEventHandler::CameraEventHandler()
 {

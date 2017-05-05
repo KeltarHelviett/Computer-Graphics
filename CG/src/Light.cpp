@@ -14,12 +14,43 @@ Light::~Light()
 
 }
 
-Vec3f Light::Color()
+Vec3f &Light::Color()
 {
-    return Vec3f();
+    return color;
 }
 
-Vec3f Light::AmbientIntensity()
+GLfloat &Light::AmbientIntensity()
 {
-    return Vec3f();
+    return ambientIntensity;
+}
+
+DirectionalLight::DirectionalLight()
+{
+
+}
+
+DirectionalLight::DirectionalLight(Vec3f color, GLfloat ambientIntensity)
+{
+    this->color            = color;
+    this->ambientIntensity = ambientIntensity;
+}
+
+DirectionalLight::~DirectionalLight() {}
+
+Vec3f &DirectionalLight::Direction()
+{
+    return direction;
+}
+
+GLfloat &DirectionalLight::DiffuseIntensity()
+{
+    return diffuseIntensity;
+}
+
+DirectionalLight::DirectionalLight(Vec3f color, GLfloat ambientIntensity, Vec3f direction, GLfloat diffuseIntensity)
+{
+    this->color            = color;
+    this->ambientIntensity = ambientIntensity;
+    this->direction        = direction;
+    this->diffuseIntensity = diffuseIntensity;
 }

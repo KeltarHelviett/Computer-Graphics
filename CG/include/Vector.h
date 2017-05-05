@@ -3,6 +3,7 @@
 
 #include <cmath>
 #include <initializer_list>
+#include <GL/glew.h>
 
 template<int size, typename T>
 class Vector
@@ -186,9 +187,9 @@ Vector<size, T> Vector<size, T>::Normalized()
 }
 
 
-using Vec3f = Vector<3, float>;
-using Vec4f = Vector<4, float>;
-using Vec2f = Vector<2, float>;
+using Vec3f = Vector<3, GLfloat>;
+using Vec4f = Vector<4, GLfloat>;
+using Vec2f = Vector<2, GLfloat>;
 
 class Vector3;
 class Vector4;

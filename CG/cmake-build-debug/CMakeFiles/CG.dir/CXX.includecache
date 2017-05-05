@@ -39,6 +39,8 @@ Event.h
 /home/keltar/Desktop/Computer-Graphics/CG/include/Event.h
 
 /home/keltar/Desktop/Computer-Graphics/CG/include/Light.h
+GL/glew.h
+-
 Vector.h
 /home/keltar/Desktop/Computer-Graphics/CG/include/Vector.h
 
@@ -51,18 +53,18 @@ Vector.h
 /home/keltar/Desktop/Computer-Graphics/CG/include/MouseEventArgs.h
 
 /home/keltar/Desktop/Computer-Graphics/CG/include/MouseEventHandler.h
-GL/glut.h
--
 Vector.h
 /home/keltar/Desktop/Computer-Graphics/CG/include/Vector.h
 MouseEventArgs.h
 /home/keltar/Desktop/Computer-Graphics/CG/include/MouseEventArgs.h
 Point.h
 /home/keltar/Desktop/Computer-Graphics/CG/include/Point.h
+GL/glut.h
+-
 
 /home/keltar/Desktop/Computer-Graphics/CG/include/Point.h
 cmath
-/home/keltar/Desktop/Computer-Graphics/CG/include/cmath
+-
 
 /home/keltar/Desktop/Computer-Graphics/CG/include/Quaternion.h
 Vector.h
@@ -79,12 +81,10 @@ string
 -
 
 /home/keltar/Desktop/Computer-Graphics/CG/include/ShaderProgram.h
-GL/glew.h
--
-GL/glut.h
--
 Shader.h
 /home/keltar/Desktop/Computer-Graphics/CG/include/Shader.h
+GL/glew.h
+-
 
 /home/keltar/Desktop/Computer-Graphics/CG/include/Texture.h
 string
@@ -98,6 +98,8 @@ Magick++.h
 cmath
 -
 initializer_list
+-
+GL/glew.h
 -
 
 /home/keltar/Desktop/Computer-Graphics/CG/include/Window.h
@@ -119,20 +121,20 @@ Quaternion.h
 /home/keltar/Desktop/Computer-Graphics/CG/include/Quaternion.h
 
 /home/keltar/Desktop/Computer-Graphics/CG/src/Camera.cpp
-GL/glut.h
--
 ../include/Camera.h
 /home/keltar/Desktop/Computer-Graphics/CG/include/Camera.h
 ../include/Quaternion.h
 /home/keltar/Desktop/Computer-Graphics/CG/include/Quaternion.h
-
-/home/keltar/Desktop/Computer-Graphics/CG/src/CameraEventHandler.cpp
 GL/glut.h
 -
+
+/home/keltar/Desktop/Computer-Graphics/CG/src/CameraEventHandler.cpp
 iostream
 -
 ../include/CameraEventHandler.h
 /home/keltar/Desktop/Computer-Graphics/CG/include/CameraEventHandler.h
+GL/glut.h
+-
 
 /home/keltar/Desktop/Computer-Graphics/CG/src/Event.cpp
 ../include/Event.h
@@ -203,8 +205,6 @@ iostream
 /home/keltar/Desktop/Computer-Graphics/CG/src/main.cpp
 GL/glew.h
 -
-GL/glut.h
--
 Magick++.h
 -
 ../include/Shader.h
@@ -231,6 +231,10 @@ cassert
 /home/keltar/Desktop/Computer-Graphics/CG/include/MouseEventHandler.h
 ../include/Texture.h
 /home/keltar/Desktop/Computer-Graphics/CG/include/Texture.h
+../include/Light.h
+/home/keltar/Desktop/Computer-Graphics/CG/include/Light.h
+GL/glut.h
+-
 
 /usr/include/ImageMagick-6/Magick++.h
 Magick++/Include.h

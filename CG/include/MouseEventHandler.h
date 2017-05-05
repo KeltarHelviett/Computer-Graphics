@@ -6,10 +6,11 @@
 #define CG_MOUSEEVENTHANDLER_H
 
 
-#include <GL/glut.h>
+
 #include "Vector.h"
 #include "MouseEventArgs.h"
 #include "Point.h"
+#include <GL/glut.h>
 
 struct MouseInfo
 {

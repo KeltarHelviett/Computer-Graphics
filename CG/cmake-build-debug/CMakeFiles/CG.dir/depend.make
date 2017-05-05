@@ -209,6 +209,7 @@ CMakeFiles/CG.dir/src/main.cpp.o: ../include/CameraEventHandler.h
 CMakeFiles/CG.dir/src/main.cpp.o: ../include/Event.h
 CMakeFiles/CG.dir/src/main.cpp.o: ../include/EventHandler.h
 CMakeFiles/CG.dir/src/main.cpp.o: ../include/KeyboardEventHandler.h
+CMakeFiles/CG.dir/src/main.cpp.o: ../include/Light.h
 CMakeFiles/CG.dir/src/main.cpp.o: ../include/Matrix4.h
 CMakeFiles/CG.dir/src/main.cpp.o: ../include/MouseEventArgs.h
 CMakeFiles/CG.dir/src/main.cpp.o: ../include/MouseEventHandler.h

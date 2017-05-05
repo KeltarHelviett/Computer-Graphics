@@ -1,5 +1,4 @@
 #include <GL/glew.h>
-#include <GL/glut.h>
 #include <Magick++.h>
 #include "../include/Shader.h"
 #include "../include/ShaderProgram.h"
@@ -13,6 +12,8 @@
 #include "../include/CameraEventHandler.h"
 #include "../include/MouseEventHandler.h"
 #include "../include/Texture.h"
+#include "../include/Light.h"
+#include <GL/glut.h>
 
 #define ToRadian(x) (float)((x) * M_PI / 180.0f)
 #define ToDegree(x) ((x) * 180.0f / M_PI)
@@ -21,6 +22,7 @@ struct Vertex
 {
     Vec3f pos;
     Vec2f tex;
+    Vec3f normal;
 
     Vertex() {}
 
@@ -28,25 +30,56 @@ struct Vertex
     {
         this->pos = pos;
         this->tex = tex;
+        normal    = {0.0f, 0.0f, 0.0f};
     }
 };
 
 GLuint VAO;
 GLuint VBO;
 GLuint IBO;
-GLuint gSampler;
+GLuint Sampler;
+GLuint DLColor;
+GLuint DLIntens;
+GLuint DLDiffuse;
+GLuint DLDirection;
 Texture *Tex = NULL;
 float Scale = 0.0f;
-GLuint gWorldLocation;
+GLuint WVP;
+GLuint WorldTrans;
 Matrix4 Projection, Translation, Rotattion, MScale;
 Camera Cam;
 float zMove = 0.0f;
 KeyboardEventHandler KEH;
 CameraEventHandler CEH;
 MouseEventHandler MEH;
+DirectionalLight dl({1.0f, 1.0f, 1.0f}, 1.0f, {1.0f, 0.0f, 0.0f}, 0.5f);
 
 #define WINDOW_WIDTH 1024
 #define WINDOW_HEIGHT 768
+
+void CalcNormals(const unsigned int* Indices, unsigned int IndexCount, Vertex* Vertices, unsigned int VertexCount)
+{
+    for (unsigned int i = 0 ; i < IndexCount ; i += 3) {
+        unsigned int Index0 = Indices[i];
+        unsigned int Index1 = Indices[i + 1];
+        unsigned int Index2 = Indices[i + 2];
+        Vec3f v1 = Vertices[Index1].pos - Vertices[Index0].pos;
+        Vec3f v2 = Vertices[Index2].pos - Vertices[Index0].pos;
+        Vec3f Normal = v1.Cross(v2);
+        Normal.Normalize();
+
+        Vertices[Index0].normal += Normal;
+        Vertices[Index1].normal += Normal;
+        Vertices[Index2].normal += Normal;
+    }
+
+    for (unsigned int i = 0 ; i < VertexCount ; i++) {
+        Vertices[i].normal.Normalize();
+        //std::cout << Vertices[i].normal[0] << "\t" << Vertices[i].normal[1] << "\t" << Vertices[i].normal[2] << std::endl;
+        auto v = -dl.Direction() * Vertices[i].normal;
+        std::cout << v << std::endl;
+    }
+}
 
 void CreateVertexBuffer()
 {
@@ -67,6 +100,7 @@ void CreateVertexBuffer()
                                1, 3, 2,
                                2, 3, 0,
                                1, 2, 0 };
+    CalcNormals(Indices, sizeof(Indices) / sizeof(Indices[0]), vs, sizeof(vs) / sizeof(vs[0]));
     glGenBuffers(1, &IBO);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, IBO);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(Indices), Indices, GL_STATIC_DRAW);
@@ -76,9 +110,12 @@ void CreateVertexBuffer()
 
     glEnableVertexAttribArray(0);
     glEnableVertexAttribArray(1);
+    glEnableVertexAttribArray(2);
 
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), 0);
-    glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), 0);
+    glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), (const GLvoid*)12);
+    glVertexAttribPointer(2, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (const GLvoid*)20);
+
     glBindVertexArray(VAO);
 }
 
@@ -98,10 +135,21 @@ void CreateShaders()
         sp.use();
     else
         throw std::runtime_error("Shader program is not valid");
-    gSampler = (GLuint) glGetUniformLocation(sp.program(), "gSampler");
-    assert(gSampler != 0xFFFFFFFF);
-    gWorldLocation = (GLuint)glGetUniformLocation(sp.program(), "gWVP");
-    assert(gWorldLocation != 0xFFFFFFFF);
+    Sampler = (GLuint) glGetUniformLocation(sp.program(), "Sampler");
+    assert(Sampler != 0xFFFFFFFF);
+    WVP = (GLuint)glGetUniformLocation(sp.program(), "WVP");
+    assert(WVP != 0xFFFFFFFF);
+    DLColor = (GLuint) glGetUniformLocation(sp.program(), "directionalLight.Color");
+    assert(DLColor!= 0xFFFFFFFF);
+    DLIntens = (GLuint) glGetUniformLocation(sp.program(), "directionalLight.AmbientIntensity");
+    assert(DLIntens != 0xFFFFFFFF);
+    DLDiffuse = (GLuint) glGetUniformLocation(sp.program(), "directionalLight.DiffuseIntensity");
+    assert(DLDiffuse != 0xFFFFFFFF);
+    DLDirection = (GLuint) glGetUniformLocation(sp.program(), "directionalLight.Direction");
+    assert(DLDirection != 0xFFFFFFFF);
+    WorldTrans = (GLuint) glGetUniformLocation(sp.program(), "World");
+    assert(WorldTrans != 0xFFFFFFFF);
+
 }
 
 Matrix4 GetRotationMatrix(float x, float y, float z)
@@ -155,8 +203,17 @@ void RenderScene()
 
     Vec3f p = CEH.GetCameraPosition(KEH.keys(), Cam.Target(), Cam.Up(), Cam.Position());
     Matrix4 res = Cam.GetProjectionPerspectiveMatrix()  * Cam.GetUVNMatrix() * Cam.SetPosition(p[0], p[1], p[2]);
+    Matrix4 world = EyeMatrix4();
 
-    glUniformMatrix4fv(gWorldLocation, 1, GL_TRUE, (GLfloat *)&res);
+    glUniformMatrix4fv(WVP, 1, GL_TRUE, (GLfloat *)&res);
+    glUniformMatrix4fv(WorldTrans, 1, GL_TRUE, (GLfloat *)&world);
+    glUniform3f(DLColor, dl.Color()[0], dl.Color()[1], dl.Color()[2]);
+    Vec3f Direction = dl.Direction();
+    Direction.Normalize();
+    glUniform3f(DLDirection, Direction[0], Direction[1], Direction[2]);
+    glUniform1f(DLDiffuse, dl.DiffuseIntensity());
+    glUniform1f(DLIntens, dl.AmbientIntensity());
+    glUniform1i(Sampler, 0);
     Tex->Bind(GL_TEXTURE0);
     glDrawElements(GL_TRIANGLES, 12, GL_UNSIGNED_INT, 0);
 
@@ -165,6 +222,11 @@ void RenderScene()
 
 void KeyPressed(unsigned char key, int x, int y)
 {
+    if (key == 'o')
+        dl.AmbientIntensity() += 0.05;
+    if (key == 'p')
+        dl.AmbientIntensity() -= 0.05;
+
     KEH.Press(key, x, y);
 }
 
@@ -211,7 +273,6 @@ int main(int argc, char *argv[])
     glutWarpPointer(WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2);
     MEH.MouseMove(WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2);
     MEH.MouseMove(WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2);
-    glUniform1i(gSampler, 0);
     Tex = new Texture(GL_TEXTURE_2D, "../rsc/stone2.jpg");
     if (!Tex->Load())
         return 1;

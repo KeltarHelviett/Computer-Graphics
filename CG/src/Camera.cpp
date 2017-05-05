@@ -2,9 +2,9 @@
 // Created by keltar on 3/29/17.
 //
 
-#include <GL/glut.h>
 #include "../include/Camera.h"
 #include "../include/Quaternion.h"
+#include <GL/glut.h>
 
 #define ToRadian(x) (float)((x) * M_PI / 180.0f)
 #define ToDegree(x) (float)((x) * 180.0f / M_PI)

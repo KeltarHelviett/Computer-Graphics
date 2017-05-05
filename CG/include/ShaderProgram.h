@@ -2,9 +2,9 @@
 #define CG_SHADERPROGRAM_H
 
 
-#include <GL/glew.h>
-#include <GL/glut.h>
+
 #include "Shader.h"
+#include <GL/glew.h>
 
 class ShaderProgram
 {
