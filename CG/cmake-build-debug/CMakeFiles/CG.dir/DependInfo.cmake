@@ -18,7 +18,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/keltar/Desktop/Computer-Graphics/CG/src/Shader.cpp" "/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/CMakeFiles/CG.dir/src/Shader.cpp.o"
   "/home/keltar/Desktop/Computer-Graphics/CG/src/ShaderProgram.cpp" "/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/CMakeFiles/CG.dir/src/ShaderProgram.cpp.o"
   "/home/keltar/Desktop/Computer-Graphics/CG/src/Texture.cpp" "/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/CMakeFiles/CG.dir/src/Texture.cpp.o"
-  "/home/keltar/Desktop/Computer-Graphics/CG/src/Vector.cpp" "/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/CMakeFiles/CG.dir/src/Vector.cpp.o"
   "/home/keltar/Desktop/Computer-Graphics/CG/src/Window.cpp" "/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/CMakeFiles/CG.dir/src/Window.cpp.o"
   "/home/keltar/Desktop/Computer-Graphics/CG/src/gl_math.cpp" "/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/CMakeFiles/CG.dir/src/gl_math.cpp.o"
   "/home/keltar/Desktop/Computer-Graphics/CG/src/main.cpp" "/home/keltar/Desktop/Computer-Graphics/CG/cmake-build-debug/CMakeFiles/CG.dir/src/main.cpp.o"

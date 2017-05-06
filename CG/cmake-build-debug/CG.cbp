@@ -181,9 +181,6 @@
 		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/src/Texture.cpp">
 			<Option target="CG"/>
 		</Unit>
-		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/src/Vector.cpp">
-			<Option target="CG"/>
-		</Unit>
 		<Unit filename="/home/keltar/Desktop/Computer-Graphics/CG/src/Window.cpp">
 			<Option target="CG"/>
 		</Unit>

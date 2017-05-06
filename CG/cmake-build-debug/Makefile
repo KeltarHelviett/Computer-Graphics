@@ -501,33 +501,6 @@ src/Texture.cpp.s:
 	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/Texture.cpp.s
 .PHONY : src/Texture.cpp.s
 
-src/Vector.o: src/Vector.cpp.o
-
-.PHONY : src/Vector.o
-
-# target to build an object file
-src/Vector.cpp.o:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/Vector.cpp.o
-.PHONY : src/Vector.cpp.o
-
-src/Vector.i: src/Vector.cpp.i
-
-.PHONY : src/Vector.i
-
-# target to preprocess a source file
-src/Vector.cpp.i:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/Vector.cpp.i
-.PHONY : src/Vector.cpp.i
-
-src/Vector.s: src/Vector.cpp.s
-
-.PHONY : src/Vector.s
-
-# target to generate assembly for a file
-src/Vector.cpp.s:
-	$(MAKE) -f CMakeFiles/CG.dir/build.make CMakeFiles/CG.dir/src/Vector.cpp.s
-.PHONY : src/Vector.cpp.s
-
 src/Window.o: src/Window.cpp.o
 
 .PHONY : src/Window.o
@@ -660,9 +633,6 @@ help:
 	@echo "... src/Texture.o"
 	@echo "... src/Texture.i"
 	@echo "... src/Texture.s"
-	@echo "... src/Vector.o"
-	@echo "... src/Vector.i"
-	@echo "... src/Vector.s"
 	@echo "... src/Window.o"
 	@echo "... src/Window.i"
 	@echo "... src/Window.s"

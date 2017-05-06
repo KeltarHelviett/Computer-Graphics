@@ -190,10 +190,6 @@ iostream
 ../include/Texture.h
 /home/keltar/Desktop/Computer-Graphics/CG/include/Texture.h
 
-/home/keltar/Desktop/Computer-Graphics/CG/src/Vector.cpp
-../include/Vector.h
-/home/keltar/Desktop/Computer-Graphics/CG/include/Vector.h
-
 /home/keltar/Desktop/Computer-Graphics/CG/src/Window.cpp
 ../include/Window.h
 /home/keltar/Desktop/Computer-Graphics/CG/include/Window.h

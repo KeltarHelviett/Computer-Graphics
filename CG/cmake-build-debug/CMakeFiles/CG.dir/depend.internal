@@ -192,9 +192,6 @@ CMakeFiles/CG.dir/src/Texture.cpp.o
  /usr/include/ImageMagick-6/wand/stream.h
  /usr/include/ImageMagick-6/wand/wand-view.h
  /usr/include/x86_64-linux-gnu/ImageMagick-6/magick/magick-baseconfig.h
-CMakeFiles/CG.dir/src/Vector.cpp.o
- /home/keltar/Desktop/Computer-Graphics/CG/include/Vector.h
- /home/keltar/Desktop/Computer-Graphics/CG/src/Vector.cpp
 CMakeFiles/CG.dir/src/Window.cpp.o
  /home/keltar/Desktop/Computer-Graphics/CG/include/Window.h
  /home/keltar/Desktop/Computer-Graphics/CG/src/Window.cpp

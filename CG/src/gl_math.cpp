@@ -23,10 +23,3 @@ Matrix4 ZeroMatrix4()
     return res;
 }
 
-Vector4 ZeroVector4()
-{
-    Vector4 res;
-    for (int i = 0; i < 4; ++i)
-        res[i] = 0;
-    return res;
-}

@@ -60,9 +60,9 @@ Matrix4 Matrix4::Add(const Matrix4 &other)
 }
 
 
-Vector4 Matrix4::Mult(Vector4 &other)
+Vec4f  Matrix4::Mult(Vec4f  &other)
 {
-    Vector4 res;
+    Vec4f res;
     for (int i = 0; i < 4; ++i)
     {
         for (int j = 0; j < 4; ++j)
@@ -73,7 +73,7 @@ Vector4 Matrix4::Mult(Vector4 &other)
     return res;
 }
 
-Vector4 Matrix4::operator*(Vector4 &other)
+Vec4f  Matrix4::operator*(Vec4f  &other)
 {
     return this->Mult(other);
 }

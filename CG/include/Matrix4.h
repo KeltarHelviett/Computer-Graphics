@@ -16,10 +16,10 @@ public:
     Matrix4 Add(const Matrix4 &other);
     Matrix4 operator+(const Matrix4 &other);
 
-    Vector4 Mult(Vector4 &other);
-    Vector4 operator*(Vector4 &other);
+    Vec4f  Mult(Vec4f &other);
+    Vec4f  operator*(Vec4f &other);
 
-    float* operator[](unsigned int index);
+    GLfloat * operator[](unsigned int index);
 
     bool operator==(const Matrix4 &other);
 

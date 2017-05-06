@@ -192,9 +192,6 @@ CMakeFiles/CG.dir/src/Texture.cpp.o: /usr/include/ImageMagick-6/wand/stream.h
 CMakeFiles/CG.dir/src/Texture.cpp.o: /usr/include/ImageMagick-6/wand/wand-view.h
 CMakeFiles/CG.dir/src/Texture.cpp.o: /usr/include/x86_64-linux-gnu/ImageMagick-6/magick/magick-baseconfig.h
 
-CMakeFiles/CG.dir/src/Vector.cpp.o: ../include/Vector.h
-CMakeFiles/CG.dir/src/Vector.cpp.o: ../src/Vector.cpp
-
 CMakeFiles/CG.dir/src/Window.cpp.o: ../include/Window.h
 CMakeFiles/CG.dir/src/Window.cpp.o: ../src/Window.cpp
 
