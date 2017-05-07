@@ -258,7 +258,7 @@ void RenderScene()
     glUniform1i(Sampler, 0);
     Tex->Bind(GL_TEXTURE0);
     glDrawElements(GL_TRIANGLES, 12 * 3, GL_UNSIGNED_INT, 0);
-
+    PrintLog();
     glutSwapBuffers();
 }
 
