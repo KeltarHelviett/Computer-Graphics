@@ -12,5 +12,4 @@
 Matrix4 EyeMatrix4();
 Matrix4 ZeroMatrix4();
 
-Vector4 ZeroVector4();
 #endif //CG_GL_MATH_H

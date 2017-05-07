@@ -52,7 +52,7 @@ float zMove = 0.0f;
 KeyboardEventHandler KEH;
 CameraEventHandler CEH;
 MouseEventHandler MEH;
-DirectionalLight dl({1.0f, 1.0f, 1.0f}, 1.0f, {1.0f, 0.0f, 0.0f}, 0.5f);
+DirectionalLight dl({1.0f, 1.0f, 1.0f}, 1.0f, {1.0f, .0f, .0f}, 0.5f);
 
 #define WINDOW_WIDTH 1024
 #define WINDOW_HEIGHT 768
@@ -68,9 +68,9 @@ void CalcNormals(const unsigned int* Indices, unsigned int IndexCount, Vertex* V
         Vec3f Normal = v1.Cross(v2);
         Normal.Normalize();
 
-        Vertices[Index0].normal += Normal;
-        Vertices[Index1].normal += Normal;
-        Vertices[Index2].normal += Normal;
+        Vertices[Index0].normal = Vertices[Index0].normal + Normal;
+        Vertices[Index1].normal = Vertices[Index0].normal + Normal;
+        Vertices[Index2].normal = Vertices[Index0].normal + Normal;
     }
 
     for (unsigned int i = 0 ; i < VertexCount ; i++) {
@@ -86,21 +86,63 @@ void CreateVertexBuffer()
     glGenVertexArrays(1, &VAO);
     glBindVertexArray(VAO);
 
-    Vertex vs[4];
-    vs[0] = Vertex({-1.0f, -1.0f, 0.5773f}, {0.0f, 0.0f});
-    vs[1] = Vertex({0.0f, -1.0f, -1.15475f},  {0.5f, 0.0f});
-    vs[2] = Vertex({1.0f, -1.0f, 0.5773f},  {1.0f, 0.0f});
-    vs[3] = Vertex({0.0f, 1.0f, 0.0f},   {0.5f, 1.0f});
+    Vertex vs[] = {
+
+            Vertex({-0.5f, -0.5f, -0.5f}, {0.0f, 0.0f}),
+            Vertex({-0.5f,  0.5f, -0.5f}, {0.0f, 0.5f}),
+            Vertex({0.5f, -0.5f, -0.5f}, {0.5f, 0.0f}),
+            Vertex({0.5f,  0.5f, -0.5f}, {0.5f, 0.5f}),
+
+            Vertex({-0.5f, -0.5f,  0.5f}, {0.0f, 0.0f}),
+            Vertex({-0.5f,  0.5f,  0.5f}, {0.0f, 0.5f}),
+            Vertex({0.5f, -0.5f,  0.5f}, {0.5f, 0.0f}),
+            Vertex({0.5f,  0.5f,  0.5f}, {0.5f, 0.5f}),
+
+            Vertex({-0.5f, -0.5f, -0.5f}, {0.0f, 0.0f}),
+            Vertex({-0.5f,  0.5f, -0.5f}, {0.0f, 0.5f}),
+            Vertex({-0.5f, -0.5f,  0.5f}, {0.5f, 0.0f}),
+            Vertex({-0.5f,  0.5f,  0.5f}, {0.5f, 0.5f}),
+
+            Vertex({0.5f, -0.5f, -0.5f}, {0.0f, 0.0f}),
+            Vertex({0.5f,  0.5f, -0.5f}, {0.0f, 0.5f}),
+            Vertex({0.5f, -0.5f,  0.5f}, {0.5f, 0.0f}),
+            Vertex({0.5f,  0.5f,  0.5f}, {0.5f, 0.5f}),
+
+            Vertex({-0.5f, -0.5f, -0.5f}, {0.0f, 0.0f}),
+            Vertex({-0.5f, -0.5f,  0.5f}, {0.0f, 0.5f}),
+            Vertex({0.5f, -0.5f, -0.5f}, {0.5f, 0.0f}),
+            Vertex({0.5f, -0.5f,  0.5f}, {0.5f, 0.5f}),
+
+            Vertex({-0.5f,  0.5f, -0.5f}, {0.0f, 0.0f}),
+            Vertex({-0.5f,  0.5f,  0.5f}, {0.0f, 0.5f}),
+            Vertex({0.5f,  0.5f, -0.5f}, {0.5f, 0.0f}),
+            Vertex({0.5f,  0.5f,  0.5f}, {0.5f, 0.5f})
+    };
+
+
+
+
+
+    unsigned int Indices[] = { 1,  0,  2,
+                               1,  2,  3,
+                               4,  5,  6,
+                               6,  5,  7,
+                               8,  9, 10,
+                               10, 9, 11,
+                               13, 12, 14,
+                               13, 14, 15,
+                               17, 16, 18,
+                               17, 18, 19,
+                               21, 20, 22,
+                               21, 22, 23 };
+    CalcNormals(Indices, sizeof(Indices) / sizeof(Indices[0]), vs, sizeof(vs) / sizeof(vs[0]));
+    for (int i = 0; i < 4 * 6; i++)
+        std::cout << vs[i].normal[0] << '\t' << vs[i].normal[1] << '\t' << vs[i].normal[2] << '\t' << std::endl;
 
     glGenBuffers(1, &VBO);
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
     glBufferData(GL_ARRAY_BUFFER, sizeof(vs), vs, GL_STATIC_DRAW);
 
-    unsigned int Indices[] = { 0, 3, 1,
-                               1, 3, 2,
-                               2, 3, 0,
-                               1, 2, 0 };
-    CalcNormals(Indices, sizeof(Indices) / sizeof(Indices[0]), vs, sizeof(vs) / sizeof(vs[0]));
     glGenBuffers(1, &IBO);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, IBO);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(Indices), Indices, GL_STATIC_DRAW);
@@ -112,7 +154,7 @@ void CreateVertexBuffer()
     glEnableVertexAttribArray(1);
     glEnableVertexAttribArray(2);
 
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), 0);
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), nullptr);
     glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), (const GLvoid*)12);
     glVertexAttribPointer(2, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (const GLvoid*)20);
 
@@ -215,17 +257,28 @@ void RenderScene()
     glUniform1f(DLIntens, dl.AmbientIntensity());
     glUniform1i(Sampler, 0);
     Tex->Bind(GL_TEXTURE0);
-    glDrawElements(GL_TRIANGLES, 12, GL_UNSIGNED_INT, 0);
+    glDrawElements(GL_TRIANGLES, 12 * 3, GL_UNSIGNED_INT, 0);
 
     glutSwapBuffers();
 }
 
 void KeyPressed(unsigned char key, int x, int y)
 {
-    if (key == 'o')
-        dl.AmbientIntensity() += 0.05;
-    if (key == 'p')
-        dl.AmbientIntensity() -= 0.05;
+    switch (key)
+    {
+        case 'o':
+            dl.AmbientIntensity() += 0.05;
+            break;
+        case 'p':
+            dl.AmbientIntensity() -= 0.05;
+            break;
+        case 'k':
+            dl.DiffuseIntensity() += 0.05;
+            std::cout << dl.DiffuseIntensity() << std::endl;
+            break;
+        case 'l':
+            dl.DiffuseIntensity() -= 0.05;
+    }
 
     KEH.Press(key, x, y);
 }
@@ -255,7 +308,7 @@ int main(int argc, char *argv[])
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA);
     Window w(1024, 768, 300, 300, "Window");
-    glClearColor(.0f, .0f, .0f, 0.0f);
+    glClearColor(.5f, .5f, 1.0f, 1.0f);
     glutIdleFunc(RenderScene);
     glutKeyboardUpFunc(KeyUp);
     glutKeyboardFunc(KeyPressed);
