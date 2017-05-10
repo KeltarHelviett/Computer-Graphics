@@ -16,10 +16,11 @@ public:
 
     Vec3f &Color();
     GLfloat &AmbientIntensity();
-
+    GLfloat &DiffuseIntensity();
 protected:
     Vec3f color;
     GLfloat ambientIntensity;
+    GLfloat diffuseIntensity;
 };
 
 class DirectionalLight: public Light
@@ -30,13 +31,32 @@ public:
     DirectionalLight(Vec3f color, GLfloat ambientIntensity, Vec3f direction, GLfloat diffuseIntensity);
 
     Vec3f &Direction();
-    GLfloat &DiffuseIntensity();
+
 
     ~DirectionalLight();
 
 private:
     Vec3f direction;
-    GLfloat diffuseIntensity;
+
 };
+
+class PointLight: public Light
+{
+public:
+    PointLight(const Vec3f &color, const Vec3f &pos, GLfloat ambientIntensity, GLfloat diffuseIntensity, GLfloat constant, GLfloat linear, GLfloat exp);
+    PointLight();
+
+    GLfloat &Constant();
+    GLfloat &Linear();
+    GLfloat &Exp();
+
+    Vec3f &Pos();
+private:
+    Vec3f pos;
+    GLfloat constant, linear, exp;
+};
+
+
+
 
 #endif //CG_LIGHT_H

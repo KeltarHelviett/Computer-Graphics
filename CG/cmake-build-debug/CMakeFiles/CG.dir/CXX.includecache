@@ -229,6 +229,8 @@ cassert
 /home/keltar/Desktop/Computer-Graphics/CG/include/Texture.h
 ../include/Light.h
 /home/keltar/Desktop/Computer-Graphics/CG/include/Light.h
+vector
+-
 GL/glut.h
 -
 

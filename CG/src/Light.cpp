@@ -24,6 +24,11 @@ GLfloat &Light::AmbientIntensity()
     return ambientIntensity;
 }
 
+GLfloat &Light::DiffuseIntensity()
+{
+    return diffuseIntensity;
+}
+
 DirectionalLight::DirectionalLight()
 {
 
@@ -42,15 +47,47 @@ Vec3f &DirectionalLight::Direction()
     return direction;
 }
 
-GLfloat &DirectionalLight::DiffuseIntensity()
-{
-    return diffuseIntensity;
-}
-
 DirectionalLight::DirectionalLight(Vec3f color, GLfloat ambientIntensity, Vec3f direction, GLfloat diffuseIntensity)
 {
     this->color            = color;
     this->ambientIntensity = ambientIntensity;
     this->direction        = direction;
     this->diffuseIntensity = diffuseIntensity;
+}
+
+PointLight::PointLight(const Vec3f &color, const Vec3f &pos, GLfloat ambientIntensity, GLfloat diffuseIntensity,
+                       GLfloat constant, GLfloat linear, GLfloat exp)
+{
+    this->color            = color;
+    this->pos              = pos;
+    this->ambientIntensity = ambientIntensity;
+    this->diffuseIntensity = diffuseIntensity;
+    this->constant         = constant;
+    this->linear           = linear;
+    this->exp              = exp;
+}
+
+GLfloat &PointLight::Constant()
+{
+    return constant;
+}
+
+GLfloat &PointLight::Linear()
+{
+    return linear;
+}
+
+GLfloat &PointLight::Exp()
+{
+    return exp;
+}
+
+Vec3f &PointLight::Pos()
+{
+    return pos;
+}
+
+PointLight::PointLight()
+{
+
 }

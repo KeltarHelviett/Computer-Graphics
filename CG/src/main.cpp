@@ -13,6 +13,7 @@
 #include "../include/MouseEventHandler.h"
 #include "../include/Texture.h"
 #include "../include/Light.h"
+#include <vector>
 #include <GL/glut.h>
 
 #define ToRadian(x) (float)((x) * M_PI / 180.0f)
@@ -34,6 +35,7 @@ struct Vertex
     }
 };
 
+//GLuint CamWorldPos;
 GLuint VAO;
 GLuint VBO;
 GLuint IBO;
@@ -42,10 +44,14 @@ GLuint DLColor;
 GLuint DLIntens;
 GLuint DLDiffuse;
 GLuint DLDirection;
-Texture *Tex = NULL;
-float Scale = 0.0f;
+GLuint NumPLight;
+GLuint CAMERA;
 GLuint WVP;
 GLuint WorldTrans;
+
+Texture *Tex = NULL;
+float Scale = 0.0f;
+
 Matrix4 Projection, Translation, Rotattion, MScale;
 Camera Cam;
 float zMove = 0.0f;
@@ -53,9 +59,28 @@ KeyboardEventHandler KEH;
 CameraEventHandler CEH;
 MouseEventHandler MEH;
 DirectionalLight dl({1.0f, 1.0f, 1.0f}, 1.0f, {1.0f, .0f, .0f}, 0.5f);
+std::vector<PointLight> pls;
+GLuint prog;
+struct PLS
+{
+    GLuint Color, AmbientIntensity, Position, DiffuseIntensity, Constant, Linear, Exp;
+}GPLS[10];
 
 #define WINDOW_WIDTH 1024
 #define WINDOW_HEIGHT 768
+
+void AddPointLight()
+{
+    PointLight pl;
+    pl.Color() = {1.0f, 1.0f, 1.0f};
+    pl.Pos() = Cam.Position();
+    pl.Constant() = .0f;
+    pl.Linear() = 0.1f;
+    pl.Exp() = 0.4f;
+    pl.DiffuseIntensity() = 0.5f;
+    pl.AmbientIntensity() = 0.1f;
+    pls.push_back(pl);
+}
 
 void CalcNormals(const unsigned int* Indices, unsigned int IndexCount, Vertex* Vertices, unsigned int VertexCount)
 {
@@ -181,17 +206,17 @@ void CreateShaders()
     assert(Sampler != 0xFFFFFFFF);
     WVP = (GLuint)glGetUniformLocation(sp.program(), "WVP");
     assert(WVP != 0xFFFFFFFF);
-    DLColor = (GLuint) glGetUniformLocation(sp.program(), "directionalLight.Color");
+    DLColor = (GLuint) glGetUniformLocation(sp.program(), "directionalLight.Base.Color");
     assert(DLColor!= 0xFFFFFFFF);
-    DLIntens = (GLuint) glGetUniformLocation(sp.program(), "directionalLight.AmbientIntensity");
+    DLIntens = (GLuint) glGetUniformLocation(sp.program(), "directionalLight.Base.AmbientIntensity");
     assert(DLIntens != 0xFFFFFFFF);
-    DLDiffuse = (GLuint) glGetUniformLocation(sp.program(), "directionalLight.DiffuseIntensity");
+    DLDiffuse = (GLuint) glGetUniformLocation(sp.program(), "directionalLight.Base.DiffuseIntensity");
     assert(DLDiffuse != 0xFFFFFFFF);
     DLDirection = (GLuint) glGetUniformLocation(sp.program(), "directionalLight.Direction");
     assert(DLDirection != 0xFFFFFFFF);
     WorldTrans = (GLuint) glGetUniformLocation(sp.program(), "World");
     assert(WorldTrans != 0xFFFFFFFF);
-
+    prog = sp.program();
 }
 
 Matrix4 GetRotationMatrix(float x, float y, float z)
@@ -256,6 +281,39 @@ void RenderScene()
     glUniform1f(DLDiffuse, dl.DiffuseIntensity());
     glUniform1f(DLIntens, dl.AmbientIntensity());
     glUniform1i(Sampler, 0);
+    p = Cam.Position();
+    if (pls.size() > 0)
+    {
+        CAMERA = (GLuint) glGetUniformLocation(prog, "Cam");
+        glUniform3f(CAMERA, p[0], p[1], p[2]);
+        for (int i = 0; i < pls.size(); i++)
+        {
+            char Name[128];
+            snprintf(Name, sizeof(Name), "PointLights[%d].Base.Color", i);
+            GPLS[i].Color = glGetUniformLocation(prog, Name);
+            snprintf(Name, sizeof(Name), "PointLights[%d].Base.AmbientIntensity", i);
+            GPLS[i].AmbientIntensity= glGetUniformLocation(prog, Name);
+            snprintf(Name, sizeof(Name), "PointLights[%d].Base.DiffuseIntensity", i);
+            GPLS[i].DiffuseIntensity = glGetUniformLocation(prog, Name);
+            snprintf(Name, sizeof(Name), "PointLights[%d].Position", i);
+            GPLS[i].Position = glGetUniformLocation(prog, Name);
+            snprintf(Name, sizeof(Name), "PointLights[%d].Atten.Constant", i);
+            GPLS[i].Constant = glGetUniformLocation(prog, Name);
+            snprintf(Name, sizeof(Name), "PointLights[%d].Atten.Linear", i);
+            GPLS[i].Linear = glGetUniformLocation(prog, Name);
+            snprintf(Name, sizeof(Name), "PointLights[%d].Atten.Exp", i);
+            GPLS[i].Exp = glGetUniformLocation(prog, Name);
+
+            glUniform3f(GPLS[i].Color, pls[i].Color()[0], pls[i].Color()[1], pls[i].Color()[2]);
+            glUniform1f(GPLS[i].AmbientIntensity, pls[i].AmbientIntensity());
+            glUniform1f(GPLS[i].DiffuseIntensity, pls[i].DiffuseIntensity());
+            glUniform3f(GPLS[i].Position, pls[i].Pos()[0], pls[i].Pos()[1], pls[i].Pos()[2]);
+            glUniform1f(GPLS[i].Constant, pls[i].Constant());
+            glUniform1f(GPLS[i].Linear, pls[i].Linear());
+            glUniform1f(GPLS[i].Exp, pls[i].Exp());
+        }
+    }
+    glUniform1i(NumPLight, pls.size());
     Tex->Bind(GL_TEXTURE0);
     glDrawElements(GL_TRIANGLES, 12 * 3, GL_UNSIGNED_INT, 0);
     PrintLog();
@@ -278,6 +336,10 @@ void KeyPressed(unsigned char key, int x, int y)
             break;
         case 'l':
             dl.DiffuseIntensity() -= 0.05;
+            break;
+        case 'v':
+            AddPointLight();
+            break;
     }
 
     KEH.Press(key, x, y);
