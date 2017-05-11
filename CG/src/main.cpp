@@ -57,37 +57,38 @@ struct PLS
 
 void AddCubeModel()
 {
+    auto c = Cam.Position();
     Vertex vs[] = {
 
             Vertex({-0.5f, -0.5f, -0.5f}, {0.0f, 0.0f}),
             Vertex({-0.5f,  0.5f, -0.5f}, {0.0f, 0.5f}),
-            Vertex({0.5f, -0.5f, -0.5f}, {0.5f, 0.0f}),
-            Vertex({0.5f,  0.5f, -0.5f}, {0.5f, 0.5f}),
+            Vertex({ 0.5f, -0.5f, -0.5f}, {0.5f, 0.0f}),
+            Vertex({ 0.5f,  0.5f, -0.5f}, {0.5f, 0.5f}),
 
             Vertex({-0.5f, -0.5f,  0.5f}, {0.0f, 0.0f}),
             Vertex({-0.5f,  0.5f,  0.5f}, {0.0f, 0.5f}),
-            Vertex({0.5f, -0.5f,  0.5f}, {0.5f, 0.0f}),
-            Vertex({0.5f,  0.5f,  0.5f}, {0.5f, 0.5f}),
+            Vertex({ 0.5f, -0.5f,  0.5f}, {0.5f, 0.0f}),
+            Vertex({ 0.5f,  0.5f,  0.5f}, {0.5f, 0.5f}),
 
             Vertex({-0.5f, -0.5f, -0.5f}, {0.0f, 0.0f}),
             Vertex({-0.5f,  0.5f, -0.5f}, {0.0f, 0.5f}),
             Vertex({-0.5f, -0.5f,  0.5f}, {0.5f, 0.0f}),
             Vertex({-0.5f,  0.5f,  0.5f}, {0.5f, 0.5f}),
 
-            Vertex({0.5f, -0.5f, -0.5f}, {0.0f, 0.0f}),
-            Vertex({0.5f,  0.5f, -0.5f}, {0.0f, 0.5f}),
-            Vertex({0.5f, -0.5f,  0.5f}, {0.5f, 0.0f}),
-            Vertex({0.5f,  0.5f,  0.5f}, {0.5f, 0.5f}),
+            Vertex({ 0.5f, -0.5f, -0.5f}, {0.0f, 0.0f}),
+            Vertex({ 0.5f,  0.5f, -0.5f}, {0.0f, 0.5f}),
+            Vertex({ 0.5f, -0.5f,  0.5f}, {0.5f, 0.0f}),
+            Vertex({ 0.5f,  0.5f,  0.5f}, {0.5f, 0.5f}),
 
             Vertex({-0.5f, -0.5f, -0.5f}, {0.0f, 0.0f}),
             Vertex({-0.5f, -0.5f,  0.5f}, {0.0f, 0.5f}),
-            Vertex({0.5f, -0.5f, -0.5f}, {0.5f, 0.0f}),
-            Vertex({0.5f, -0.5f,  0.5f}, {0.5f, 0.5f}),
+            Vertex({ 0.5f, -0.5f, -0.5f}, {0.5f, 0.0f}),
+            Vertex({ 0.5f, -0.5f,  0.5f}, {0.5f, 0.5f}),
 
             Vertex({-0.5f,  0.5f, -0.5f}, {0.0f, 0.0f}),
             Vertex({-0.5f,  0.5f,  0.5f}, {0.0f, 0.5f}),
-            Vertex({0.5f,  0.5f, -0.5f}, {0.5f, 0.0f}),
-            Vertex({0.5f,  0.5f,  0.5f}, {0.5f, 0.5f})
+            Vertex({ 0.5f,  0.5f, -0.5f}, {0.5f, 0.0f}),
+            Vertex({ 0.5f,  0.5f,  0.5f}, {0.5f, 0.5f})
     };
 
 
@@ -106,7 +107,7 @@ void AddCubeModel()
                                17, 18, 19,
                                21, 20, 22,
                                21, 22, 23 };
-    Model *m = new Model(&vs[0], &Indices[0], GL_TEXTURE_2D, "../rsc/stone2.jpg");
+    Model *m = new Model(vs, Indices, sizeof(vs) / sizeof(vs[0]), sizeof(Indices) / sizeof(Indices[0]), GL_TEXTURE_2D, "../rsc/stone2.jpg");
     models.push_back(m);
     std::cout << "New cube" << std::endl;
 }
@@ -122,117 +123,6 @@ void AddPointLight()
     pl.DiffuseIntensity() = 0.5f;
     pl.AmbientIntensity() = 0.5f;
     pls.push_back(pl);
-}
-
-void CalcNormals(const unsigned int* Indices, unsigned int IndexCount, Vertex* Vertices, unsigned int VertexCount)
-{
-    for (unsigned int i = 0 ; i < IndexCount ; i += 3) {
-        unsigned int Index0 = Indices[i];
-        unsigned int Index1 = Indices[i + 1];
-        unsigned int Index2 = Indices[i + 2];
-        Vec3f v1 = Vertices[Index1].pos - Vertices[Index0].pos;
-        Vec3f v2 = Vertices[Index2].pos - Vertices[Index0].pos;
-        Vec3f Normal = v1.Cross(v2);
-        Normal.Normalize();
-
-        Vertices[Index0].normal = Vertices[Index0].normal + Normal;
-        Vertices[Index1].normal = Vertices[Index0].normal + Normal;
-        Vertices[Index2].normal = Vertices[Index0].normal + Normal;
-    }
-
-    for (unsigned int i = 0 ; i < VertexCount ; i++) {
-        Vertices[i].normal.Normalize();
-        //std::cout << Vertices[i].normal[0] << "\t" << Vertices[i].normal[1] << "\t" << Vertices[i].normal[2] << std::endl;
-        auto v = -dl.Direction() * Vertices[i].normal;
-        std::cout << v << std::endl;
-    }
-}
-
-void CreateVertexBuffer()
-{
-
-    Model *m = new Model();
-    glGenVertexArrays(1, &m->VAO);
-    glBindVertexArray(m->VAO);
-    Vertex vs[] = {
-
-            Vertex({-0.5f, -0.5f, -0.5f}, {0.0f, 0.0f}),
-            Vertex({-0.5f,  0.5f, -0.5f}, {0.0f, 0.5f}),
-            Vertex({0.5f, -0.5f, -0.5f}, {0.5f, 0.0f}),
-            Vertex({0.5f,  0.5f, -0.5f}, {0.5f, 0.5f}),
-
-            Vertex({-0.5f, -0.5f,  0.5f}, {0.0f, 0.0f}),
-            Vertex({-0.5f,  0.5f,  0.5f}, {0.0f, 0.5f}),
-            Vertex({0.5f, -0.5f,  0.5f}, {0.5f, 0.0f}),
-            Vertex({0.5f,  0.5f,  0.5f}, {0.5f, 0.5f}),
-
-            Vertex({-0.5f, -0.5f, -0.5f}, {0.0f, 0.0f}),
-            Vertex({-0.5f,  0.5f, -0.5f}, {0.0f, 0.5f}),
-            Vertex({-0.5f, -0.5f,  0.5f}, {0.5f, 0.0f}),
-            Vertex({-0.5f,  0.5f,  0.5f}, {0.5f, 0.5f}),
-
-            Vertex({0.5f, -0.5f, -0.5f}, {0.0f, 0.0f}),
-            Vertex({0.5f,  0.5f, -0.5f}, {0.0f, 0.5f}),
-            Vertex({0.5f, -0.5f,  0.5f}, {0.5f, 0.0f}),
-            Vertex({0.5f,  0.5f,  0.5f}, {0.5f, 0.5f}),
-
-            Vertex({-0.5f, -0.5f, -0.5f}, {0.0f, 0.0f}),
-            Vertex({-0.5f, -0.5f,  0.5f}, {0.0f, 0.5f}),
-            Vertex({0.5f, -0.5f, -0.5f}, {0.5f, 0.0f}),
-            Vertex({0.5f, -0.5f,  0.5f}, {0.5f, 0.5f}),
-
-            Vertex({-0.5f,  0.5f, -0.5f}, {0.0f, 0.0f}),
-            Vertex({-0.5f,  0.5f,  0.5f}, {0.0f, 0.5f}),
-            Vertex({0.5f,  0.5f, -0.5f}, {0.5f, 0.0f}),
-            Vertex({0.5f,  0.5f,  0.5f}, {0.5f, 0.5f})
-    };
-
-
-
-
-
-    unsigned int Indices[] = { 1,  0,  2,
-                               1,  2,  3,
-                               4,  5,  6,
-                               6,  5,  7,
-                               8,  9, 10,
-                               10, 9, 11,
-                               13, 12, 14,
-                               13, 14, 15,
-                               17, 16, 18,
-                               17, 18, 19,
-                               21, 20, 22,
-                               21, 22, 23 };
-
-    CalcNormals(Indices, sizeof(Indices) / sizeof(Indices[0]), vs, sizeof(vs) / sizeof(vs[0]));
-    for (int i = 0; i < 4 * 6; i++)
-        std::cout << vs[i].normal[0] << '\t' << vs[i].normal[1] << '\t' << vs[i].normal[2] << '\t' << std::endl;
-
-    glGenBuffers(1, &m->VBO);
-    glBindBuffer(GL_ARRAY_BUFFER, m->VBO);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(vs), vs, GL_STATIC_DRAW);
-
-    glGenBuffers(1, &m->IBO);
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m->IBO);
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(Indices), Indices, GL_STATIC_DRAW);
-
-    glBindBuffer(GL_ARRAY_BUFFER, m->VBO);
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m->IBO);
-
-    glEnableVertexAttribArray(0);
-    glEnableVertexAttribArray(1);
-    glEnableVertexAttribArray(2);
-
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), nullptr);
-    glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), (const GLvoid*)12);
-    glVertexAttribPointer(2, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (const GLvoid*)20);
-
-    m->tex = new Texture(GL_TEXTURE_2D, "../rsc/stone2.jpg");
-    if(!m->tex->Load())
-        exit(0);
-    models.push_back(m);
-//
-//    glBindVertexArray(VAO);
 }
 
 void CreateShaders()
@@ -310,8 +200,6 @@ void RenderScene()
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glEnable(GL_DEPTH_TEST);
 
-
-
     Vec3f p = CEH.GetCameraPosition(KEH.keys(), Cam.Target(), Cam.Up(), Cam.Position());
     Matrix4 res = Cam.GetProjectionPerspectiveMatrix()  * Cam.GetUVNMatrix() * Cam.SetPosition(p[0], p[1], p[2]);
     Matrix4 world = EyeMatrix4();
@@ -358,9 +246,6 @@ void RenderScene()
         }
     }
     glUniform1i(NumPLight, pls.size());
-//    glBindVertexArray(VAO);
-//    Tex->Bind(GL_TEXTURE0);
-//    glDrawElements(GL_TRIANGLES, 12 * 3, GL_UNSIGNED_INT, 0);
     for (int i = 0; i < models.size(); i++)
     {
         models[i]->Draw();
@@ -380,7 +265,6 @@ void KeyPressed(unsigned char key, int x, int y)
             break;
         case 'k':
             dl.DiffuseIntensity() += 0.05;
-            std::cout << dl.DiffuseIntensity() << std::endl;
             break;
         case 'l':
             dl.DiffuseIntensity() -= 0.05;
@@ -435,13 +319,60 @@ int main(int argc, char *argv[])
         return 1;
 //    CreateVertexBuffer();
     CreateShaders();
-//    glutGameModeString("1920x1200@64");
-//    glutEnterGameMode();
+    glutGameModeString("1920x1200@64");
+    glutEnterGameMode();
     glutWarpPointer(WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2);
     MEH.MouseMove(WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2);
     MEH.MouseMove(WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2);
-    Tex = new Texture(GL_TEXTURE_2D, "../rsc/stone2.jpg");
-    if (!Tex->Load())
-        return 1;
+//    Tex = new Texture(GL_TEXTURE_2D, "../rsc/stone2.jpg");
+//    if (!Tex->Load())
+//        return 1;
+    Vertex vs[] = {
+
+            Vertex({-0.5f, -0.5f, -0.5f}, {0.0f, 0.0f}),
+            Vertex({-0.5f,  0.5f, -0.5f}, {0.0f, 0.5f}),
+            Vertex({0.5f, -0.5f, -0.5f}, {0.5f, 0.0f}),
+            Vertex({0.5f,  0.5f, -0.5f}, {0.5f, 0.5f}),
+
+            Vertex({-0.5f, -0.5f,  0.5f}, {0.0f, 0.0f}),
+            Vertex({-0.5f,  0.5f,  0.5f}, {0.0f, 0.5f}),
+            Vertex({0.5f, -0.5f,  0.5f}, {0.5f, 0.0f}),
+            Vertex({0.5f,  0.5f,  0.5f}, {0.5f, 0.5f}),
+
+            Vertex({-0.5f, -0.5f, -0.5f}, {0.0f, 0.0f}),
+            Vertex({-0.5f,  0.5f, -0.5f}, {0.0f, 0.5f}),
+            Vertex({-0.5f, -0.5f,  0.5f}, {0.5f, 0.0f}),
+            Vertex({-0.5f,  0.5f,  0.5f}, {0.5f, 0.5f}),
+
+            Vertex({0.5f, -0.5f, -0.5f}, {0.0f, 0.0f}),
+            Vertex({0.5f,  0.5f, -0.5f}, {0.0f, 0.5f}),
+            Vertex({0.5f, -0.5f,  0.5f}, {0.5f, 0.0f}),
+            Vertex({0.5f,  0.5f,  0.5f}, {0.5f, 0.5f}),
+
+            Vertex({-0.5f, -0.5f, -0.5f}, {0.0f, 0.0f}),
+            Vertex({-0.5f, -0.5f,  0.5f}, {0.0f, 0.5f}),
+            Vertex({0.5f, -0.5f, -0.5f}, {0.5f, 0.0f}),
+            Vertex({0.5f, -0.5f,  0.5f}, {0.5f, 0.5f}),
+
+            Vertex({-0.5f,  0.5f, -0.5f}, {0.0f, 0.0f}),
+            Vertex({-0.5f,  0.5f,  0.5f}, {0.0f, 0.5f}),
+            Vertex({0.5f,  0.5f, -0.5f}, {0.5f, 0.0f}),
+            Vertex({0.5f,  0.5f,  0.5f}, {0.5f, 0.5f})
+    };
+
+    unsigned int Indices[] = { 1,  0,  2,
+                               1,  2,  3,
+                               4,  5,  6,
+                               6,  5,  7,
+                               8,  9, 10,
+                               10, 9, 11,
+                               13, 12, 14,
+                               13, 14, 15,
+                               17, 16, 18,
+                               17, 18, 19,
+                               21, 20, 22,
+                               21, 22, 23 };
+//    Model *m = new Model(vs, Indices, GL_TEXTURE_2D, "../rsc/stone2.jpg");
+//    models.push_back(m);
     glutMainLoop();
 }
