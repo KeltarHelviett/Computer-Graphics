@@ -12,7 +12,7 @@
 class Texture
 {
 public:
-
+    Texture();
     Texture(GLenum textureTarget, const std::string &fileName);
 
     bool Load();

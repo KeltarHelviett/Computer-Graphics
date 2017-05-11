@@ -5,6 +5,11 @@
 #include <iostream>
 #include "../include/Texture.h"
 
+Texture::Texture()
+{
+
+}
+
 Texture::Texture(GLenum textureTarget, const std::string &fileName)
 {
     this->textureTarget = textureTarget;
@@ -37,4 +42,5 @@ void Texture::Bind(GLenum textureUnit)
     glActiveTexture(textureUnit);
     glBindTexture(textureTarget, texturObj);
 }
+
 

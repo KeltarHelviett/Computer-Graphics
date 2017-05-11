@@ -29,5 +29,5 @@
 *.app
 
 CG/cmake-build-debug/
-
+CG/cmake-build-debug
 
