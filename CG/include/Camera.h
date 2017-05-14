@@ -17,6 +17,7 @@ public:
     Camera(float FOV, float z1, float z2);
 
     Matrix4 SetPosition(float x, float y, float z);
+    Matrix4 SetPosition(Vec3f pos);
     Matrix4 GetUVNMatrix();
     Matrix4 GetProjectionPerspectiveMatrix();
 

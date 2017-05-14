@@ -9,6 +9,7 @@
 
 #include "Texture.h"
 #include "Vector.h"
+#include "Matrix4.h"
 
 struct Vertex
 {
@@ -35,10 +36,14 @@ public:
     bool Load(Vertex *vs, GLuint *indices, GLuint vertexCount, GLuint indCount);
     void Draw();
 
+    Matrix4 SetPosition(GLfloat x, GLfloat y, GLfloat z);
+    Matrix4 GetTrans();
 private:
-    void CalcNormals(GLuint *indices, Vertex* vs);
+    GLfloat x, y, z;
+    void CalcNormals(GLuint *indices, Vertex* vs, GLuint vertexCount, GLuint indexCount);
     GLuint VAO, VBO, IBO;
     Texture *tex;
+    GLuint indexCount;
 
 };
 

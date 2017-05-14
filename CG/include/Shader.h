@@ -19,11 +19,10 @@ public:
     GLuint shader();
 
     void compile();
-private:
+protected:
     std::string _code;
     GLenum  _type;
     GLuint  _shader;
 };
-
 
 #endif

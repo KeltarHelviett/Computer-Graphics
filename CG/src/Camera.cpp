@@ -16,7 +16,7 @@ Camera::Camera(float FOV, float z1, float z2)
     fov = FOV;
     this->z1 = z1;
     this->z2 = z2;
-    pos    = {1.0f, 1.0f, -3.0f};
+    pos    = {.0f, .0f, .0f};
     target = {0.0f, 0.0f, 1.0f};
     up     = {0.0f, 1.0f, 0.0f};
 
@@ -53,6 +53,12 @@ Matrix4 Camera::SetPosition(float x, float y, float z)
             {0, 0, 0, 1}
     };
 }
+
+Matrix4 Camera::SetPosition(Vec3f pos)
+{
+    return this->SetPosition(pos[0], pos[1], pos[2]);
+}
+
 
 Matrix4 Camera::GetUVNMatrix()
 {
@@ -132,3 +138,4 @@ Matrix4 Camera::GetProjectionPerspectiveMatrix()
     m[3][0] = 0.0f;                   m[3][1] = 0.0f;            m[3][2] = 1.0f;                   m[3][3] = 0.0;
     return m;
 }
+

@@ -30,6 +30,8 @@ Vec3f CameraEventHandler::GetCameraPosition(bool *keys, Vec3f target, Vec3f up, 
     }
     if (keys['S'] || keys['s'])
         oldPos -= (target * step);
+    if (keys[32])
+        oldPos[1] += step;
     return oldPos;
 }
 
@@ -43,4 +45,9 @@ Point CameraEventHandler::GetRotationAngles(MouseInfo mi)
 
 //    }
     return delta;
+}
+
+Vec3f CameraEventHandler::GetCameraPosition(bool *keys, Camera *cam)
+{
+    return this->GetCameraPosition(keys, cam->Target(), cam->Up(), cam->Position());
 }

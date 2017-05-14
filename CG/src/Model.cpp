@@ -8,6 +8,7 @@
 Model::Model()
 {
     VAO = VBO = IBO = 0;
+    x = y = z = 0;
 }
 
 Model::Model(Vertex *vs, GLuint *indices, GLuint vertexCount, GLuint indCount, GLenum textureTarget, const std::string &fileName)
@@ -22,14 +23,13 @@ void Model::Draw()
     glBindVertexArray(VAO);
     tex->Bind(GL_TEXTURE0);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, IBO);
-    glDrawElements(GL_TRIANGLES, 12 * 3, GL_UNSIGNED_INT, 0);
+    glDrawElements(GL_TRIANGLES, indexCount, GL_UNSIGNED_INT, 0);
 }
 
-void Model::CalcNormals(GLuint *indices, Vertex *vs)
+void Model::CalcNormals(GLuint *indices, Vertex *vs, GLuint vertexCount, GLuint indexCount)
 {
     std::cout << "IN" << std::endl;
-    GLuint indexAmount = 36;//sizeof(indices) / sizeof(indices[0]);
-    for (GLuint i = 0 ; i < indexAmount; i += 3) {
+    for (GLuint i = 0 ; i < indexCount; i += 3) {
         GLuint index0 = indices[i];
         GLuint index1 = indices[i + 1];
         GLuint index2 = indices[i + 2];
@@ -42,8 +42,7 @@ void Model::CalcNormals(GLuint *indices, Vertex *vs)
         vs[index1].normal = vs[index0].normal + Normal;
         vs[index2].normal = vs[index0].normal + Normal;
     }
-    GLuint vertexAmount = 24;//sizeof(vs) / sizeof(vs[0]);
-    for (GLuint i = 0 ; i < vertexAmount; i++) {
+    for (GLuint i = 0 ; i < vertexCount; i++) {
         vs[i].normal.Normalize();
         std::cout << vs[i].normal[0] << vs[i].normal[1] << vs[i].normal[2] << std::endl;
     }
@@ -56,8 +55,8 @@ bool Model::Load(Vertex *vs, GLuint *indices, GLuint vertexCount, GLuint indCoun
     glGenVertexArrays(1, &VAO);
     glBindVertexArray(VAO);
 
-    this->CalcNormals(indices, vs);
-
+    this->CalcNormals(indices, vs, vertexCount, indCount);
+    this->indexCount = indCount;
     glGenBuffers(1, &VBO);
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
     glBufferData(GL_ARRAY_BUFFER, vertexCount * sizeof(*vs), vs, GL_STATIC_DRAW);
@@ -79,5 +78,24 @@ bool Model::Load(Vertex *vs, GLuint *indices, GLuint vertexCount, GLuint indCoun
 
     glBindVertexArray(VAO);
     return true;
+}
+
+Matrix4 Model::SetPosition(GLfloat x, GLfloat y, GLfloat z)
+{
+    this->x = x; this->y = y; this->z = z;
+    return
+            {
+                {1.0f, 0.0f, 0.0f, x},
+                {0.0f, 1.0f, 0.0f, y},
+                {0.0f, 0.0f, 1.0f, z},
+                {0.0f, 0.0f, 0.0f, 1.0f}
+            }
+    ;
+
+}
+
+Matrix4 Model::GetTrans()
+{
+    return this->SetPosition(x, y, z);
 }
 
