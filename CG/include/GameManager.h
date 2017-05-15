@@ -35,6 +35,7 @@ struct SpotLightUniform: public PointLightUniform
     SpotLightUniform() {}
 };
 
+enum CamMode {CAM_MAIN, CAM_SPOT_LIGHT, CAM_POINT_LIGHT};
 class GameManager
 {
 public:
@@ -48,23 +49,28 @@ public:
     void KeyPress(unsigned char key, int x, int y);
     void KeyUp(unsigned char key, int x, int y);
     void MouseMove(int x, int y);
-
+    void ChangeMode(CamMode mode);
     ~GameManager();
 private:
     void InitShaderProgram();
     void InitUniformLocations();
     void InitPlatform();
     void InitDirectionalLight();
-
+    void SwitchCam(GLuint num);
+    void SetAttachedLight();
+    CamMode mode;
     std::vector<Model *> models;
     std::vector<PointLight *> pointLights;
     std::vector<SpotLight *> spotLights;
-    std::vector<Camera *> cams;
     DirectionalLight directionalLight;
     MouseEventHandler meh;
     KeyboardEventHandler keh;
     CameraEventHandler ceh;
     Camera *activeCam;
+    Camera *mainCam;
+    Camera *dynamicCam;
+    PointLight *attachedLight;
+    GLuint attachedCamNum;
     ShaderProgram program;
     // uniforms
     std::vector<PointLightUniform> plus;
@@ -76,6 +82,7 @@ private:
     GLuint activeCamUniform;
     GLuint WVP;
     GLuint worldTrans;
+
 };
 
 

@@ -28,7 +28,6 @@ void Model::Draw()
 
 void Model::CalcNormals(GLuint *indices, Vertex *vs, GLuint vertexCount, GLuint indexCount)
 {
-    std::cout << "IN" << std::endl;
     for (GLuint i = 0 ; i < indexCount; i += 3) {
         GLuint index0 = indices[i];
         GLuint index1 = indices[i + 1];
@@ -44,7 +43,6 @@ void Model::CalcNormals(GLuint *indices, Vertex *vs, GLuint vertexCount, GLuint 
     }
     for (GLuint i = 0 ; i < vertexCount; i++) {
         vs[i].normal.Normalize();
-        std::cout << vs[i].normal[0] << vs[i].normal[1] << vs[i].normal[2] << std::endl;
     }
 }
 

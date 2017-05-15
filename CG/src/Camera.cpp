@@ -11,7 +11,7 @@
 
 Camera::Camera(): Camera(60, 1, 100) {}
 
-Camera::Camera(float FOV, float z1, float z2)
+Camera::Camera(GLfloat FOV, GLfloat z1, GLfloat z2)
 {
     fov = FOV;
     this->z1 = z1;
@@ -20,26 +20,7 @@ Camera::Camera(float FOV, float z1, float z2)
     target = {0.0f, 0.0f, 1.0f};
     up     = {0.0f, 1.0f, 0.0f};
 
-    Vec3f hTarget = {target[0], 0.0f, target[2]};
-    hTarget.Normalize();
-    if (hTarget[2] >= 0.0f){
-        if (hTarget[0] >= 0.0f){
-            angles.x = 360.0f - ToDegree(asin(hTarget[2]));
-        }
-        else{
-            angles.x = 180.0f + ToDegree(asin(hTarget[2]));
-        }
-    }
-    else{
-        if (hTarget[0] >= 0.0f){
-            angles.x = ToDegree(asin(-hTarget[2]));
-        }
-        else{
-            angles.x = 90.0f + ToDegree(asin(-hTarget[2]));
-        }
-    }
-
-    angles.y = -ToDegree(asin(target[1]));
+    CalculateAngles();
 }
 
 Matrix4 Camera::SetPosition(float x, float y, float z)
@@ -116,7 +97,7 @@ Point Camera::Angles()
     return angles;
 }
 
-Vec3f Camera::Target()
+Vec3f &Camera::Target()
 {
     return target;
 }
@@ -137,5 +118,35 @@ Matrix4 Camera::GetProjectionPerspectiveMatrix()
     m[2][0] = 0.0f;                   m[2][1] = 0.0f;            m[2][2] = (-z1 -z2) / zrange ;    m[2][3] = (2.0f * z2 * z1) / zrange;
     m[3][0] = 0.0f;                   m[3][1] = 0.0f;            m[3][2] = 1.0f;                   m[3][3] = 0.0;
     return m;
+}
+
+void Camera::CalculateAngles()
+{
+    Vec3f hTarget = {target[0], 0.0f, target[2]};
+    hTarget.Normalize();
+    if (hTarget[2] >= 0.0f){
+        if (hTarget[0] >= 0.0f){
+            angles.x = 360.0f - ToDegree(asin(hTarget[2]));
+        }
+        else{
+            angles.x = 180.0f + ToDegree(asin(hTarget[2]));
+        }
+    }
+    else{
+        if (hTarget[0] >= 0.0f){
+            angles.x = ToDegree(asin(-hTarget[2]));
+        }
+        else{
+            angles.x = 90.0f + ToDegree(asin(-hTarget[2]));
+        }
+    }
+
+    angles.y = -ToDegree(asin(target[1]));
+}
+
+void Camera::Retarget(Vec3f newTarget)
+{
+    target = newTarget;
+    CalculateAngles();
 }
 

@@ -1,7 +1,7 @@
 #version 450
 
-const int MAX_POINT_LIGHTS = 10;
-const int MAX_SPOT_LIGHTS = 10;
+const int MAX_POINT_LIGHTS = 9;
+const int MAX_SPOT_LIGHTS = 9;
 
 in vec2 TexCoord0;
 in vec3 Normal0;

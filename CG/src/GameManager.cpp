@@ -25,6 +25,16 @@ void GameManager::Render()
 
     Vec3f camNewPos = ceh.GetCameraPosition(keh.keys(), this->activeCam);
     Matrix4 camCoords = activeCam->GetProjectionPerspectiveMatrix()  * activeCam->GetUVNMatrix() * activeCam->SetPosition(camNewPos);
+    if (mode != CAM_MAIN && activeCam != mainCam)
+    {
+        attachedLight->Pos() = activeCam->Position();
+        if (mode == CAM_SPOT_LIGHT)
+        {
+            SpotLight *sl = (SpotLight *)attachedLight;
+            sl->Direction() = activeCam->Target();
+        }
+        SetAttachedLight();
+    }
     if (pointLights.size() > 0 || spotLights.size() > 0)
     {
         Vec3f camCurPos = activeCam->Position();
@@ -44,7 +54,8 @@ void GameManager::Render()
 void GameManager::Init()
 {
     activeCam = new Camera();
-
+    mainCam = activeCam;
+    mode = CAM_MAIN;
     InitShaderProgram();
     InitUniformLocations();
     InitDirectionalLight();
@@ -236,6 +247,20 @@ void GameManager::KeyPress(unsigned char key, int x, int y)
         case 'g':
             AddSpotLight();
             break;
+        case 'r':
+            ChangeMode(CAM_MAIN);
+            activeCam = mainCam;
+            break;
+        case 't':
+            ChangeMode(CAM_POINT_LIGHT);
+            break;
+        case 'y':
+            ChangeMode(CAM_SPOT_LIGHT);
+            break;
+    }
+    if (key <= 57 && key >= 49 && mode != CAM_MAIN)
+    {
+        SwitchCam((GLuint) (key - 49));
     }
     keh.Press(key, x, y);
 }
@@ -268,7 +293,6 @@ void GameManager::AddSpotLight()
     sl->DiffuseIntensity() = 15.0f;
     sl->AmbientIntensity() = .3f;
     sl->Direction() = activeCam->Target();
-    std::cout << sl->Direction();
     sl->Cutoff() = 20.0f;
     spotLights.push_back(sl);
     spotLightsNumber = (GLuint) glGetUniformLocation(program.program(), "NumSpotLights");
@@ -312,29 +336,73 @@ void GameManager::AddSpotLight()
         Vec3f Direction = spotLights[i]->Direction();
         Direction.Normalize();
         glUniform3f(slus[i].direction, Direction[0], Direction[1], Direction[2]);
-        std::cout << cosf(ToRadian(spotLights[i]->Cutoff())) << std::endl;
         glUniform1f(slus[i].cutoff, cosf(ToRadian(spotLights[i]->Cutoff())));
         glUniform1f(slus[i].constant, spotLights[i]->Constant());
         glUniform1f(slus[i].linear,   spotLights[i]->Linear());
         glUniform1f(slus[i].exp,      spotLights[i]->Exp());
-        assert(slus[i].color != 0xFFFFFFFF);
-        assert(slus[i].ambientIntensity != 0xFFFFFFFF);
-        assert(slus[i].diffuseIntensity != 0xFFFFFFFF);
-        assert(slus[i].position != 0xFFFFFFFF);
-        assert(slus[i].direction != 0xFFFFFFFF);
-        assert(slus[i].cutoff != 0xFFFFFFFF);
-        assert(slus[i].constant != 0xFFFFFFFF);
-        assert(slus[i].linear != 0xFFFFFFFF);
-        assert(slus[i].exp != 0xFFFFFFFF);
 
     }
 }
 
-//void GameManager::InitGlutCallbacks()
-//{
-//    glutKeyboardUpFunc(KeyUp);
-//    glutKeyboardFunc(KeyPressed);
-//    glutMouseFunc(MouseClick);
-//    glutMotionFunc(MouseMove);
-//}
+void GameManager::ChangeMode(CamMode mode)
+{
+    this->mode = mode;
+}
+
+void GameManager::SwitchCam(GLuint num)
+{
+    if (mode == CAM_MAIN)
+        return;
+    if (mode == CAM_POINT_LIGHT && num < pointLights.size())
+    {
+        std::cout << "I M HERE BIY++OY" << std::endl;
+        dynamicCam = new Camera();
+        attachedLight = pointLights[num];
+        dynamicCam->SetPosition(attachedLight->Pos());
+        activeCam = dynamicCam;
+        attachedCamNum = num;
+    }
+    else if (mode == CAM_SPOT_LIGHT && num < spotLights.size())
+    {
+        std::cout << "I M HERE BIsad" << std::endl;
+        dynamicCam = new Camera();
+        SpotLight *sl = spotLights[num];
+        dynamicCam->SetPosition(sl->Pos());
+        sl->Direction() = dynamicCam->Target();
+        attachedLight = sl;
+        activeCam = dynamicCam;
+        attachedCamNum = num;
+    }
+}
+
+void GameManager::SetAttachedLight()
+{
+    if (activeCam == mainCam)
+        return;
+    auto i = attachedCamNum;
+    if (mode == CAM_POINT_LIGHT)
+    {
+        glUniform3f(plus[i].color, pointLights[i]->Color()[0], pointLights[i]->Color()[1], pointLights[i]->Color()[2]);
+        glUniform1f(plus[i].ambientIntensity, pointLights[i]->AmbientIntensity());
+        glUniform1f(plus[i].diffuseIntensity, pointLights[i]->DiffuseIntensity());
+        glUniform3f(plus[i].position, pointLights[i]->Pos()[0], pointLights[i]->Pos()[1], pointLights[i]->Pos()[2]);
+        glUniform1f(plus[i].constant, pointLights[i]->Constant());
+        glUniform1f(plus[i].linear, pointLights[i]->Linear());
+        glUniform1f(plus[i].exp, pointLights[i]->Exp());
+    }
+    auto c = spotLights[i]->Color();
+    glUniform3f(slus[i].color, c[0], c[0], c[0]);
+    glUniform1f(slus[i].ambientIntensity, spotLights[i]->AmbientIntensity());
+    glUniform1f(slus[i].diffuseIntensity, spotLights[i]->DiffuseIntensity());
+    glUniform3f(slus[i].position,  spotLights[i]->Pos()[0], spotLights[i]->Pos()[1], spotLights[i]->Pos()[2]);
+    Vec3f Direction = spotLights[i]->Direction();
+    Direction.Normalize();
+    glUniform3f(slus[i].direction, Direction[0], Direction[1], Direction[2]);
+    glUniform1f(slus[i].cutoff, cosf(ToRadian(spotLights[i]->Cutoff())));
+    glUniform1f(slus[i].constant, spotLights[i]->Constant());
+    glUniform1f(slus[i].linear,   spotLights[i]->Linear());
+    glUniform1f(slus[i].exp,      spotLights[i]->Exp());
+}
+
+
 
