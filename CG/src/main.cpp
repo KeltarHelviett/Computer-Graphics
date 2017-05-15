@@ -4,8 +4,6 @@
 #include "../include/Window.h"
 #include "../include/GameManager.h"
 
-#define ToRadian(x) (float)((x) * M_PI / 180.0f)
-#define ToDegree(x) ((x) * 180.0f / M_PI)
 
 GameManager *GM;
 #define WINDOW_WIDTH 1024

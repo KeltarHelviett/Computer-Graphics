@@ -91,3 +91,32 @@ PointLight::PointLight()
 {
 
 }
+
+SpotLight::SpotLight()
+{
+
+}
+
+SpotLight::SpotLight(const Vec3f &color, const Vec3f &pos, const Vec3f &direction, GLfloat cutoof,
+                     GLfloat ambientIntensity, GLfloat diffuseIntensity, GLfloat constant, GLfloat linear, GLfloat exp)
+{
+    this->color = color;
+    this->pos = pos;
+    this->direction = direction;
+    this->cutoff = cutoof;
+    this->ambientIntensity = ambientIntensity;
+    this->diffuseIntensity = diffuseIntensity;
+    this->constant = constant;
+    this->linear = linear;
+    this->exp = exp;
+}
+
+Vec3f &SpotLight::Direction()
+{
+    return direction;
+}
+
+GLfloat &SpotLight::Cutoff()
+{
+    return cutoff;
+}

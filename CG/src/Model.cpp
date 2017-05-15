@@ -99,3 +99,10 @@ Matrix4 Model::GetTrans()
     return this->SetPosition(x, y, z);
 }
 
+Model::~Model()
+{
+    glDeleteBuffers(1, &VBO);
+    glDeleteBuffers(1, &IBO);
+    glDeleteVertexArrays(1, &VAO);
+}
+

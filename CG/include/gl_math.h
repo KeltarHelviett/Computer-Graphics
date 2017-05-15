@@ -9,6 +9,9 @@
 #include "Vector.h"
 #include "Quaternion.h"
 
+#define ToRadian(x) (float)((x) * M_PI / 180.0f)
+#define ToDegree(x) ((x) * 180.0f / M_PI)
+
 Matrix4 EyeMatrix4();
 Matrix4 ZeroMatrix4();
 

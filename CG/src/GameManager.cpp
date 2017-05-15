@@ -3,6 +3,7 @@
 //
 
 #include <iostream>
+#include <cstring>
 #include "../include/GameManager.h"
 
 GameManager::GameManager()
@@ -24,7 +25,7 @@ void GameManager::Render()
 
     Vec3f camNewPos = ceh.GetCameraPosition(keh.keys(), this->activeCam);
     Matrix4 camCoords = activeCam->GetProjectionPerspectiveMatrix()  * activeCam->GetUVNMatrix() * activeCam->SetPosition(camNewPos);
-    if (pointLights.size() > 0)
+    if (pointLights.size() > 0 || spotLights.size() > 0)
     {
         Vec3f camCurPos = activeCam->Position();
         glUniform3f(activeCamUniform, camCurPos[0], camCurPos[1], camCurPos[2]);
@@ -46,9 +47,9 @@ void GameManager::Init()
 
     InitShaderProgram();
     InitUniformLocations();
-    InitPlatform();
     InitDirectionalLight();
     AddCube();
+    InitPlatform();
     glUniform1i(sampler, 0);
 }
 
@@ -90,10 +91,10 @@ void GameManager::InitUniformLocations()
 void GameManager::InitPlatform()
 {
     Vertex vs[] = {
-            Vertex({-10.0f, 0.0, -10.0f}, {0.0f, 0.0f}),
-            Vertex({-10.0f, 0.0,  10.0},  {0.0f, 1.0f}),
-            Vertex({ 10.0f, 0.0, -10.0f}, {1.0f, 0.0f}),
-            Vertex({ 10.0f, 0.0,  10.0},  {1.0f, 1.0f}),
+            Vertex({-10.0f, -0.5f, -10.0f}, {0.0f, 0.0f}),
+            Vertex({-10.0f, -0.5f,  10.0},  {0.0f, 1.0f}),
+            Vertex({ 10.0f, -0.5f, -10.0f}, {1.0f, 0.0f}),
+            Vertex({ 10.0f, -0.5f,  10.0},  {1.0f, 1.0f}),
     };
 
     GLuint inds[] = {
@@ -115,6 +116,7 @@ void GameManager::AddPointLight()
     pl->DiffuseIntensity() = .5f;
     pl->AmbientIntensity() = .3f;
     pointLights.push_back(pl);
+    pointLightsNumber = (GLuint) glGetUniformLocation(program.program(), "NumPointLights");
     glUniform1i(pointLightsNumber, (GLint) pointLights.size());
     activeCamUniform = (GLuint) glGetUniformLocation(program.program(), "Cam");
     plus.push_back(PointLightUniform());
@@ -231,6 +233,9 @@ void GameManager::KeyPress(unsigned char key, int x, int y)
         case 'b':
             AddCube();
             break;
+        case 'g':
+            AddSpotLight();
+            break;
     }
     keh.Press(key, x, y);
 }
@@ -245,6 +250,84 @@ void GameManager::MouseMove(int x, int y)
     meh.MouseMove(x, y);
     Point angles = ceh.GetRotationAngles(meh.Info());
     activeCam->Rotate(angles);
+}
+
+GameManager::~GameManager()
+{
+
+}
+
+void GameManager::AddSpotLight()
+{
+    SpotLight *sl = new SpotLight();
+    sl->Color() = {1.0f, 1.0f, 1.0f};
+    sl->Pos() = activeCam->Position();
+    sl->Constant() = .0f;
+    sl->Linear() = .1f;
+    sl->Exp() = .0f;
+    sl->DiffuseIntensity() = 15.0f;
+    sl->AmbientIntensity() = .3f;
+    sl->Direction() = activeCam->Target();
+    std::cout << sl->Direction();
+    sl->Cutoff() = 20.0f;
+    spotLights.push_back(sl);
+    spotLightsNumber = (GLuint) glGetUniformLocation(program.program(), "NumSpotLights");
+    glUniform1i(spotLightsNumber, (GLint) spotLights.size());
+    activeCamUniform = (GLuint) glGetUniformLocation(program.program(), "Cam");
+    slus.push_back(SpotLightUniform());
+    for (int i = 0; i < slus.size(); ++i)
+    {
+        char Name[128];
+        snprintf(Name, sizeof(Name), "SpotLights[%d].Base.Base.Color", i);
+        slus[i].color = (GLuint) glGetUniformLocation(program.program(), Name);
+
+        snprintf(Name, sizeof(Name), "SpotLights[%d].Base.Base.AmbientIntensity", i);
+        slus[i].ambientIntensity = (GLuint) glGetUniformLocation(program.program(), Name);
+
+        snprintf(Name, sizeof(Name), "SpotLights[%d].Base.Position", i);
+        slus[i].position = (GLuint) glGetUniformLocation(program.program(), Name);
+
+        snprintf(Name, sizeof(Name), "SpotLights[%d].Direction", i);
+        slus[i].direction = (GLuint) glGetUniformLocation(program.program(), Name);
+
+        snprintf(Name, sizeof(Name), "SpotLights[%d].Cutoff", i);
+        slus[i].cutoff = (GLuint) glGetUniformLocation(program.program(), Name);
+
+        snprintf(Name, sizeof(Name), "SpotLights[%d].Base.Base.DiffuseIntensity", i);
+        slus[i].diffuseIntensity = (GLuint) glGetUniformLocation(program.program(), Name);
+
+        snprintf(Name, sizeof(Name), "SpotLights[%d].Base.Atten.Constant", i);
+        slus[i].constant = (GLuint) glGetUniformLocation(program.program(), Name);
+
+        snprintf(Name, sizeof(Name), "SpotLights[%d].Base.Atten.Linear", i);
+        slus[i].linear = (GLuint) glGetUniformLocation(program.program(), Name);
+
+        snprintf(Name, sizeof(Name), "SpotLights[%d].Base.Atten.Exp", i);
+        slus[i].exp = (GLuint) glGetUniformLocation(program.program(), Name);
+        auto c = spotLights[i]->Color();
+        glUniform3f(slus[i].color, c[0], c[0], c[0]);
+        glUniform1f(slus[i].ambientIntensity, spotLights[i]->AmbientIntensity());
+        glUniform1f(slus[i].diffuseIntensity, spotLights[i]->DiffuseIntensity());
+        glUniform3f(slus[i].position,  spotLights[i]->Pos()[0], spotLights[i]->Pos()[1], spotLights[i]->Pos()[2]);
+        Vec3f Direction = spotLights[i]->Direction();
+        Direction.Normalize();
+        glUniform3f(slus[i].direction, Direction[0], Direction[1], Direction[2]);
+        std::cout << cosf(ToRadian(spotLights[i]->Cutoff())) << std::endl;
+        glUniform1f(slus[i].cutoff, cosf(ToRadian(spotLights[i]->Cutoff())));
+        glUniform1f(slus[i].constant, spotLights[i]->Constant());
+        glUniform1f(slus[i].linear,   spotLights[i]->Linear());
+        glUniform1f(slus[i].exp,      spotLights[i]->Exp());
+        assert(slus[i].color != 0xFFFFFFFF);
+        assert(slus[i].ambientIntensity != 0xFFFFFFFF);
+        assert(slus[i].diffuseIntensity != 0xFFFFFFFF);
+        assert(slus[i].position != 0xFFFFFFFF);
+        assert(slus[i].direction != 0xFFFFFFFF);
+        assert(slus[i].cutoff != 0xFFFFFFFF);
+        assert(slus[i].constant != 0xFFFFFFFF);
+        assert(slus[i].linear != 0xFFFFFFFF);
+        assert(slus[i].exp != 0xFFFFFFFF);
+
+    }
 }
 
 //void GameManager::InitGlutCallbacks()

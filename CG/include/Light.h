@@ -51,9 +51,22 @@ public:
     GLfloat &Exp();
 
     Vec3f &Pos();
-private:
+protected:
     Vec3f pos;
     GLfloat constant, linear, exp;
+};
+
+class SpotLight: public PointLight
+{
+public:
+    SpotLight();
+    SpotLight(const Vec3f &color, const Vec3f &pos, const Vec3f &direction, GLfloat cutoof,GLfloat ambientIntensity, GLfloat diffuseIntensity, GLfloat constant, GLfloat linear, GLfloat exp);
+
+    Vec3f &Direction();
+    GLfloat &Cutoff();
+private:
+    Vec3f direction;
+    GLfloat cutoff;
 };
 
 

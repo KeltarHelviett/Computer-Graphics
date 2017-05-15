@@ -14,6 +14,8 @@
 #include "CameraEventHandler.h"
 #include "ShaderProgram.h"
 #include <cassert>
+#include "TestUtils.h"
+#include "gl_math.h"
 
 struct DirectionalLightUniform
 {
@@ -27,6 +29,11 @@ struct PointLightUniform
     PointLightUniform() {}
 };
 
+struct SpotLightUniform: public PointLightUniform
+{
+    GLuint direction, cutoff;
+    SpotLightUniform() {}
+};
 
 class GameManager
 {
@@ -36,10 +43,13 @@ public:
     void Init();
     void AddPointLight();
     void AddCube();
+    void AddSpotLight();
     void MouseClick(int button , int state, int x, int y);
     void KeyPress(unsigned char key, int x, int y);
     void KeyUp(unsigned char key, int x, int y);
     void MouseMove(int x, int y);
+
+    ~GameManager();
 private:
     void InitShaderProgram();
     void InitUniformLocations();
@@ -48,6 +58,7 @@ private:
 
     std::vector<Model *> models;
     std::vector<PointLight *> pointLights;
+    std::vector<SpotLight *> spotLights;
     std::vector<Camera *> cams;
     DirectionalLight directionalLight;
     MouseEventHandler meh;
@@ -57,9 +68,11 @@ private:
     ShaderProgram program;
     // uniforms
     std::vector<PointLightUniform> plus;
+    std::vector<SpotLightUniform> slus;
     GLuint sampler;
     DirectionalLightUniform dlu;
     GLuint pointLightsNumber;
+    GLuint spotLightsNumber;
     GLuint activeCamUniform;
     GLuint WVP;
     GLuint worldTrans;

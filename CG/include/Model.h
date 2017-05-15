@@ -38,6 +38,8 @@ public:
 
     Matrix4 SetPosition(GLfloat x, GLfloat y, GLfloat z);
     Matrix4 GetTrans();
+
+    ~Model();
 private:
     GLfloat x, y, z;
     void CalcNormals(GLuint *indices, Vertex* vs, GLuint vertexCount, GLuint indexCount);
